@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Étape IV — L'essence et ses visages · L'essence retrouvée</title>
+  <meta name="description" content="Quatrième étape du chemin : les visages de l'essence. Pourquoi l'essence se donne en qualités distinctes — la Force, la Fusion, la Joie, la Paix, la Volonté, la Compassion, la Brillance — d'après A.H. Almaas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* zone nuit */
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      /* zone jour */
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--encre-estompe:#84897f;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;
+      background:var(--jour-bg);font-size:1.13rem;
+    }
+    .voile{max-width:44rem;margin:0 auto;padding:0 1.4rem}
+    .voile--large{max-width:72rem}
+    .voile--gloss{max-width:52rem}
+    .contenu{padding-bottom:4rem}
+
+    /* ================= ZONE NUIT ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+      padding-bottom:2.4rem;
+    }
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:34rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .num-etape{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;color:var(--or);text-transform:uppercase}
+    .nuit .exergue{border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:3.6rem 0 1.4rem;margin:2.4rem 0 0}
+    .nuit .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .nuit .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .nuit .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= ZONE JOUR (lecture) ================= */
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .contenu .exergue{
+      margin:2.6rem 0;padding:1.6rem 1.8rem;border-left:2px solid var(--or-sombre);
+      background:rgba(163,120,31,.06);border-radius:0 14px 14px 0;
+    }
+    .contenu .exergue blockquote{margin:0;font-size:1.28rem;font-style:italic;color:var(--encre-douce);line-height:1.55}
+    .contenu .exergue .source{display:block;margin-top:.7rem;font-size:.95rem;font-style:normal;color:var(--estompe)}
+    .glossnote{font-size:1rem;color:var(--estompe);font-style:italic}
+    .glossnote a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .glossnote a:hover{color:var(--or-sombre)}
+
+    /* cartes génériques */
+    .facette,.halte,.terme,.visage{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+    }
+    .facette{margin:1.4rem 0;padding:1.35rem 1.5rem;border-radius:14px}
+    .facette h2{margin:0 0 .45rem;font-weight:600;font-size:1.32rem;color:var(--or-profond);display:flex;align-items:baseline;gap:.6rem}
+    .facette h2 .num{font-family:Inter,sans-serif;font-size:.72rem;color:var(--estompe);letter-spacing:.1em}
+    .facette p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .facette p + p{margin-top:.7rem}
+    .facette .lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .facette .lien:hover{color:var(--or-sombre)}
+
+    .avertissement,.conseil,.exploration{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+    }
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .conseil{color:var(--encre-douce);font-size:1.06rem}
+    .conseil strong{color:var(--encre)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.5rem}
+    .exploration h2{margin:.1rem 0 .7rem;font-size:1.4rem;color:var(--encre)}
+    .exploration p{color:var(--encre-douce);font-size:1.06rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.3rem;color:var(--encre-douce);font-size:1.06rem}
+    .exploration li{margin-bottom:.55rem}
+
+    /* frise biographique */
+    .frise{margin:2.4rem 0;padding-left:1.4rem;border-left:1px solid rgba(163,120,31,.35)}
+    .jalon{position:relative;margin-bottom:1.5rem}
+    .jalon::before{
+      content:"";position:absolute;left:-1.75rem;top:.5rem;width:.7rem;height:.7rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.15);
+    }
+    .jalon .quand{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--or-profond);text-transform:uppercase}
+    .jalon .quoi{color:var(--encre-douce);font-size:1.06rem}
+
+    /* sentier du chemin */
+    .sentier{margin:2.6rem 0 0;padding-left:1.7rem;border-left:1px solid rgba(163,120,31,.32)}
+    .halte{position:relative;margin-bottom:1.1rem;display:block;text-decoration:none;
+      padding:1.2rem 1.35rem;border-radius:14px;transition:all .2s ease;color:inherit}
+    a.halte:hover{border-color:var(--jour-ligne);transform:translateX(3px)}
+    .halte::before{
+      content:"";position:absolute;left:-2.15rem;top:1.55rem;width:.72rem;height:.72rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);
+    }
+    a.halte::before{background:rgba(163,120,31,.5);box-shadow:0 0 8px rgba(163,120,31,.3)}
+    .halte .entete{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .halte .num{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--or-profond)}
+    .halte h2{margin:0;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .halte .bientot{
+      margin-left:auto;font-family:Inter,sans-serif;font-size:.6rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--estompe);border:1px solid var(--jour-bord);
+      padding:.16rem .5rem;border-radius:999px;
+    }
+    .halte p{margin:0;color:var(--encre-douce);font-size:1.04rem}
+    .halte .source{margin-top:.45rem;font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    /* visages colorés */
+    .visages{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.7rem;margin:1.6rem 0 1.2rem}
+    .visage{padding:1rem 1.1rem;border-radius:12px;text-align:center}
+    .visage .teinte{width:.85rem;height:.85rem;border-radius:50%;margin:0 auto .5rem;box-shadow:0 0 10px currentColor}
+    .visage .nom{font-weight:600;font-size:1.08rem;color:var(--encre)}
+    .visage .en{font-family:Inter,sans-serif;font-size:.68rem;color:var(--estompe);letter-spacing:.04em}
+
+    /* glossaire */
+    .outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 82%,transparent);padding:1.4rem 0}
+    .cherche{
+      width:100%;padding:.85rem 1.2rem;border-radius:999px;
+      background:#fff;border:1px solid var(--jour-bord);
+      color:var(--encre);font-family:'Cormorant Garamond',serif;font-size:1.12rem;outline:none;
+      transition:border-color .2s ease;
+    }
+    .cherche::placeholder{color:var(--estompe);font-style:italic}
+    .cherche:focus{border-color:var(--jour-ligne)}
+    .filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}
+    .filtre{
+      font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      padding:.4rem .85rem;border-radius:999px;cursor:pointer;
+      color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent;
+      transition:all .18s ease;
+    }
+    .filtre:hover{border-color:var(--jour-ligne);color:var(--encre)}
+    .filtre.actif{color:#141005;background:linear-gradient(135deg,var(--or-vif),#d9b054);border-color:transparent;font-weight:600}
+    .compteur{text-align:center;color:var(--estompe);font-size:.98rem;font-style:italic;margin:.7rem 0 0}
+    .lettre{font-size:1.5rem;color:var(--or-sombre);margin:2.2rem 0 .6rem;font-weight:500;border-bottom:1px solid rgba(163,120,31,.25);padding-bottom:.2rem}
+    .terme{padding:1.15rem 1.25rem;border-radius:14px;margin-bottom:.65rem;transition:border-color .2s ease}
+    .terme:hover{border-color:var(--jour-ligne)}
+    .terme .ligne1{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .terme .fr{font-size:1.32rem;font-weight:600;color:var(--encre)}
+    .terme .en{
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.02em;
+      color:var(--or-profond);border:1px solid var(--jour-ligne);
+      padding:.14rem .6rem;border-radius:999px;background:rgba(163,120,31,.07);
+      font-style:normal;white-space:nowrap;
+    }
+    .terme .def{margin:0;color:var(--encre-douce);font-size:1.08rem}
+    .terme .src{margin:.45rem 0 0;font-size:.92rem;color:var(--estompe);font-style:italic}
+    .rien{text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}
+
+    /* navigation de fin de page */
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a,.suite span{
+      font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;
+      color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease;
+    }
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    .suite span{opacity:.5;cursor:default}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="chemin.html">← Le chemin</a>
+
+    <header class="tete">
+      <div class="num-etape">Étape IV</div>
+      <h1>L'essence et ses visages</h1>
+      <p class="chapeau">Ce qui revient n'est pas une lumière uniforme — c'est une palette. La Force, la Joie, la Paix, la Volonté, l'amour qui fond, la compassion, l'intelligence qui synthétise&nbsp;: sept qualités, sept saveurs.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+
+    <h2>Une lumière qui se décline</h2>
+    <p>
+      Ouvrez n'importe quel texte d'Almaas consacré à ce sujet, et la même surprise revient&nbsp;:
+      l'essence ne s'y décrit jamais comme un flux uniforme, une simple «&nbsp;impression d'être là&nbsp;».
+      Elle s'y décrit couleur par couleur, texture par texture — presque comme un minéralogiste
+      dresserait l'inventaire d'une collection de pierres. Rouge dense d'un côté, or qui fond de l'autre,
+      noir profond, argent vif, vert tendre. Cette précision n'est pas une manière littéraire de parler&nbsp;:
+      c'est, disent ses élèves, ce qu'on rencontre réellement quand on cesse de <em>penser</em> l'intériorité
+      pour commencer à la <em>sentir</em>. Chaque qualité a sa propre densité, sa propre température,
+      son propre endroit dans le corps — aussi distincte qu'une odeur l'est d'une autre.
+    </p>
+
+    <h2>Une parenté avec les lataif soufis</h2>
+    <p>
+      Almaas ne part pas de rien. Dans <em>Le vaisseau spatial Inquiry</em>, il reprend explicitement
+      une carte plus ancienne&nbsp;: les <em>lataif</em> soufis (« subtilités », en arabe), cinq centres
+      traditionnellement associés chacun à une couleur et à ce qu'il appelle une impulsion sacrée —
+      le jaune de la joie («&nbsp;je souhaite&nbsp;»), le rouge de la force («&nbsp;je peux&nbsp;»), le blanc
+      de la persévérance («&nbsp;je veux&nbsp;»), le noir de la perception au-delà des apparences
+      («&nbsp;je perçois&nbsp;»), le vert de la bienveillance («&nbsp;je suis&nbsp;»). Il ne recopie pas ce
+      schéma tel quel — l'Approche Diamant dessine sa propre cartographie, plus large, avec des
+      qualités que les soufis ne nomment pas ainsi — mais il en retient l'intuition centrale&nbsp;:
+      le cœur n'est pas un organe unique. C'est une constellation d'organes, chacun capable de sa
+      propre perception.
+    </p>
+
+    <p>Voici sept de ces visages, pour commencer à les reconnaître — cliquez sur l'un d'eux pour y aller directement&nbsp;:</p>
+
+    <div class="visages" aria-label="Sommaire des sept qualités essentielles">
+      <a class="visage" href="#force" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#e05252;background:#e05252"></div><div class="nom">La Force</div><div class="en">Strength — rouge</div></a>
+      <a class="visage" href="#fusion" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#e8c97a;background:#e8c97a"></div><div class="nom">La Fusion</div><div class="en">Merging Love — or fondant</div></a>
+      <a class="visage" href="#joie" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#f2e04d;background:#f2e04d"></div><div class="nom">La Joie</div><div class="en">Joy — jaune</div></a>
+      <a class="visage" href="#paix" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#4d5a80;background:#4d5a80"></div><div class="nom">La Paix</div><div class="en">Peace — noire</div></a>
+      <a class="visage" href="#volonte" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#c9d4e4;background:#c9d4e4"></div><div class="nom">La Volonté</div><div class="en">Will — argent</div></a>
+      <a class="visage" href="#compassion" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#5fae7f;background:#5fae7f"></div><div class="nom">La Compassion</div><div class="en">Compassion — verte</div></a>
+      <a class="visage" href="#brillance" style="text-decoration:none;color:inherit"><div class="teinte" style="color:#d8c98a;background:#d8c98a"></div><div class="nom">La Brillance</div><div class="en">Brilliancy — presque incolore</div></a>
+    </div>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2 id="force">La Force</h2>
+    <p>
+      Rouge, dense, chaude — presque une braise. Là où l'idéal de l'ego du huitième type de
+      l'ennéagramme se durcit en carapace («&nbsp;je dois dominer, je ne dois jamais plier&nbsp;»),
+      la qualité qu'il imite maladroitement est bien plus simple&nbsp;: une puissance tranquille
+      qui n'a besoin de convaincre personne. Elle se sent le plus souvent dans le ventre, les jambes,
+      parfois tout le long de la colonne — un socle, plus qu'un poing. Ce n'est pas l'agressivité
+      qui frappe pour se défendre&nbsp;: c'est ce qui reste debout sans avoir besoin de frapper.
+    </p>
+    <p>
+      Ce qui la bloque, le plus souvent, c'est la peur de sa propre intensité — l'idée enfantine
+      qu'être fort, c'est forcément blesser, déborder, être «&nbsp;trop&nbsp;». Alors on l'étouffe,
+      ou on la mime par la dureté, ce qui n'est pas la même chose. Quand elle revient, au quotidien,
+      elle ne fait pas de bruit&nbsp;: c'est le oui et le non qui sortent sans hésitation, la limite
+      posée sans avoir à hausser le ton, la capacité de rester présent dans une situation difficile
+      sans se raidir ni fuir.
+    </p>
+
+    <h2 id="fusion">La Fusion — l'amour qui fond</h2>
+    <p>
+      Or liquide, tiède, sans bord net. Almaas la relie à la toute première expérience du nourrisson
+      dans les bras de sa mère — ce moment développemental où des psychologues comme Margaret Mahler
+      situent une union pas encore séparée&nbsp;: non pas «&nbsp;deux qui s'aiment&nbsp;», mais «&nbsp;un
+      seul continuum de chaleur&nbsp;», ressenti le plus souvent dans la poitrine, comme une fonte
+      douce plutôt qu'un battement. C'est cet aspect que le deuxième type de l'ennéagramme cherche
+      désespérément à produire chez l'autre — être aimé au point de fusionner — sans savoir qu'il
+      peut d'abord se le donner à lui-même.
+    </p>
+    <p>
+      Ce qui la bloque&nbsp;: la peur de se perdre dans l'autre, souvent héritée d'une fusion ancienne
+      qui a mal tourné — trop envahissante, ou rompue trop tôt. Alors on tient ses distances, ou l'on
+      s'accroche par manque, ce qui n'est pas non plus la même chose. Quand elle revient, elle ne
+      demande pas de partenaire&nbsp;: c'est cette qualité de proximité qu'on peut sentir seul, dans
+      le contact avec un arbre, un animal, un souvenir tendre — la frontière qui s'assouplit sans
+      disparaître.
+    </p>
+
+    <h2 id="joie">La Joie</h2>
+    <p>
+      Jaune, pétillant, léger — la lataif soufie associe cette couleur à une impulsion très simple&nbsp;:
+      «&nbsp;je souhaite&nbsp;», l'élan pur vers ce qui attire, avant tout calcul. Elle se sent souvent
+      haut dans la poitrine ou juste sous le sternum, comme de petites bulles qui montent. Ce n'est
+      pas l'excitation qui a besoin d'un événement pour exister&nbsp;: c'est une pétillance qui peut
+      se poser sur n'importe quoi — un rayon de lumière sur une table, un mot bien choisi, le simple
+      fait d'être en vie un mardi ordinaire.
+    </p>
+    <p>
+      Ce qui la bloque&nbsp;: le sérieux appris très tôt, l'idée que la joie serait enfantine,
+      superficielle, ou qu'elle attirerait le malheur si l'on s'y abandonne trop. Beaucoup d'adultes
+      capables portent ce blocage sans même le nommer. Quand la joie revient, elle se reconnaît à
+      un signe précis&nbsp;: un rire qui part avant qu'on ait décidé de rire, une légèreté dans le
+      corps qui n'a pas de raison particulière — et qui n'en a pas besoin.
+    </p>
+
+    <h2 id="paix">La Paix</h2>
+    <p>
+      Noire — ce qui surprend toujours ceux qui découvrent cette carte pour la première fois, tant
+      le noir est associé ailleurs au deuil ou à la peur. Ici, c'est l'inverse&nbsp;: un noir velouté,
+      épais, profond comme un ciel sans lune, associé dans les lataif soufies à la faculté de percevoir
+      au-delà des apparences («&nbsp;je perçois&nbsp;»). Elle se sent souvent comme une immobilité qui
+      englobe le corps tout entier — pas un point précis, mais une densité tranquille qui n'a besoin
+      de rien résoudre.
+    </p>
+    <p>
+      Ce qui la bloque, c'est la confusion très répandue entre le calme et le vide qui fait peur&nbsp;:
+      on associe l'arrêt du mouvement intérieur à un danger — l'ennui, l'insignifiance, parfois même
+      la mort. Alors on s'agite pour ne jamais la rencontrer. Quand elle revient, au quotidien, c'est
+      cette capacité rare de ne rien faire sans être anxieux de ne rien faire&nbsp;: un silence
+      partagé dans une pièce, une attente sans impatience, une nuit d'insomnie traversée sans lutte.
+    </p>
+
+    <h2 id="volonte">La Volonté</h2>
+    <p>
+      Ici les sources hésitent, et c'est révélateur en soi&nbsp;: la carte soufie des cinq lataif
+      situe la persévérance dans le blanc («&nbsp;je veux&nbsp;»), tandis que dans <em>Clés de
+      l'Ennéagramme</em>, à propos de la fixation du sixième type, Almaas décrit la volonté
+      personnelle comme une présence <em>argentée</em> — souple, vivante, chatoyante, presque
+      liquide. Peu importe le nom exact de la teinte&nbsp;: ce qui compte, c'est le contraste
+      qu'il souligne avec ce que la personnalité fabrique à sa place — une volonté de fer, rigide,
+      cassante, qui tient par crispation plutôt que par confiance.
+    </p>
+    <p>
+      Elle se sent souvent le long de l'axe du corps, comme une colonne intérieure qui ne demande
+      aucun effort pour rester droite. Ce qui la bloque&nbsp;: la conviction qu'on s'effondrerait
+      sans structure extérieure — règle, autorité, discipline imposée. Elle revient dans les moments
+      où l'on tient un engagement sans avoir à se forcer, où une décision se prend sans piétiner
+      indéfiniment&nbsp;: une fermeté qui n'a rien de dur.
+    </p>
+
+    <h2 id="compassion">La Compassion</h2>
+    <p>
+      Verte, tendre, un peu fraîche — la lataif du cœur, associée à l'impulsion la plus dépouillée
+      de toutes&nbsp;: «&nbsp;je suis&nbsp;», la simple bienveillance d'être présent à ce qui souffre,
+      sans avoir besoin de le réparer. Elle se sent le plus souvent au centre de la poitrine, comme
+      une sève qui monte doucement plutôt qu'une vague d'émotion. Ce n'est pas la pitié, qui regarde
+      l'autre de haut&nbsp;: c'est une chaleur qui se pose au même niveau.
+    </p>
+    <p>
+      Ce qui la bloque&nbsp;: le cynisme protecteur, ou son inverse — une gentillesse de façade qui
+      évite le contact réel par peur d'être submergé. Elle revient, dans le quotidien, comme cette
+      tendresse simple qu'on peut soudain sentir pour un inconnu croisé dans la rue, pour un collègue
+      difficile, ou — le plus souvent oublié — pour soi-même, au moment précis où l'on vient d'échouer.
+    </p>
+
+    <h2 id="brillance">La Brillance</h2>
+    <p>
+      Presque incolore — ce qui la rend difficile à ranger à côté des six autres. Almaas l'appelait
+      autrefois «&nbsp;l'essence de l'essence&nbsp;», parce qu'elle contient, fondues ensemble et non
+      différenciées, toutes les qualités précédentes à la fois. Dans <em>Brilliancy</em>, il la décrit
+      comme une substance fine et lumineuse, circulant le long de l'axe du corps — moins une couleur
+      qu'une clarté. C'est elle qui produit la synthèse soudaine, le flash où des éléments dispersés
+      se révèlent avoir toujours été un seul motif&nbsp;: l'intelligence non comme un score, mais
+      comme une présence.
+    </p>
+    <p>
+      Ce qui la bloque le plus souvent, d'après les séances de travail rapportées dans le livre,
+      c'est une projection ancienne sur une figure paternelle&nbsp;: on situe la source de
+      l'intelligence au-dehors, chez un père jugé brillant ou décevant, et l'on doute d'en avoir
+      soi-même. Quand elle revient, elle se reconnaît à une sensation très précise&nbsp;: le
+      sentiment qu'il ne manque plus rien, qu'une solution trouvée a une évidence élégante — et
+      la disparition curieuse du besoin de vérifier qu'on a raison.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <div class="exploration">
+      <div class="etiquette">Exploration — pour clore l'étape</div>
+      <h2>La qualité qui manque, en ce moment</h2>
+      <p>Reprenez les sept visages ci-dessus, lentement, un par un.</p>
+      <ol>
+        <li>Laquelle, en ce moment de votre vie, semble la plus absente — celle dont le manque se
+        fait le plus sentir, pas celle qu'on «&nbsp;devrait&nbsp;» avoir&nbsp;? Ne cherchez pas la
+        bonne réponse&nbsp;: notez la première qui vous traverse.</li>
+        <li>Remontez à un moment — même ancien, même bref — où cette qualité était incontestablement
+        là. Pas une pensée à son sujet&nbsp;: un souvenir précis, avec un lieu, une lumière, un corps
+        qui la contenait.</li>
+        <li>Fermez les yeux, et cherchez-la maintenant comme une sensation, pas comme une idée.
+        Où, dans le corps, pourrait-elle se loger si elle revenait&nbsp;? Ne la forcez pas&nbsp;:
+        contentez-vous d'ouvrir l'espace, et regardez ce qui s'y présente.</li>
+      </ol>
+      <p>Rien n'est censé se «&nbsp;produire&nbsp;» de spectaculaire. Le simple fait de chercher,
+      honnêtement, dans le corps plutôt que dans la tête, est déjà l'exercice.</p>
+    </div>
+
+    <p class="glossnote" style="margin-top:1.6rem">
+      Termes de cette étape au <a href="glossaire.html">glossaire bilingue</a>&nbsp;: aspects essentiels
+      <em>(essential aspects)</em>, lataif <em>(lataif)</em>, Force <em>(Strength)</em>, Brillance
+      <em>(Brilliancy)</em>.
+    </p>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="les-trous.html">← Étape III</a>
+      <a class="dorée" href="la-perle.html">Étape V — La Perle →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </div>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>

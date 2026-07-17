@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Essence Regained — after A. H. Almaas</title>
+  <meta name="description" content="The question of essence, after A. H. Almaas: what in us has never disappeared, how we lose sight of it, how it is found again. His philosophy, his spirituality, his Diamond Approach — and a bilingual glossary, English–French.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.65;
+      background:var(--jour-bg);
+    }
+    .voile{max-width:72rem;margin:0 auto;padding:0 1.4rem}
+
+    /* ================= NUIT : héros + exergue ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+    }
+    .heros{min-height:82vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:4.5rem 0 3rem;position:relative}
+    .diamant{width:120px;height:120px;margin:0 auto 1.6rem;display:block}
+    .diamant path, .diamant line{stroke:var(--or);stroke-width:1.1;fill:none;opacity:.85}
+    .diamant .facette{opacity:.38}
+    .diamant .lueur{fill:rgba(232,201,122,.06);stroke:none}
+    .nuit h1{
+      font-weight:500;font-size:clamp(2.6rem,6vw,4.2rem);
+      margin:.2rem 0 .4rem;letter-spacing:.01em;line-height:1.08;color:#f4f7ff;
+    }
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .sous-titre{font-size:clamp(1.15rem,2.4vw,1.45rem);color:var(--nuit-doux);font-style:italic;margin:0 0 2.2rem}
+    .invitation{max-width:38rem;margin:0 auto 2.6rem;font-size:clamp(1.2rem,2.4vw,1.4rem);color:var(--nacre)}
+    .invitation strong{color:var(--or-vif);font-weight:600}
+    .portes{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.4rem}
+    .porte{
+      font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:600;
+      padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;
+      color:var(--nacre);border:1px solid var(--nuit-carte-bord);
+      background:var(--nuit-carte);transition:all .22s ease;letter-spacing:.01em;
+    }
+    .porte:hover{border-color:var(--nuit-ligne);color:#fff;transform:translateY(-2px)}
+    .porte--principale{
+      color:#141005;border-color:transparent;
+      background:linear-gradient(135deg,var(--or-vif),#d9b054);
+      box-shadow:0 8px 30px rgba(232,201,122,.22);
+    }
+    .porte--principale:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,201,122,.34);color:#141005}
+    .aide{font-size:1.02rem;color:var(--nuit-estompe);font-style:italic;max-width:44rem;margin:0 auto}
+    .exergue{text-align:center;padding:3.6rem 0 4.4rem;border-top:1px solid rgba(255,255,255,.05)}
+    .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= JOUR : le reste ================= */
+    section{padding:3.4rem 0}
+    .titre-section{text-align:center;font-weight:500;font-size:clamp(1.7rem,3.4vw,2.2rem);margin:0 0 .5rem;color:var(--encre)}
+    .chapeau{text-align:center;max-width:42rem;margin:0 auto 2.6rem;color:var(--encre-douce);font-size:1.15rem}
+
+    .chemin{display:flex;gap:0;justify-content:center;flex-wrap:wrap;max-width:60rem;margin:0 auto}
+    .etape{flex:1 1 7.2rem;min-width:7.2rem;text-align:center;padding:0 .5rem;position:relative}
+    .etape::before{
+      content:"";position:absolute;top:.62rem;left:-50%;width:100%;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(163,120,31,.45),transparent);
+    }
+    .etape:first-child::before{display:none}
+    .etape .pierre{
+      width:1.25rem;height:1.25rem;margin:0 auto .7rem;transform:rotate(45deg);
+      border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);transition:all .25s ease;
+    }
+    .etape:hover .pierre{background:rgba(163,120,31,.4);box-shadow:0 0 12px rgba(163,120,31,.35)}
+    .etape .nom{font-size:1.05rem;font-weight:600;color:var(--encre);line-height:1.25}
+    .etape .note{font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    .espaces{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1rem;max-width:66rem;margin:0 auto}
+    .espace{
+      display:block;text-decoration:none;padding:1.5rem 1.4rem 1.35rem;border-radius:16px;
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+      transition:all .22s ease;position:relative;overflow:hidden;
+      box-shadow:0 2px 10px rgba(35,44,74,.045);
+    }
+    .espace:hover{border-color:var(--jour-ligne);transform:translateY(-3px)}
+    .espace .glyphe{font-size:1.25rem;color:var(--or-sombre);margin-bottom:.55rem;display:block}
+    .espace h3{margin:0 0 .4rem;font-weight:600;font-size:1.28rem;color:var(--encre)}
+    .espace p{margin:0;font-size:1.02rem;color:var(--encre-douce)}
+    .espace .bientot{
+      position:absolute;top:.85rem;right:.9rem;font-family:Inter,sans-serif;
+      font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--estompe);
+      border:1px solid var(--jour-bord);padding:.18rem .5rem;border-radius:999px;
+    }
+
+    .fratrie{text-align:center;padding:3rem 0 2rem;border-top:1px solid rgba(35,44,74,.1)}
+    .fratrie p{color:var(--estompe);font-size:1.02rem;font-style:italic;margin:0 0 1rem}
+    .fratrie a{
+      color:var(--encre-douce);text-decoration:none;margin:0 .9rem;font-size:1.05rem;
+      border-bottom:1px solid rgba(35,44,74,.25);transition:all .18s ease;
+    }
+    .fratrie a:hover{color:var(--or-profond);border-color:var(--or-sombre)}
+
+    footer{
+      text-align:center;padding:1.6rem 0 2.4rem;color:var(--estompe);
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.03em;
+    }
+
+    .apparait{opacity:0;transform:translateY(14px);animation:lever .9s ease forwards}
+    @keyframes lever{to{opacity:1;transform:translateY(0)}}
+    .d1{animation-delay:.1s}.d2{animation-delay:.28s}.d3{animation-delay:.46s}.d4{animation-delay:.64s}.d5{animation-delay:.82s}
+    .diamant .trace{stroke-dasharray:var(--long,300);stroke-dashoffset:var(--long,300);animation:tracer 2.2s cubic-bezier(.4,0,.2,1) forwards}
+    @keyframes tracer{to{stroke-dashoffset:0}}
+
+    @media (max-width:640px){
+      .heros{min-height:auto;padding-top:3.4rem}
+      .etape::before{display:none}
+      .chemin{gap:1.1rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+
+    <!-- ================= HÉROS ================= -->
+    <header class="heros">
+      <svg class="diamant apparait d1" viewBox="0 0 120 120" aria-hidden="true">
+        <polygon class="lueur" points="60,14 96,44 60,106 24,44"/>
+        <path class="trace" style="--long:340" d="M 24 44 L 60 14 L 96 44 L 60 106 Z"/>
+        <line class="facette trace" style="--long:120" x1="24" y1="44" x2="96" y2="44"/>
+        <line class="facette trace" style="--long:90" x1="42" y1="29" x2="45" y2="44"/>
+        <line class="facette trace" style="--long:90" x1="78" y1="29" x2="75" y2="44"/>
+        <line class="facette trace" style="--long:110" x1="45" y1="44" x2="60" y2="106"/>
+        <line class="facette trace" style="--long:110" x1="75" y1="44" x2="60" y2="106"/>
+        <line class="facette trace" style="--long:70" x1="60" y1="14" x2="45" y2="44"/>
+        <line class="facette trace" style="--long:70" x1="60" y1="14" x2="75" y2="44"/>
+      </svg>
+
+      <h1 class="apparait d2">Essence <em>Regained</em></h1>
+      <p class="sous-titre apparait d2">after A. H. Almaas</p>
+
+      <p class="invitation apparait d3">
+        There is something in you that has never disappeared. Life has covered it over —
+        it has not destroyed it. This site explores <strong>the question of essence</strong>,
+        guided by the work of A.&nbsp;H.&nbsp;Almaas — philosopher and spiritual teacher,
+        founder of the Diamond Approach.
+      </p>
+
+      <nav class="portes apparait d4" aria-label="Entry points">
+        <a class="porte" href="#manque">Is something missing?</a>
+        <a class="porte porte--principale" href="chemin.html">Follow the path</a>
+        <a class="porte" href="#espaces">Explore freely</a>
+      </nav>
+      <p class="aide apparait d5">
+        If it's a sense of lack that brings you here, start with what you're living.
+        Discovering Almaas for the first time? “Follow the path” takes you by the hand, from the simplest to the deepest.
+      </p>
+    </header>
+
+    <!-- ================= EXERGUE ================= -->
+    <div class="exergue">
+      <blockquote>
+        “Only when compassion is present will people allow themselves to see the truth.”
+        <span class="source">A.&nbsp;H.&nbsp;Almaas — <em>Diamond Heart, Book One</em></span>
+      </blockquote>
+    </div>
+  </div></div>
+
+  <div class="voile">
+
+    <!-- ================= LE CHEMIN ================= -->
+    <section id="chemin">
+      <h2 class="titre-section">The path, in seven steps</h2>
+      <p class="chapeau">
+        A gradual journey toward essence, faithful to the work — each step builds on the one before,
+        like the facets of a single stone.
+      </p>
+      <div class="chemin">
+        <a class="etape" style="text-decoration:none" href="etre-ou-lon-est.html"><div class="pierre"></div><div class="nom">Being where you are</div><div class="note">presence</div></a>
+        <a class="etape" style="text-decoration:none" href="le-juge-interieur.html"><div class="pierre"></div><div class="nom">The inner judge</div><div class="note">defending against it</div></a>
+        <a class="etape" style="text-decoration:none" href="les-trous.html"><div class="pierre"></div><div class="nom">The holes</div><div class="note">crossing through lack</div></a>
+        <a class="etape" style="text-decoration:none" href="les-visages-de-lessence.html"><div class="pierre"></div><div class="nom">Essence and its faces</div><div class="note">and its colors</div></a>
+        <a class="etape" style="text-decoration:none" href="la-perle.html"><div class="pierre"></div><div class="nom">The Pearl</div><div class="note">becoming a person</div></a>
+        <a class="etape" style="text-decoration:none" href="le-point.html"><div class="pierre"></div><div class="nom">The Point</div><div class="note">who am I?</div></a>
+        <a class="etape" style="text-decoration:none" href="l-immensite.html"><div class="pierre"></div><div class="nom">The boundless</div><div class="note">the dimensions of Being</div></a>
+      </div>
+    </section>
+
+    <!-- ================= LE MANQUE ================= -->
+    <section id="manque">
+      <h2 class="titre-section">Is something missing?</h2>
+      <p class="chapeau">
+        An emptiness in the chest, a sense of not truly being yourself, a strength that's missing,
+        a love sought outside yourself&nbsp;— for Almaas, each precise lack is a door&nbsp;:
+        behind every “hole”, the very quality that seems absent is waiting to be found again.
+        This part of the site will start from what you're living — not from theory.
+      </p>
+    </section>
+
+    <!-- ================= LES ESPACES ================= -->
+    <section id="espaces">
+      <h2 class="titre-section">The spaces of the site</h2>
+      <p class="chapeau">Ten spaces, to explore in order or freely.</p>
+      <div class="espaces">
+        <a class="espace" href="lessence.html"><span class="glyphe">✦</span><h3>The question of essence</h3><p>What essence is, how the child loses sight of it, how it is found again — the heart of the site.</p></a>
+        <a class="espace" href="lhomme.html"><span class="glyphe">◈</span><h3>The man</h3><p>Hameed Ali&nbsp;: from Kuwait to Berkeley, physics, Naranjo — the birth of a body of work.</p></a>
+        <a class="espace" href="chemin.html"><span class="glyphe">◇</span><h3>The path</h3><p>The guided journey in seven steps, from the most accessible to the deepest. The first is ready.</p></a>
+        <a class="espace" href="les-visages-de-lessence.html"><span class="glyphe">❋</span><h3>The faces of essence</h3><p>Strength, love, joy, peace, will, compassion — the essential qualities, one by one.</p></a>
+        <a class="espace" href="pratiquer.html"><span class="glyphe">❖</span><h3>Practice</h3><p>Inquiry step by step, working with the inner judge, presence in ordinary life.</p></a>
+        <a class="espace" href="lapproche.html"><span class="glyphe">◆</span><h3>The Diamond Approach</h3><p>The method Almaas founded&nbsp;: psychology and spirituality brought together — presented, situated, without making it a dogma.</p></a>
+        <a class="espace" href="enneagramme-essence.html"><span class="glyphe">⬡</span><h3>The enneagram of essence</h3><p>The nine Holy Ideas and the nine essential qualities — in dialogue with the Inner Mirror.</p></a>
+        <a class="espace" href="le-chemin-de-lamour.html"><span class="glyphe">♡</span><h3>The path of love</h3><p>Rose, gold, pomegranate&nbsp;: the faces of love, up to the inner Beloved.</p></a>
+        <a class="espace" href="glossaire.html"><span class="glyphe">✧</span><h3>Bilingual glossary</h3><p>Almaas's words, from English to French&nbsp;: each original term, its translation and its definition.</p></a>
+        <a class="espace" href="lire-almaas.html"><span class="glyphe">✦</span><h3>Reading Almaas</h3><p>Where to begin, which book for which question — the reading guide to the work.</p></a>
+      </div>
+    </section>
+
+    <!-- ================= FRATRIE ================= -->
+    <div class="fratrie">
+      <p>Essence Regained belongs to the same family as&nbsp;:</p>
+      <a href="https://lavoiedudedans.fr" target="_blank" rel="noopener">La voie du dedans</a>
+      <a href="https://lemiroirinterieur.fr" target="_blank" rel="noopener">Le miroir intérieur</a>
+    </div>
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>

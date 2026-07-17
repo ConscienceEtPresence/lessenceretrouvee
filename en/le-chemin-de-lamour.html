@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The path of love — Essence Regained</title>
+  <meta name="description" content="Pink, gold, pomegranate: A.H. Almaas's three colors of personal love, desire reclaimed, love without an object, and the devotional path to the inner Beloved.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* zone nuit */
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      /* zone jour */
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--encre-estompe:#84897f;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;
+      background:var(--jour-bg);font-size:1.13rem;
+    }
+    .voile{max-width:44rem;margin:0 auto;padding:0 1.4rem}
+    .voile--large{max-width:72rem}
+    .voile--gloss{max-width:52rem}
+    .contenu{padding-bottom:4rem}
+
+    /* ================= ZONE NUIT ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+      padding-bottom:2.4rem;
+    }
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:34rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .num-etape{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;color:var(--or);text-transform:uppercase}
+    .nuit .exergue{border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:3.6rem 0 1.4rem;margin:2.4rem 0 0}
+    .nuit .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .nuit .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .nuit .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= ZONE JOUR (lecture) ================= */
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .contenu .exergue{
+      margin:2.6rem 0;padding:1.6rem 1.8rem;border-left:2px solid var(--or-sombre);
+      background:rgba(163,120,31,.06);border-radius:0 14px 14px 0;
+    }
+    .contenu .exergue blockquote{margin:0;font-size:1.28rem;font-style:italic;color:var(--encre-douce);line-height:1.55}
+    .contenu .exergue .source{display:block;margin-top:.7rem;font-size:.95rem;font-style:normal;color:var(--estompe)}
+    .glossnote{font-size:1rem;color:var(--estompe);font-style:italic}
+    .glossnote a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .glossnote a:hover{color:var(--or-sombre)}
+
+    /* cartes génériques */
+    .facette,.halte,.terme,.visage{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+    }
+    .facette{margin:1.4rem 0;padding:1.35rem 1.5rem;border-radius:14px}
+    .facette h2{margin:0 0 .45rem;font-weight:600;font-size:1.32rem;color:var(--or-profond);display:flex;align-items:baseline;gap:.6rem}
+    .facette h2 .num{font-family:Inter,sans-serif;font-size:.72rem;color:var(--estompe);letter-spacing:.1em}
+    .facette p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .facette p + p{margin-top:.7rem}
+    .facette .lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .facette .lien:hover{color:var(--or-sombre)}
+
+    .avertissement,.conseil,.exploration{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+    }
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .conseil{color:var(--encre-douce);font-size:1.06rem}
+    .conseil strong{color:var(--encre)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.5rem}
+    .exploration h2{margin:.1rem 0 .7rem;font-size:1.4rem;color:var(--encre)}
+    .exploration p{color:var(--encre-douce);font-size:1.06rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.3rem;color:var(--encre-douce);font-size:1.06rem}
+    .exploration li{margin-bottom:.55rem}
+
+    /* frise biographique */
+    .frise{margin:2.4rem 0;padding-left:1.4rem;border-left:1px solid rgba(163,120,31,.35)}
+    .jalon{position:relative;margin-bottom:1.5rem}
+    .jalon::before{
+      content:"";position:absolute;left:-1.75rem;top:.5rem;width:.7rem;height:.7rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.15);
+    }
+    .jalon .quand{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--or-profond);text-transform:uppercase}
+    .jalon .quoi{color:var(--encre-douce);font-size:1.06rem}
+
+    /* sentier du chemin */
+    .sentier{margin:2.6rem 0 0;padding-left:1.7rem;border-left:1px solid rgba(163,120,31,.32)}
+    .halte{position:relative;margin-bottom:1.1rem;display:block;text-decoration:none;
+      padding:1.2rem 1.35rem;border-radius:14px;transition:all .2s ease;color:inherit}
+    a.halte:hover{border-color:var(--jour-ligne);transform:translateX(3px)}
+    .halte::before{
+      content:"";position:absolute;left:-2.15rem;top:1.55rem;width:.72rem;height:.72rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);
+    }
+    a.halte::before{background:rgba(163,120,31,.5);box-shadow:0 0 8px rgba(163,120,31,.3)}
+    .halte .entete{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .halte .num{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--or-profond)}
+    .halte h2{margin:0;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .halte .bientot{
+      margin-left:auto;font-family:Inter,sans-serif;font-size:.6rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--estompe);border:1px solid var(--jour-bord);
+      padding:.16rem .5rem;border-radius:999px;
+    }
+    .halte p{margin:0;color:var(--encre-douce);font-size:1.04rem}
+    .halte .source{margin-top:.45rem;font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    /* visages colorés */
+    .visages{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.7rem;margin:1.6rem 0 1.2rem}
+    .visage{padding:1rem 1.1rem;border-radius:12px;text-align:center}
+    .visage .teinte{width:.85rem;height:.85rem;border-radius:50%;margin:0 auto .5rem;box-shadow:0 0 10px currentColor}
+    .visage .nom{font-weight:600;font-size:1.08rem;color:var(--encre)}
+    .visage .en{font-family:Inter,sans-serif;font-size:.68rem;color:var(--estompe);letter-spacing:.04em}
+
+    /* glossaire */
+    .outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 82%,transparent);padding:1.4rem 0}
+    .cherche{
+      width:100%;padding:.85rem 1.2rem;border-radius:999px;
+      background:#fff;border:1px solid var(--jour-bord);
+      color:var(--encre);font-family:'Cormorant Garamond',serif;font-size:1.12rem;outline:none;
+      transition:border-color .2s ease;
+    }
+    .cherche::placeholder{color:var(--estompe);font-style:italic}
+    .cherche:focus{border-color:var(--jour-ligne)}
+    .filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}
+    .filtre{
+      font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      padding:.4rem .85rem;border-radius:999px;cursor:pointer;
+      color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent;
+      transition:all .18s ease;
+    }
+    .filtre:hover{border-color:var(--jour-ligne);color:var(--encre)}
+    .filtre.actif{color:#141005;background:linear-gradient(135deg,var(--or-vif),#d9b054);border-color:transparent;font-weight:600}
+    .compteur{text-align:center;color:var(--estompe);font-size:.98rem;font-style:italic;margin:.7rem 0 0}
+    .lettre{font-size:1.5rem;color:var(--or-sombre);margin:2.2rem 0 .6rem;font-weight:500;border-bottom:1px solid rgba(163,120,31,.25);padding-bottom:.2rem}
+    .terme{padding:1.15rem 1.25rem;border-radius:14px;margin-bottom:.65rem;transition:border-color .2s ease}
+    .terme:hover{border-color:var(--jour-ligne)}
+    .terme .ligne1{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .terme .fr{font-size:1.32rem;font-weight:600;color:var(--encre)}
+    .terme .en{
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.02em;
+      color:var(--or-profond);border:1px solid var(--jour-ligne);
+      padding:.14rem .6rem;border-radius:999px;background:rgba(163,120,31,.07);
+      font-style:normal;white-space:nowrap;
+    }
+    .terme .def{margin:0;color:var(--encre-douce);font-size:1.08rem}
+    .terme .src{margin:.45rem 0 0;font-size:.92rem;color:var(--estompe);font-style:italic}
+    .rien{text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}
+
+    /* navigation de fin de page */
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a,.suite span{
+      font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;
+      color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease;
+    }
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    .suite span{opacity:.5;cursor:default}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+
+    /* pont vers le site jumeau */
+    .pont{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+      text-align:center;
+    }
+    .pont p{margin:0;color:var(--encre-douce);font-size:1.05rem}
+    .pont a{color:var(--or-profond);font-weight:600;text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .pont a:hover{color:var(--or-sombre)}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← Essence Regained</a>
+
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1>The path of <em>love</em></h1>
+      <p class="chapeau">Pink, gold, pomegranate — the faces of love, all the way to the inner Beloved.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+
+    <h2>Love is not an emotion</h2>
+    <p>
+      We speak of love as one feeling among others — a happy mood, an attachment, a
+      surge that comes and goes. Almaas proposes something else: love is not primarily
+      what one <em>feels</em> about someone, it is a <em>presence</em> — as real and
+      palpable as a warmth in the chest, a density, a precise texture one can recognize
+      in the body, independent of its object.
+    </p>
+    <p>
+      This is his usual method: not to philosophize about love, but to let it show
+      itself as it is actually lived — and to discover that it does not show itself in
+      only one way. Love has colors. Almaas distinguishes three, within the register of
+      personal love, the love lived between two beings: pink, melting gold,
+      pomegranate. Each has its own flavor, its function, its distortions — and each
+      deserves to be recognized on its own terms, without being confused with the other
+      two.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>The three colors of personal love</h2>
+    <p>
+      These three qualities are not opposed to one another and form no hierarchy: they
+      follow one another, blend, and return at different moments within the same
+      relationship.
+    </p>
+
+    <div class="visages" aria-label="The three colors of personal love">
+      <div class="visage"><div class="teinte" style="color:#e0879b;background:#e0879b"></div><div class="nom">Pink</div><div class="en">Pink Love — appreciation</div></div>
+      <div class="visage"><div class="teinte" style="color:#e8c97a;background:#e8c97a"></div><div class="nom">Melting Gold</div><div class="en">Merging Gold — fusion</div></div>
+      <div class="visage"><div class="teinte" style="color:#a5323f;background:#a5323f"></div><div class="nom">Pomegranate</div><div class="en">Pomegranate — passion</div></div>
+    </div>
+
+    <div class="facette">
+      <h2><span class="num">Pink</span>The appreciation that loves without need</h2>
+      <p>
+        This is the simplest sweetness to recognize: the pure pleasure of seeing the
+        other, of appreciating what they are, wanting nothing more. A tenderness that
+        is not hungry — it does not seek to fill a lack, it is content to savor the
+        singular beauty of the person loved. Almaas compares it to an almost childlike
+        sweetness: light, sugary, weightless.
+      </p>
+      <p>
+        It is also the least mature of the three when it stands alone: as long as it
+        depends on an idealized image of the other, it shatters at the first
+        disappointment. Its maturity comes when it widens into a love able to embrace
+        the other in their entirety — qualities and flaws alike — without the bond
+        breaking.
+      </p>
+    </div>
+
+    <div class="facette">
+      <h2><span class="num">Gold</span>The fusion that dissolves separation</h2>
+      <p>
+        Another flavor, more enveloping: the desire for closeness, to be pressed right
+        up against, to no longer feel the boundary between self and other. Directly
+        experienced, this quality has the texture of a golden, transparent, almost
+        syrupy nectar — it melts away the body's tensions and the sense of being
+        separate, without erasing who one is.
+      </p>
+      <p>
+        Almaas links this desire for fusion to life's earliest experience: the original
+        unity between the infant and the one who carries it. Every adult story of
+        fusion still bears its trace. But melting gold is not a regression: it is what
+        reveals itself when one stays present to the void of separation, instead of
+        hurrying to fill it.
+      </p>
+    </div>
+
+    <div class="facette">
+      <h2><span class="num">Pomegranate</span>The passion that consumes and unifies</h2>
+      <p>
+        The most intense of the three: a burning love that does not settle for drawing
+        near, but drives toward union through complete dissolution. Almaas names it
+        after the pomegranate fruit — dense, gorged, ready to burst. It is a passion
+        that consumes the boundaries of the self rather than working around them, and
+        that unifies precisely because it recoils from nothing it encounters.
+      </p>
+      <p>
+        It is also the most often held back: fear of its own intensity, old wounds
+        around desire, restrain the pomegranate before it can even unfold. To recover
+        it does not mean acting on it without measure: it means ceasing to fear it.
+      </p>
+    </div>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>Desire reclaimed</h2>
+    <p>
+      Spiritual tradition is often wary of desire: it is seen as the obstacle, the
+      thing to be tamed to reach a purer love. In <em>The Power of Divine Eros</em>,
+      written with his longtime collaborator Karen Johnson, Almaas takes the opposite
+      view: at their root, generous love and burning desire are not two rival forces.
+      They are one and the same energy — which the ego's self-centered experience has
+      split in two.
+    </p>
+    <p>
+      This book grew out of a seminar grounded, very concretely, in the body: an
+      attention brought to the center of the belly, seat of the instinctual energies —
+      of survival, sociability, sexuality. The central idea is summed up in an image
+      that Almaas and Johnson return to throughout the text: it is a matter of
+      <em>uniting the animal and the angel</em> — not denying our instinctual nature to
+      earn the sacred, but recognizing that desire, fully felt rather than acted out in
+      haste, is already the soul's own movement toward its truth.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>When love no longer has an object</h2>
+    <p>
+      The three colors above are lived between two beings: there is oneself, there is
+      the other, and love flows between them. In <em>Nondual Love</em>, Almaas
+      describes a different register — not a stronger love, but a love that no longer
+      needs a recipient. A sweetness, a goodness that is directed at nothing because it
+      already pervades everything, including the one who believes they are feeling it.
+    </p>
+    <p>
+      What most often prevents us from tasting it, Almaas says, is a quiet belief: that
+      there must be someone who <em>has</em> an experience, a separate "self" who owns
+      their love the way one owns a possession. As long as that belief holds, love
+      stays locked within the relationship between two. When it loosens, even for a
+      moment, love reveals itself as the very nature of what is — with no subject who
+      loves, no object loved, and yet nothing is missing.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>The Inner Beloved</h2>
+    <p>
+      One last turn of the path remains, perhaps the oldest: that of the mystics, of
+      Sufi poets like Rumi, for whom all human love is never more than the reflection
+      of a vaster love, addressed — at bottom — to a single Beloved. In <em>The Inner
+      Beloved</em>, Almaas takes up this devotional path of the heart and retraces it
+      with the same demand for direct experience that runs through his entire body of
+      work.
+    </p>
+    <p>
+      The ordinary heart, he says, loves in a kind of "polygamy": scattered among
+      multiple objects — people, things, ideals — never finding complete satisfaction.
+      This is not a flaw to correct: it is the starting point of a path. Little by
+      little, as the heart strips away its successive attachments — what Almaas calls
+      the poverty of the heart — and stays faithful to what it truly loves, without the
+      mind imposing a direction, it comes to recognize that a single love has always
+      been there, beneath all the others: that of the inner Beloved. Not an outward
+      figure to worship, but the most intimate nature of what we are — recognized, at
+      last, as worthy of love.
+    </p>
+
+    <div class="pont">
+      <p>
+        These texts lend themselves to longer, more embodied treatments: the page
+        <a href="https://lemiroirinterieur.fr/en/diamant-amour.html">"The Diamond of Love"</a>,
+        on the sister site devoted to the enneagram, explores them in detail.
+      </p>
+    </div>
+
+    <div class="exploration">
+      <div class="etiquette">Exploration</div>
+      <h2>Three loves, three colors</h2>
+      <p>
+        Think back to three loves in your life — it doesn't matter whether they lasted
+        a day or several decades, whether they concern a person, a place, a work.
+      </p>
+      <ol>
+        <li>For each, let the sensation come, more than the memory: was it light and
+        appreciative — more pink? Enveloping, fusional — more gold? Intense,
+        devouring — more pomegranate?</li>
+        <li>The same love may have changed color over time, or blended several at
+        once: simply note it, without trying to decide.</li>
+        <li>None of the three colors is superior to the others. The question is not
+        which one you succeeded at best — but which you recognize most easily, and
+        which still feels, for now, more foreign.</li>
+      </ol>
+    </div>
+
+    <p class="glossnote" style="margin-top:1.6rem">
+      Terms on this page in the <a href="glossaire.html">bilingual glossary</a>: Pink
+      Love <em>(amour rose)</em>, Merging Gold Love <em>(amour or fusionnel)</em>,
+      Pomegranate / Passionate Love <em>(amour grenade)</em>, divine eros
+      <em>(éros divin)</em>, the Beloved <em>(Bien-aimé)</em>.
+    </p>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="index.html">← Essence Regained</a>
+      <a class="dorée" href="lessence.html">The question of essence →</a>
+    </nav>
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The man</title>
+  <meta name="description" content="Hameed Ali, known as A.H. Almaas: born in Kuwait, trained in physics, transformed by his meeting with Claudio Naranjo in Berkeley in 1971 — the story of a body of work devoted to essence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* zone nuit */
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      /* zone jour */
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--encre-estompe:#84897f;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;
+      background:var(--jour-bg);font-size:1.13rem;
+    }
+    .voile{max-width:44rem;margin:0 auto;padding:0 1.4rem}
+    .voile--large{max-width:72rem}
+    .voile--gloss{max-width:52rem}
+    .contenu{padding-bottom:4rem}
+
+    /* ================= ZONE NUIT ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+      padding-bottom:2.4rem;
+    }
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:34rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .num-etape{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;color:var(--or);text-transform:uppercase}
+    .nuit .exergue{border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:3.6rem 0 1.4rem;margin:2.4rem 0 0}
+    .nuit .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .nuit .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .nuit .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= ZONE JOUR (lecture) ================= */
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .contenu .exergue{
+      margin:2.6rem 0;padding:1.6rem 1.8rem;border-left:2px solid var(--or-sombre);
+      background:rgba(163,120,31,.06);border-radius:0 14px 14px 0;
+    }
+    .contenu .exergue blockquote{margin:0;font-size:1.28rem;font-style:italic;color:var(--encre-douce);line-height:1.55}
+    .contenu .exergue .source{display:block;margin-top:.7rem;font-size:.95rem;font-style:normal;color:var(--estompe)}
+    .glossnote{font-size:1rem;color:var(--estompe);font-style:italic}
+    .glossnote a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .glossnote a:hover{color:var(--or-sombre)}
+
+    /* cartes génériques */
+    .facette,.halte,.terme,.visage{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+    }
+    .facette{margin:1.4rem 0;padding:1.35rem 1.5rem;border-radius:14px}
+    .facette h2{margin:0 0 .45rem;font-weight:600;font-size:1.32rem;color:var(--or-profond);display:flex;align-items:baseline;gap:.6rem}
+    .facette h2 .num{font-family:Inter,sans-serif;font-size:.72rem;color:var(--estompe);letter-spacing:.1em}
+    .facette p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .facette p + p{margin-top:.7rem}
+    .facette .lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .facette .lien:hover{color:var(--or-sombre)}
+
+    .avertissement,.conseil,.exploration{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+    }
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .conseil{color:var(--encre-douce);font-size:1.06rem}
+    .conseil strong{color:var(--encre)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.5rem}
+    .exploration h2{margin:.1rem 0 .7rem;font-size:1.4rem;color:var(--encre)}
+    .exploration p{color:var(--encre-douce);font-size:1.06rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.3rem;color:var(--encre-douce);font-size:1.06rem}
+    .exploration li{margin-bottom:.55rem}
+
+    /* frise biographique */
+    .frise{margin:2.4rem 0;padding-left:1.4rem;border-left:1px solid rgba(163,120,31,.35)}
+    .jalon{position:relative;margin-bottom:1.5rem}
+    .jalon::before{
+      content:"";position:absolute;left:-1.75rem;top:.5rem;width:.7rem;height:.7rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.15);
+    }
+    .jalon .quand{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--or-profond);text-transform:uppercase}
+    .jalon .quoi{color:var(--encre-douce);font-size:1.06rem}
+
+    /* sentier du chemin */
+    .sentier{margin:2.6rem 0 0;padding-left:1.7rem;border-left:1px solid rgba(163,120,31,.32)}
+    .halte{position:relative;margin-bottom:1.1rem;display:block;text-decoration:none;
+      padding:1.2rem 1.35rem;border-radius:14px;transition:all .2s ease;color:inherit}
+    a.halte:hover{border-color:var(--jour-ligne);transform:translateX(3px)}
+    .halte::before{
+      content:"";position:absolute;left:-2.15rem;top:1.55rem;width:.72rem;height:.72rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);
+    }
+    a.halte::before{background:rgba(163,120,31,.5);box-shadow:0 0 8px rgba(163,120,31,.3)}
+    .halte .entete{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .halte .num{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--or-profond)}
+    .halte h2{margin:0;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .halte .bientot{
+      margin-left:auto;font-family:Inter,sans-serif;font-size:.6rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--estompe);border:1px solid var(--jour-bord);
+      padding:.16rem .5rem;border-radius:999px;
+    }
+    .halte p{margin:0;color:var(--encre-douce);font-size:1.04rem}
+    .halte .source{margin-top:.45rem;font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    /* visages colorés */
+    .visages{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.7rem;margin:1.6rem 0 1.2rem}
+    .visage{padding:1rem 1.1rem;border-radius:12px;text-align:center}
+    .visage .teinte{width:.85rem;height:.85rem;border-radius:50%;margin:0 auto .5rem;box-shadow:0 0 10px currentColor}
+    .visage .nom{font-weight:600;font-size:1.08rem;color:var(--encre)}
+    .visage .en{font-family:Inter,sans-serif;font-size:.68rem;color:var(--estompe);letter-spacing:.04em}
+
+    /* glossaire */
+    .outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 82%,transparent);padding:1.4rem 0}
+    .cherche{
+      width:100%;padding:.85rem 1.2rem;border-radius:999px;
+      background:#fff;border:1px solid var(--jour-bord);
+      color:var(--encre);font-family:'Cormorant Garamond',serif;font-size:1.12rem;outline:none;
+      transition:border-color .2s ease;
+    }
+    .cherche::placeholder{color:var(--estompe);font-style:italic}
+    .cherche:focus{border-color:var(--jour-ligne)}
+    .filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}
+    .filtre{
+      font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      padding:.4rem .85rem;border-radius:999px;cursor:pointer;
+      color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent;
+      transition:all .18s ease;
+    }
+    .filtre:hover{border-color:var(--jour-ligne);color:var(--encre)}
+    .filtre.actif{color:#141005;background:linear-gradient(135deg,var(--or-vif),#d9b054);border-color:transparent;font-weight:600}
+    .compteur{text-align:center;color:var(--estompe);font-size:.98rem;font-style:italic;margin:.7rem 0 0}
+    .lettre{font-size:1.5rem;color:var(--or-sombre);margin:2.2rem 0 .6rem;font-weight:500;border-bottom:1px solid rgba(163,120,31,.25);padding-bottom:.2rem}
+    .terme{padding:1.15rem 1.25rem;border-radius:14px;margin-bottom:.65rem;transition:border-color .2s ease}
+    .terme:hover{border-color:var(--jour-ligne)}
+    .terme .ligne1{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .terme .fr{font-size:1.32rem;font-weight:600;color:var(--encre)}
+    .terme .en{
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.02em;
+      color:var(--or-profond);border:1px solid var(--jour-ligne);
+      padding:.14rem .6rem;border-radius:999px;background:rgba(163,120,31,.07);
+      font-style:normal;white-space:nowrap;
+    }
+    .terme .def{margin:0;color:var(--encre-douce);font-size:1.08rem}
+    .terme .src{margin:.45rem 0 0;font-size:.92rem;color:var(--estompe);font-style:italic}
+    .rien{text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}
+
+    /* navigation de fin de page */
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a,.suite span{
+      font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;
+      color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease;
+    }
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    .suite span{opacity:.5;cursor:default}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← Essence Regained</a>
+
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1>The Man</h1>
+      <p class="chapeau">Hameed Ali, known to the world as A.&nbsp;H.&nbsp;Almaas.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+
+
+    <p>
+      Behind the pen name stands a quiet man. <em>A.&nbsp;H.&nbsp;Almaas</em> is the writing signature
+      of <em>Hameed Ali</em>, born in Kuwait, who came to the United States to study
+      physics. His is a mind trained in the rigor of the sciences — and this is perhaps
+      why his spiritual work has that very particular quality: an almost experimental
+      precision applied to matters of the soul.
+    </p>
+
+    <h2>Berkeley, 1971 — the encounter</h2>
+    <p>
+      The turning point has a place and a date. In 1971, in Berkeley, the young physicist
+      joins a group led by the Chilean psychiatrist <em>Claudio Naranjo</em> — the SAT group,
+      &ldquo;Seekers After Truth.&rdquo; There, meditation, Gestalt therapy,
+      self-analysis in the line of Karen Horney, the enneagram map inherited
+      from Oscar Ichazo, and the work of the &ldquo;three centers&rdquo; drawn from Gurdjieff
+      all come together. Almaas will later say what he owes to Naranjo: the discovery
+      that psychological work and spiritual practice, far from opposing one another, can
+      support each other. This intuition becomes the heart of his entire body of work.
+    </p>
+
+    <h2>The birth of a body of work</h2>
+    <p>
+      In the years that follow, Hameed Ali explores, experiments, takes notes. With
+      <em>Karen Johnson</em>, his lifelong collaborator — and, in the very early days, Faisal
+      Muqaddam — he discovers, step by step, what will become the Diamond Approach: a path
+      in which the direct experience of essence works its way through modern
+      psychology. He begins teaching in 1976, in California and Colorado, then founds
+      the <em>Ridhwan</em> school in 1977 — an Arabic word he explains himself as something
+      like &ldquo;fulfilled,&rdquo; &ldquo;satisfied,&rdquo; and at the same time &ldquo;that which fulfills.&rdquo;
+    </p>
+
+    <div class="exergue">
+      <blockquote>
+        &ldquo;I am both a complete human being and the transcendent timeless truth of the spirit.&rdquo;
+        <span class="source">A.&nbsp;H.&nbsp;Almaas, foreword to John Davis's <em>The Diamond Approach</em> (2021)</span>
+      </blockquote>
+    </div>
+
+    <h2>The writer</h2>
+    <p>
+      In 1983, he defends a doctoral thesis in psychology — signed under his civil name,
+      Abdul-Hameed Ali — in which the foundations of his thinking are already taking shape:
+      the body, essence, and the way human experience is built. Then the books
+      come, under the name Almaas: <em>The Void</em> in 1986, <em>Essence</em>, <em>The Pearl
+      Beyond Price</em>… A body of work that today numbers in the dozens of volumes — the
+      <em>Diamond Heart</em>, <em>Diamond Mind</em>, and <em>Diamond Body</em> series, the great work of synthesis
+      <em>The Inner Journey Home</em>, the trilogy on love — much of which does not yet exist
+      in French. This is one of the reasons this site exists.
+    </p>
+
+    <div class="frise" aria-label="Chronological milestones">
+      <div class="jalon"><div class="quand">Birth</div><div class="quoi">In Kuwait. Departure for the United States, studies in physics.</div></div>
+      <div class="jalon"><div class="quand">1971</div><div class="quoi">Berkeley — Claudio Naranjo's SAT group: Gestalt, Horney, the enneagram, Gurdjieff.</div></div>
+      <div class="jalon"><div class="quand">1976</div><div class="quoi">Begins teaching in groups, California and Colorado.</div></div>
+      <div class="jalon"><div class="quand">1977</div><div class="quoi">Founding of the Ridhwan school, with Karen Johnson.</div></div>
+      <div class="jalon"><div class="quand">1983</div><div class="quoi">Doctoral thesis in psychology, under the name Abdul-Hameed Ali.</div></div>
+      <div class="jalon"><div class="quand">1986 →</div><div class="quoi">The books, under the name A.&nbsp;H.&nbsp;Almaas — a body of work still under way.</div></div>
+    </div>
+
+    <p>
+      The man still lives and teaches in Berkeley. His work, meanwhile, keeps growing —
+      the final volume of his trilogy on love appeared quite recently. This site
+      is affiliated with neither him nor his school: it is the independent tribute of
+      French-speaking readers to a body of work that places <em>the question of essence</em>
+      back at the center of inner life.
+    </p>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="lapproche.html">The Diamond Approach →</a>
+      <a href="glossaire.html">The bilingual glossary →</a>
+    </nav>
+
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Bilingual glossary — Essence Regained</title>
+  <meta name="description" content="The bilingual English-French glossary of A.H. Almaas's work: each original term, its translation, and its definition — essence, presence, holes, inquiry, Pearl, Brilliancy…">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* zone nuit */
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      /* zone jour */
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--encre-estompe:#84897f;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;
+      background:var(--jour-bg);font-size:1.13rem;
+    }
+    .voile{max-width:44rem;margin:0 auto;padding:0 1.4rem}
+    .voile--large{max-width:72rem}
+    .voile--gloss{max-width:52rem}
+    .contenu{padding-bottom:4rem}
+
+    /* ================= ZONE NUIT ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+      padding-bottom:2.4rem;
+    }
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:34rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .num-etape{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;color:var(--or);text-transform:uppercase}
+    .nuit .exergue{border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:3.6rem 0 1.4rem;margin:2.4rem 0 0}
+    .nuit .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .nuit .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .nuit .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= ZONE JOUR (lecture) ================= */
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .contenu .exergue{
+      margin:2.6rem 0;padding:1.6rem 1.8rem;border-left:2px solid var(--or-sombre);
+      background:rgba(163,120,31,.06);border-radius:0 14px 14px 0;
+    }
+    .contenu .exergue blockquote{margin:0;font-size:1.28rem;font-style:italic;color:var(--encre-douce);line-height:1.55}
+    .contenu .exergue .source{display:block;margin-top:.7rem;font-size:.95rem;font-style:normal;color:var(--estompe)}
+    .glossnote{font-size:1rem;color:var(--estompe);font-style:italic}
+    .glossnote a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .glossnote a:hover{color:var(--or-sombre)}
+
+    /* cartes génériques */
+    .facette,.halte,.terme,.visage{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+    }
+    .facette{margin:1.4rem 0;padding:1.35rem 1.5rem;border-radius:14px}
+    .facette h2{margin:0 0 .45rem;font-weight:600;font-size:1.32rem;color:var(--or-profond);display:flex;align-items:baseline;gap:.6rem}
+    .facette h2 .num{font-family:Inter,sans-serif;font-size:.72rem;color:var(--estompe);letter-spacing:.1em}
+    .facette p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .facette p + p{margin-top:.7rem}
+    .facette .lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .facette .lien:hover{color:var(--or-sombre)}
+
+    .avertissement,.conseil,.exploration{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+    }
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .conseil{color:var(--encre-douce);font-size:1.06rem}
+    .conseil strong{color:var(--encre)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.5rem}
+    .exploration h2{margin:.1rem 0 .7rem;font-size:1.4rem;color:var(--encre)}
+    .exploration p{color:var(--encre-douce);font-size:1.06rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.3rem;color:var(--encre-douce);font-size:1.06rem}
+    .exploration li{margin-bottom:.55rem}
+
+    /* frise biographique */
+    .frise{margin:2.4rem 0;padding-left:1.4rem;border-left:1px solid rgba(163,120,31,.35)}
+    .jalon{position:relative;margin-bottom:1.5rem}
+    .jalon::before{
+      content:"";position:absolute;left:-1.75rem;top:.5rem;width:.7rem;height:.7rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.15);
+    }
+    .jalon .quand{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--or-profond);text-transform:uppercase}
+    .jalon .quoi{color:var(--encre-douce);font-size:1.06rem}
+
+    /* sentier du chemin */
+    .sentier{margin:2.6rem 0 0;padding-left:1.7rem;border-left:1px solid rgba(163,120,31,.32)}
+    .halte{position:relative;margin-bottom:1.1rem;display:block;text-decoration:none;
+      padding:1.2rem 1.35rem;border-radius:14px;transition:all .2s ease;color:inherit}
+    a.halte:hover{border-color:var(--jour-ligne);transform:translateX(3px)}
+    .halte::before{
+      content:"";position:absolute;left:-2.15rem;top:1.55rem;width:.72rem;height:.72rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);
+    }
+    a.halte::before{background:rgba(163,120,31,.5);box-shadow:0 0 8px rgba(163,120,31,.3)}
+    .halte .entete{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .halte .num{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--or-profond)}
+    .halte h2{margin:0;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .halte .bientot{
+      margin-left:auto;font-family:Inter,sans-serif;font-size:.6rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--estompe);border:1px solid var(--jour-bord);
+      padding:.16rem .5rem;border-radius:999px;
+    }
+    .halte p{margin:0;color:var(--encre-douce);font-size:1.04rem}
+    .halte .source{margin-top:.45rem;font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    /* visages colorés */
+    .visages{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.7rem;margin:1.6rem 0 1.2rem}
+    .visage{padding:1rem 1.1rem;border-radius:12px;text-align:center}
+    .visage .teinte{width:.85rem;height:.85rem;border-radius:50%;margin:0 auto .5rem;box-shadow:0 0 10px currentColor}
+    .visage .nom{font-weight:600;font-size:1.08rem;color:var(--encre)}
+    .visage .en{font-family:Inter,sans-serif;font-size:.68rem;color:var(--estompe);letter-spacing:.04em}
+
+    /* glossaire */
+    .outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 82%,transparent);padding:1.4rem 0}
+    .cherche{
+      width:100%;padding:.85rem 1.2rem;border-radius:999px;
+      background:#fff;border:1px solid var(--jour-bord);
+      color:var(--encre);font-family:'Cormorant Garamond',serif;font-size:1.12rem;outline:none;
+      transition:border-color .2s ease;
+    }
+    .cherche::placeholder{color:var(--estompe);font-style:italic}
+    .cherche:focus{border-color:var(--jour-ligne)}
+    .filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}
+    .filtre{
+      font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      padding:.4rem .85rem;border-radius:999px;cursor:pointer;
+      color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent;
+      transition:all .18s ease;
+    }
+    .filtre:hover{border-color:var(--jour-ligne);color:var(--encre)}
+    .filtre.actif{color:#141005;background:linear-gradient(135deg,var(--or-vif),#d9b054);border-color:transparent;font-weight:600}
+    .compteur{text-align:center;color:var(--estompe);font-size:.98rem;font-style:italic;margin:.7rem 0 0}
+    .lettre{font-size:1.5rem;color:var(--or-sombre);margin:2.2rem 0 .6rem;font-weight:500;border-bottom:1px solid rgba(163,120,31,.25);padding-bottom:.2rem}
+    .terme{padding:1.15rem 1.25rem;border-radius:14px;margin-bottom:.65rem;transition:border-color .2s ease}
+    .terme:hover{border-color:var(--jour-ligne)}
+    .terme .ligne1{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .terme .fr{font-size:1.32rem;font-weight:600;color:var(--encre)}
+    .terme .en{
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.02em;
+      color:var(--or-profond);border:1px solid var(--jour-ligne);
+      padding:.14rem .6rem;border-radius:999px;background:rgba(163,120,31,.07);
+      font-style:normal;white-space:nowrap;
+    }
+    .terme .def{margin:0;color:var(--encre-douce);font-size:1.08rem}
+    .terme .src{margin:.45rem 0 0;font-size:.92rem;color:var(--estompe);font-style:italic}
+    .rien{text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}
+
+    /* navigation de fin de page */
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a,.suite span{
+      font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;
+      color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease;
+    }
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    .suite span{opacity:.5;cursor:default}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile voile--gloss">
+    <a class="retour" href="index.html">← Essence Regained</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1>Bilingual <em>glossary</em></h1>
+      <p class="chapeau">
+        The words of Almaas, from English to French. For each notion&nbsp;:
+        the original English term, <strong>its French equivalent</strong>, and a faithful
+        definition, in our own words.
+      </p>
+    </header>
+  </div></div>
+
+  <div class="voile voile--gloss contenu">
+
+
+    <div class="outils">
+      <input id="cherche" class="cherche" type="search"
+             placeholder="Search for a term… (English or French: essence, holes, Pearl, surmoi…)"
+             aria-label="Search the glossary">
+      <div class="filtres" id="filtres" role="group" aria-label="Filtrer par thème"></div>
+      <p class="compteur" id="compteur"></p>
+    </div>
+
+    <div id="liste"></div>
+    <p class="rien" id="rien" hidden>No term matches — try another word.</p>
+
+    
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+
+  <script>
+  const TERMES = [{"fr": "Autonomie (véritable)", "en": "Autonomy", "def": "To be distinguished from egoic independence, which consists of doing as one pleases or resisting outside constraints: true autonomy is the freedom of Being, the full presence of the Personal Essence, which needs no opposition to others in order to exist.", "theme": "fondations", "sources": ["The Pearl Beyond Price"]}, {"fr": "Narcissisme fondamental (le)", "en": "Basic / Normal Narcissism", "def": "Not merely the clinical pathology described in psychiatry, but the ordinary, universal split between everyday identity and essential presence — a wound that touches everyone, including the psychologically well-balanced. The priority work of self-realization is to loosen its most central form, the one bearing on alienation from Essential Identity itself.", "theme": "fondations", "sources": ["The Point of Existence"]}, {"fr": "Faute Fondamentale (la)", "en": "Basic Fault", "def": "A term borrowed from the psychoanalyst W. R. Bion and taken up by Almaas to name each person’s original, painful separation from Being. Perceiving it and passing fully through it, rather than avoiding it, is what makes an inner realization truly transformative.", "theme": "fondations", "sources": ["Diamond Heart V"]}, {"fr": "Confiance Fondamentale (la)", "en": "Basic Trust", "def": "A nonconceptual, preverbal trust that reality is fundamentally good and trustworthy, independent of circumstances. Forged in earliest infancy, its presence or absence conditions how readily later spiritual work can unfold.", "theme": "enneagramme", "sources": ["Facets of Unity"]}, {"fr": "Être (l')", "en": "Being", "def": "A synonym, in Almaas’s usage, for true nature or ultimate essence: what is perceived when consciousness is no longer mediated by mental representations. Being is intrinsically characterized by openness and manifests through a multitude of qualities, or “aspects,” according to the moment.", "theme": "fondations", "sources": ["The Void", "Diamond Heart III"]}, {"fr": "Être réel (l')", "en": "Being Real / Realness", "def": "The fact of coinciding exactly with what one is actually experiencing, without playing a role or conforming to a self-image inherited from childhood or from one’s parents. It is, for Almaas, the basic condition of all practice: True Nature reveals itself spontaneously the moment one stops interfering with present experience.", "theme": "pratique", "sources": ["The Unfolding Now"]}, {"fr": "Dimensions sans forme (les)", "en": "Boundless Dimensions", "def": "Once Essence is recognized not merely as the ground of the individual soul but as the ground of all things, it reveals itself unfolding into several boundless, coemergent dimensions: Divine Love/Light, Being and Knowledge, nonconceptual Awareness, Logos and creative dynamism, and the Absolute/emptiness as ultimate ground.", "theme": "dimensions", "sources": ["The Inner Journey Home", "Nondual Love"]}, {"fr": "Brillance (la)", "en": "Brilliancy", "def": "A pure, undifferentiated essential presence that is intelligence itself directly experienced, to be distinguished from mere “brightness,” a quality simply attributed to something else. Almaas describes it as a fluid, luminous substance containing, in fused form, all the other qualities of Being — hence its earlier name, “Essence-of-Essence.”", "theme": "dimensions", "sources": ["Brilliancy"]}, {"fr": "Coémergence (la)", "en": "Coemergence", "def": "A nondual realization in which embodied personal presence (the soul) and the witnessing immensity of the Absolute arise together, simultaneously, with neither hierarchy nor merging of one into the other: each remains fully itself even as the other is fully present.", "theme": "dimensions", "sources": ["Luminous Night's Journey"]}, {"fr": "Compassion (aspect essentiel)", "en": "Compassion", "def": "A quality of Being that allows suffering — one’s own as much as another’s — to be met without judgment or rejection, like a warmth that seeks not to fix but simply to be present. It is one of the principal essential aspects the personality covers over as it builds its defenses.", "theme": "fondations", "sources": ["Essence", "Diamond Heart I"]}, {"fr": "Noyau / Coquille (le)", "en": "Core / Shell", "def": "The shell is the outer layer of the character fixation — traits, defenses, attitudes; the core is what it protects and conceals, namely the corresponding Holy Idea. Inner work consists of piercing the shell without violence in order to regain contact with the core.", "theme": "enneagramme", "sources": ["Keys to the Enneagram"]}, {"fr": "Désir de cessation (le)", "en": "Death Wish", "def": "As love for the Beloved intensifies, the heart may feel a desire to “be done with it,” to disappear into him. Almaas insists this movement has nothing suicidal or depressive about it: it is the soul’s desire to stop distinguishing itself from its own source — the consummation of a love story rather than its ending.", "theme": "amour", "sources": ["The Inner Beloved"]}, {"fr": "Vacuité déficiente (la)", "en": "Deficient Emptiness", "def": "A painful subjective experience of lack, emptiness, or unreality, studied in psychoanalysis in connection with narcissistic disorders and borderline states. It results from the weakening of the self’s boundaries and its relations to internal figures, and is sharply distinct from Space, which is a positive, fertile quality of Being.", "theme": "fondations", "sources": ["The Void"]}, {"fr": "Approche Diamant (l')", "en": "Diamond Approach", "def": "The name Almaas gives to his method of inner exploration, which combines the psychological investigation of personality structures with a direct opening to the presence of Being. The image of the diamond points to the precision of a perception able to cut through the layers of the ego without shattering, and to the lasting value of what it reveals.", "theme": "fondations", "sources": ["Diamond Heart I", "The Pearl Beyond Price"]}, {"fr": "Guidance Diamant (la)", "en": "Diamond Guidance", "def": "A “diamond vehicle” in which all the essential aspects are present but differentiated and organized into a structure of discernment, often experienced as a scintillating presence at the center of the forehead. It functions as an inner guide more precise than any outer guide, exactly attuned to the person’s present state, operating step by step without indicating any fixed destination.", "theme": "pratique", "sources": ["Spacecruiser Inquiry", "Keys to the Enneagram", "Luminous Night's Journey"]}, {"fr": "Véhicules diamant (les)", "en": "Diamond Vehicles", "def": "Structures of essential wisdom that arise over the course of the inner journey and carry consciousness toward a precise, objective understanding of one facet of true nature — compared by Almaas to multifaceted jewels, each one carrying a specific knowledge (the Diamond Guidance, Brilliancy, the stupa diamond...).", "theme": "dimensions", "sources": ["The Inner Journey Home", "Brilliancy", "Nondual Love"]}, {"fr": "Dilemme des limites (le)", "en": "Dilemma of Boundaries", "def": "The near-automatic belief in a sharp separation between self and world, which Almaas presents not as a fact but as a construction the personality maintains for itself, upheld more by habit than by real necessity.", "theme": "fondations", "sources": ["Diamond Heart III"]}, {"fr": "Éros divin (l')", "en": "Divine Eros", "def": "The idea that an open, generous, selfless love and a vibrant, passionate desire are not two opposed forces but one and the same reality, separated only by the ego-centered way the personality habitually lives out desire. Fully felt rather than impulsively acted upon, desire proves to be the very expression of the soul’s longing for its own truth.", "theme": "amour", "sources": ["The Power of Divine Eros"]}, {"fr": "Unité duelle (l')", "en": "Dual Unity", "def": "A concept borrowed from Margaret Mahler to designate the boundless, fused state between the infant and its primary maternal figure. In Almaas’s work, this state becomes the psychodynamic mold that shapes, for better and for worse, every later adult longing for loving merger.", "theme": "amour", "sources": ["Love Unveiled", "Essence and Sexuality"]}, {"fr": "Ego (l')", "en": "Ego", "def": "In Almaas’s usage, a term often employed as a near synonym for personality: the acquired psychic structure built up to negotiate with the drives, the environment, and then the superego, which progressively covers over Essence until the individual identifies with it exclusively.", "theme": "fondations", "sources": ["Work on the Superego", "Essence"]}, {"fr": "Idéal de l'ego (l')", "en": "Ego Ideal", "def": "A mental image the personality constructs of itself, or of what it ought to become, out of childhood intuitions and early conditioning — a facsimile that the personality mistakes for reality. It clumsily imitates the corresponding Holy Idea, the true vision the ego has lost.", "theme": "enneagramme", "sources": ["Keys to the Enneagram", "Facets of Unity"]}, {"fr": "Essence (l')", "en": "Essence", "def": "The true nature of the human being, that part directly conscious of existing — distinct from thought, emotion, intuition, or insight. Almaas defines it as identical to presence: a lived reality rather than a concept or a belief, fully accessible to the infant and then progressively covered over by the construction of the personality.", "theme": "fondations", "sources": ["Essence", "Diamond Heart I"]}, {"fr": "Aspects essentiels (les)", "en": "Essential Aspects / Facets of Essence", "def": "The many qualities or “colors” the presence of Being takes on according to the moment and the need — love, strength, will, joy, compassion, peace, value, space, and so on. Each aspect has its own trajectory of loss in childhood and rediscovery through inner work.", "theme": "fondations", "sources": ["Essence", "Diamond Heart I"]}, {"fr": "Quatre tournants (les)", "en": "Four Turnings", "def": "A retrospective framework, borrowed by way of image from the Buddhist Dharmachakra, that Almaas proposes for situating the successive developments of the Diamond Approach: the realization of individual consciousness, the nondual realization of the unity of Being, the realization of a “body” of pure consciousness, and then a reality that is neither dual nor nondual, in which the vision of totality opens.", "theme": "dimensions", "sources": ["Runaway Realization", "The Alchemy of Freedom", "The Diamond Approach (Davis)"]}, {"fr": "Non-interférence (la)", "en": "Hands Off / Noninterference", "def": "A central instruction of inquiry practice: do nothing to whatever arises in inner experience — an emotion, a sensation, a thought — whether pleasant or unpleasant, rather than pushing it away or holding onto it. One may act in the outer world, but not upon the experience itself.", "theme": "pratique", "sources": ["The Unfolding Now"]}, {"fr": "Environnement de soutien (l')", "en": "Holding Environment", "def": "A notion borrowed from Winnicott, designating the quality of the relational container offered to the child by those around it. The specific inadequacy of this environment, particular to each family configuration, shapes a particular specific difficulty for each enneatype.", "theme": "enneagramme", "sources": ["Facets of Unity"]}, {"fr": "Idée Sacrée (l')", "en": "Holy Idea", "def": "A direct, objective perception, free of egoic filtering, of one aspect of reality as it is. There are nine of them, one for each point of the Enneagram; their loss in childhood gives rise to the nine character fixations, and their mere rediscovery acts as a catalyst for inner transformation.", "theme": "enneagramme", "sources": ["Facets of Unity", "Keys to the Enneagram"]}, {"fr": "Perfection Sacrée (la)", "en": "Holy Perfection", "def": "The recognition that reality, exactly as it is at every moment, needs no correction — the opposite of the ego’s perfectionism, which ceaselessly measures the real against an absent ideal, thereby sustaining a permanent dissatisfaction.", "theme": "enneagramme", "sources": ["Facets of Unity"]}, {"fr": "Aspect idéalisé (l')", "en": "Idealized Aspect", "def": "A precise quality of Being that a given personality type unconsciously tries to imitate through its ego ideal, without ever matching it, since the ideal is only a mental image of it. Recognizing it as a directly accessible presence, rather than as a concept to attain, allows the fixation organized around it to loosen.", "theme": "enneagramme", "sources": ["Keys to the Enneagram", "Facets of Unity"]}, {"fr": "Inquiry (l')", "en": "Inquiry", "def": "The central practice of the Diamond Approach: an open, curious investigation of present experience — thoughts, sensations, emotions — pursued without a fixed goal, using the intellect, the heart, and the body together. It is not one technique among others but the spontaneous expression of the nature of Being seeking to reveal itself to itself.", "theme": "pratique", "sources": ["Spacecruiser Inquiry", "The Diamond Approach (Davis)", "Luminous Night's Journey"]}, {"fr": "Insight (vs Essence)", "en": "Insight", "def": "Insight is a punctual event of understanding, a flash of clarity, whereas Essence is a presence lived continuously. Insight can open the door to Essence but is not synonymous with it: one can understand intellectually without thereby inhabiting the corresponding presence.", "theme": "fondations", "sources": ["Essence"]}, {"fr": "Ipséité (l')", "en": "Ipseity / Selfhood", "def": "The deepest, most stripped-down quality of being-oneself, distinct from the constructed ego, which remains present even when consciousness identifies fully with the Absolute — a minimal, irreducible form of presence to oneself.", "theme": "dimensions", "sources": ["Luminous Night's Journey"]}, {"fr": "Joie (aspect essentiel)", "en": "Joy", "def": "A quality of Being experienced as a pure pleasure in existing, with no object or particular reason — to be distinguished from ordinary pleasure, always triggered by something. It is one of the essential aspects early childhood can lose when the environment fails to adequately support its spontaneous expression.", "theme": "fondations", "sources": ["Essence", "Spacecruiser Inquiry"]}, {"fr": "Lataif (les)", "en": "Lataif (Lataif-i-Khamsa)", "def": "A Sufi system of five subtle centers of the body — white, yellow, red, black, and green — to which Almaas refers in order to situate certain essential qualities and their own affective tonalities (joy, strength, trust, peace, benevolence). He occasionally relates them to the Indian chakras, while making clear that the Diamond Approach remains a distinct framework of its own.", "theme": "pratique", "sources": ["Spacecruiser Inquiry", "Keys to the Enneagram", "Essence and Sexuality"]}, {"fr": "Lumière du Jour Vivante (la)", "en": "Living Daylight", "def": "One of the first boundless dimensions of Being the soul encounters on its journey: a love not localized within the self but pervading all things, like a beneficent atmosphere. It is the grace necessary to the process of transformation, without itself being the goal.", "theme": "dimensions", "sources": ["Facets of Unity", "Nondual Love"]}, {"fr": "Logos (le)", "en": "Logos", "def": "A formal yet dynamic dimension of Being, perceived as the living, creative flow of the entire universe — related by Almaas to the Johannine Word, to Christ, and to the Sufi concept of Wahdat. Its realization completes the process of personalizing Essence by making it objective and universal.", "theme": "dimensions", "sources": ["The Pearl Beyond Price", "The Inner Journey Home"]}, {"fr": "Fusion (aspect essentiel)", "en": "Merging Essence", "def": "An essential aspect tied to the phase of non-differentiation between infant and mother (the “symbiotic phase”): a quality of presence that dissolves the sense of separation, to be recognized as an autonomous potential of Being rather than as a demand for actual merging contact with the maternal image with which it often remains associated in the unconscious.", "theme": "amour", "sources": ["Essence", "The Pearl Beyond Price"]}, {"fr": "Amour or (fusionnel doré)", "en": "Merging Gold Essence", "def": "An essential quality of love that dissolves the sense of separation without erasing the individual, described by Almaas as a golden, transparent, syrupy nectar that “melts” bodily tension and the rigidities of the self.", "theme": "amour", "sources": ["Love Unveiled", "Essence and Sexuality"]}, {"fr": "Conscience miroir (la)", "en": "Mirror-like Awareness", "def": "A primordial quality of the soul, capable of reflecting reality without distortion. Its gradual loss, through a lack of trust and defensive withdrawal in childhood, is presented by Almaas as the generic mechanism underlying the formation of the ego, whatever the personality type.", "theme": "fondations", "sources": ["Facets of Unity"]}, {"fr": "Fusion négative / positive (la)", "en": "Negative / Positive Merging", "def": "In the infant’s undifferentiated merged state with its mother, the child absorbs both the mother’s positive affects (love, contentment — positive merging) and her negative ones (frustration, anger — negative merging), without distinguishing that these are not its own. Almaas thereby explains how, to protect the positive merging, the adult may unconsciously repress other vital energies within close relationships.", "theme": "amour", "sources": ["Essence and Sexuality"]}, {"fr": "Constance d'objet (la)", "en": "Object Constancy", "def": "The capacity, acquired according to Mahler at around age three, to hold a stable, positive inner image of the mother — and of oneself — despite her physical absence or moments of frustration. Almaas uses it as a developmental marker for situating the emergence of the sense of being a separate individual.", "theme": "fondations", "sources": ["The Pearl Beyond Price", "Essence and Sexuality"]}, {"fr": "Théorie des relations d'objet (la)", "en": "Object Relations Theory", "def": "A psychoanalytic framework (Mahler, Kernberg, Jacobson) that Almaas adopts as a faithful description of personality development, while reformulating it: what this theory describes as the acquisition of a separate identity is, in his view, the construction of a mental self-image that in fact both masks and prepares the discovery of the Personal Essence.", "theme": "fondations", "sources": ["The Pearl Beyond Price", "Essence and Sexuality"]}, {"fr": "Amour grenade (passionné)", "en": "Passionate (Pomegranate) Love", "def": "An intense, burning quality of love that “consumes” and drives toward union through complete dissolution rather than gentle merging. Almaas relates it to a powerful energy, close to shakti, capable of infusing any emotion with heightened intensity.", "theme": "amour", "sources": ["Love Unveiled"]}, {"fr": "Paix (aspect essentiel)", "en": "Peace", "def": "A quality of Being experienced as a deep, unmoving calm, which is not the absence of agitation but a tranquil fullness independent of outer circumstances. It is one of the principal essential aspects Almaas describes as components of presence.", "theme": "fondations", "sources": ["Essence", "Spacecruiser Inquiry"]}, {"fr": "Perle / Essence Personnelle (la)", "en": "Pearl Beyond Price / Personal Essence", "def": "The essential aspect that carries the very quality of being a person, a real individual — experienced as a personal presence rather than as a mental structure. It is true individuality, not constructed by the ego, which resolves the apparent conflict between impersonal spiritual life and personal life embodied in the world.", "theme": "dimensions", "sources": ["The Pearl Beyond Price", "Essence"]}, {"fr": "Amour rose (l')", "en": "Personal (Pink) Love", "def": "Love experienced as the appreciation of a singular beauty in one particular person or thing — a personal, relational love, distinct from universal love, which embraces everything indiscriminately. Its full experience requires, according to Almaas, the opening of the heart center.", "theme": "amour", "sources": ["Love Unveiled"]}, {"fr": "Personnalité (la)", "en": "Personality", "def": "The acquired defensive structure, conditioned by the childhood environment, built to compensate for the progressive loss of contact with Essence. It operates through images, strategies, and representations rather than through direct presence, until the individual identifies with it as though it were his real identity.", "theme": "fondations", "sources": ["Diamond Heart I", "Essence"]}, {"fr": "Présence (la)", "en": "Presence", "def": "The direct, nonconceptual experience of “I am,” felt as a palpable quality of being rather than as a mere increase of awareness. Almaas defines it as identical to Essence: not an idea about oneself but the concrete experience of existing, here and now.", "theme": "fondations", "sources": ["Essence", "Diamond Heart I"]}, {"fr": "Réification (la)", "en": "Reification", "def": "A mental operation that turns a fluid, lived experience — a perception, a sensation, an emotion — into a fixed mental object, stored in memory and then reused as a filter for interpreting future experience. The work of inquiry consists in undoing this fixation to regain direct contact with present experience.", "theme": "pratique", "sources": ["The Unfolding Now"]}, {"fr": "Réalisation en cavale (la)", "en": "Runaway Realization", "def": "The central image of one of Almaas’s last books: inner realization as perpetual movement, never settled into a final state, which “runs away” from every attempt to capture it in a fixed view, experience, or belief.", "theme": "dimensions", "sources": ["Runaway Realization"]}, {"fr": "Âme (l')", "en": "Soul", "def": "The best term, in Almaas’s view, for what the human being really is: not a separate “self” that may or may not have a soul, but the living totality of interiority — a field of consciousness that includes both the ordinary self (mind, heart, will, lived body) and its spiritual depth, Essence.", "theme": "fondations", "sources": ["The Inner Journey Home", "Spacecruiser Inquiry"]}, {"fr": "Enfant de l'âme (l')", "en": "Soul Child", "def": "An early-childhood psychological structure, prior to the full settling-in of the character fixation, shaped by the ideal of the “heart point” type that precedes the final type in the Enneagram’s inner flow. Distinct from the more general “inner child” of mainstream psychology, since it is still intermingled with Essence and with instinctual drives.", "theme": "enneagramme", "sources": ["Keys to the Enneagram", "The Inner Journey Home"]}, {"fr": "Espace / Vide (l')", "en": "Space / Emptiness", "def": "A direct experiential quality of lightness, openness, and clarity that emerges when self-representations dissolve. It is neither an absence nor a lack but a positive, inherent facet of Being, not to be confused with the deficient emptiness felt by the suffering personality.", "theme": "fondations", "sources": ["The Void", "The Elixir of Enlightenment"]}, {"fr": "Difficulté spécifique (la)", "en": "Specific Difficulty", "def": "A painful emotional state that results, for each personality type, from the felt inadequacy of the holding environment in childhood — guilt for Point Eight, for instance, or the sense of being unworthy of love for Point Nine, regarded as the most fundamental difficulty of all.", "theme": "enneagramme", "sources": ["Facets of Unity"]}, {"fr": "Illusion spécifique (l')", "en": "Specific Illusion", "def": "A precise, mistaken belief, particular to each personality type, that settles in once the corresponding Holy Idea is lost from view. The illusion associated with Point Eight, for instance, is that of duality — the idea that separate objects exist, and that conflict is fundamentally inherent to reality.", "theme": "enneagramme", "sources": ["Facets of Unity"]}, {"fr": "Réaction spécifique (la)", "en": "Specific Reaction", "def": "The typical defensive strategy by which each personality type attempts to cope with its specific difficulty — blaming and taking revenge for Point Eight, for instance, or falling asleep and withdrawing for Point Nine. Once established, this reaction becomes an automatic pattern of functioning.", "theme": "enneagramme", "sources": ["Facets of Unity"]}, {"fr": "Force (aspect essentiel)", "en": "Strength", "def": "A quality of Being experienced as a stable, grounded energy that allows one to act and stand upright in existence without needing to simulate it through rigidity or defensive aggression. It is one of the essential aspects whose early loss shapes typical compensatory strategies.", "theme": "fondations", "sources": ["Essence", "Keys to the Enneagram"]}, {"fr": "Surmoi (le)", "en": "Superego", "def": "A coercive inner agency, the internalization of childhood’s punitive parental and social figures, which Almaas broadens to cover any rigid norm acting within us regardless of the actual situation — well beyond classical Freudian morality alone. This site also calls it the “inner judge.”", "theme": "fondations", "sources": ["Work on the Superego"]}, {"fr": "Absolu (l')", "en": "The Absolute", "def": "The ultimate, mysterious nature of reality, experienced by turns as emptiness, luminous darkness, boundless immensity, or indeterminate fullness. It is both the source and the destination of the inner journey, beyond any differentiated essential dimension.", "theme": "dimensions", "sources": ["Luminous Night's Journey", "The Point of Existence"]}, {"fr": "Bien-aimé intérieur (le)", "en": "The Beloved", "def": "A term of mystical and Sufi origin naming the ultimate nature of reality — mysterious, formless — which the heart recognizes as its true object of love once stripped of its ordinary attachments. It is not a personified figure but the Absolute itself: paradoxically, the closer one draws to it, the less it can be named.", "theme": "amour", "sources": ["The Inner Beloved", "Love Unveiled", "The Power of Divine Eros"]}, {"fr": "Point / Identité Essentielle (le)", "en": "The Point / Essential Identity", "def": "The most intimate core of presence and consciousness, experienced as a point of light within an infinite space, carrying the bare sense of “I am, here, now,” prior to any image or concept of self. It proves to be the individual expression, within the soul, of the Absolute itself.", "theme": "dimensions", "sources": ["The Point of Existence"]}, {"fr": "Théorie des trous (la)", "en": "Theory of Holes", "def": "A foundational teaching of the Diamond Approach: a “hole” is the felt absence of an essential quality one has lost awareness of — lost from sight, not lost forever. The personality fills this void with substitutes (images, strategies, compensatory behaviors); staying present to the hole rather than avoiding it opens the door to the missing quality’s return.", "theme": "fondations", "sources": ["Diamond Heart I", "Keys to the Enneagram"]}, {"fr": "Vue de la totalité (la)", "en": "View of Totality", "def": "The perspective that no view of reality is exclusive: all the possible views of existence — dual, nondual, theistic, egoic, essential — are valid expressions of total Being, none of which should be set up as the final truth.", "theme": "dimensions", "sources": ["Runaway Realization", "The Alchemy of Freedom"]}, {"fr": "Volonté (aspect essentiel)", "en": "Will", "def": "A quality of Being experienced as a supple, living, sustaining presence in the body — not to be confused with ordinary will understood as an effort to force a result, nor with its defensive counterfeit, rigidity (an “iron will”).", "theme": "fondations", "sources": ["Diamond Heart II", "Keys to the Enneagram"]}];
+  const THEMES = {"tous":"All","fondations":"Foundations","pratique":"Practice","enneagramme":"Enneagram","amour":"Love","dimensions":"Dimensions of Being"};
+
+  const $liste = document.getElementById('liste');
+  const $rien = document.getElementById('rien');
+  const $compteur = document.getElementById('compteur');
+  const $cherche = document.getElementById('cherche');
+  const $filtres = document.getElementById('filtres');
+
+  let theme = 'tous', requete = '';
+
+  function normalise(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  }
+  function lettreDe(t){
+    return normalise(t.en).replace(/^[^a-z]*/,'').charAt(0).toUpperCase() || '#';
+  }
+  function echappe(s){
+    const d=document.createElement('div'); d.textContent=s; return d.innerHTML;
+  }
+
+  Object.entries(THEMES).forEach(([cle, nom])=>{
+    const b=document.createElement('button');
+    b.className='filtre'+(cle==='tous'?' actif':'');
+    b.textContent=nom;
+    b.dataset.theme=cle;
+    b.addEventListener('click',()=>{
+      theme=cle;
+      document.querySelectorAll('.filtre').forEach(x=>x.classList.toggle('actif',x===b));
+      rend();
+    });
+    $filtres.appendChild(b);
+  });
+
+  function rend(){
+    const q=normalise(requete);
+    const vus=TERMES.filter(t=>{
+      if(theme!=='tous' && t.theme!==theme) return false;
+      if(!q) return true;
+      return normalise(t.fr).includes(q)||normalise(t.en).includes(q)||normalise(t.def).includes(q);
+    });
+    $liste.innerHTML='';
+    let lettre='';
+    vus.forEach(t=>{
+      const l=lettreDe(t);
+      if(l!==lettre){
+        lettre=l;
+        const h=document.createElement('div'); h.className='lettre'; h.textContent=l;
+        $liste.appendChild(h);
+      }
+      const d=document.createElement('article'); d.className='terme';
+      d.innerHTML='<div class="ligne1"><span class="fr">'+echappe(t.en)+'</span>'+
+                  '<span class="en" lang="fr">'+echappe(t.fr)+'</span></div>'+
+                  '<p class="def">'+echappe(t.def)+'</p>'+
+                  (t.sources&&t.sources.length?'<p class="src">→ '+echappe(t.sources.join(' · '))+'</p>':'');
+      $liste.appendChild(d);
+    });
+    $rien.hidden=vus.length>0;
+    $compteur.textContent=vus.length+' term'+(vus.length>1?'s':'')+(theme!=='tous'?' — '+THEMES[theme]:'')+(q?' for “'+requete+'”':'');
+  }
+
+  $cherche.addEventListener('input',()=>{requete=$cherche.value.trim();rend();});
+  rend();
+  </script>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>

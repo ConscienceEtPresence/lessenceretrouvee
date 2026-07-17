@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Étape I — Être où l'on est · L'essence retrouvée</title>
+  <meta name="description" content="Première étape du chemin : être où l'on est. Aimer le réel, découvrir la non-interférence (« ne touche à rien ») et déjouer le jugement comparatif — d'après The Unfolding Now d'A.H. Almaas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* zone nuit */
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      /* zone jour */
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--encre-estompe:#84897f;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;
+      background:var(--jour-bg);font-size:1.13rem;
+    }
+    .voile{max-width:44rem;margin:0 auto;padding:0 1.4rem}
+    .voile--large{max-width:72rem}
+    .voile--gloss{max-width:52rem}
+    .contenu{padding-bottom:4rem}
+
+    /* ================= ZONE NUIT ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+      padding-bottom:2.4rem;
+    }
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:34rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .num-etape{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;color:var(--or);text-transform:uppercase}
+    .nuit .exergue{border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:3.6rem 0 1.4rem;margin:2.4rem 0 0}
+    .nuit .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .nuit .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .nuit .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= ZONE JOUR (lecture) ================= */
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .contenu .exergue{
+      margin:2.6rem 0;padding:1.6rem 1.8rem;border-left:2px solid var(--or-sombre);
+      background:rgba(163,120,31,.06);border-radius:0 14px 14px 0;
+    }
+    .contenu .exergue blockquote{margin:0;font-size:1.28rem;font-style:italic;color:var(--encre-douce);line-height:1.55}
+    .contenu .exergue .source{display:block;margin-top:.7rem;font-size:.95rem;font-style:normal;color:var(--estompe)}
+    .glossnote{font-size:1rem;color:var(--estompe);font-style:italic}
+    .glossnote a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .glossnote a:hover{color:var(--or-sombre)}
+
+    /* cartes génériques */
+    .facette,.halte,.terme,.visage{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+    }
+    .facette{margin:1.4rem 0;padding:1.35rem 1.5rem;border-radius:14px}
+    .facette h2{margin:0 0 .45rem;font-weight:600;font-size:1.32rem;color:var(--or-profond);display:flex;align-items:baseline;gap:.6rem}
+    .facette h2 .num{font-family:Inter,sans-serif;font-size:.72rem;color:var(--estompe);letter-spacing:.1em}
+    .facette p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .facette p + p{margin-top:.7rem}
+    .facette .lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .facette .lien:hover{color:var(--or-sombre)}
+
+    .avertissement,.conseil,.exploration{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+    }
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .conseil{color:var(--encre-douce);font-size:1.06rem}
+    .conseil strong{color:var(--encre)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.5rem}
+    .exploration h2{margin:.1rem 0 .7rem;font-size:1.4rem;color:var(--encre)}
+    .exploration p{color:var(--encre-douce);font-size:1.06rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.3rem;color:var(--encre-douce);font-size:1.06rem}
+    .exploration li{margin-bottom:.55rem}
+
+    /* frise biographique */
+    .frise{margin:2.4rem 0;padding-left:1.4rem;border-left:1px solid rgba(163,120,31,.35)}
+    .jalon{position:relative;margin-bottom:1.5rem}
+    .jalon::before{
+      content:"";position:absolute;left:-1.75rem;top:.5rem;width:.7rem;height:.7rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.15);
+    }
+    .jalon .quand{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--or-profond);text-transform:uppercase}
+    .jalon .quoi{color:var(--encre-douce);font-size:1.06rem}
+
+    /* sentier du chemin */
+    .sentier{margin:2.6rem 0 0;padding-left:1.7rem;border-left:1px solid rgba(163,120,31,.32)}
+    .halte{position:relative;margin-bottom:1.1rem;display:block;text-decoration:none;
+      padding:1.2rem 1.35rem;border-radius:14px;transition:all .2s ease;color:inherit}
+    a.halte:hover{border-color:var(--jour-ligne);transform:translateX(3px)}
+    .halte::before{
+      content:"";position:absolute;left:-2.15rem;top:1.55rem;width:.72rem;height:.72rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);
+    }
+    a.halte::before{background:rgba(163,120,31,.5);box-shadow:0 0 8px rgba(163,120,31,.3)}
+    .halte .entete{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .halte .num{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--or-profond)}
+    .halte h2{margin:0;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .halte .bientot{
+      margin-left:auto;font-family:Inter,sans-serif;font-size:.6rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--estompe);border:1px solid var(--jour-bord);
+      padding:.16rem .5rem;border-radius:999px;
+    }
+    .halte p{margin:0;color:var(--encre-douce);font-size:1.04rem}
+    .halte .source{margin-top:.45rem;font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    /* visages colorés */
+    .visages{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.7rem;margin:1.6rem 0 1.2rem}
+    .visage{padding:1rem 1.1rem;border-radius:12px;text-align:center}
+    .visage .teinte{width:.85rem;height:.85rem;border-radius:50%;margin:0 auto .5rem;box-shadow:0 0 10px currentColor}
+    .visage .nom{font-weight:600;font-size:1.08rem;color:var(--encre)}
+    .visage .en{font-family:Inter,sans-serif;font-size:.68rem;color:var(--estompe);letter-spacing:.04em}
+
+    /* glossaire */
+    .outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 82%,transparent);padding:1.4rem 0}
+    .cherche{
+      width:100%;padding:.85rem 1.2rem;border-radius:999px;
+      background:#fff;border:1px solid var(--jour-bord);
+      color:var(--encre);font-family:'Cormorant Garamond',serif;font-size:1.12rem;outline:none;
+      transition:border-color .2s ease;
+    }
+    .cherche::placeholder{color:var(--estompe);font-style:italic}
+    .cherche:focus{border-color:var(--jour-ligne)}
+    .filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}
+    .filtre{
+      font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      padding:.4rem .85rem;border-radius:999px;cursor:pointer;
+      color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent;
+      transition:all .18s ease;
+    }
+    .filtre:hover{border-color:var(--jour-ligne);color:var(--encre)}
+    .filtre.actif{color:#141005;background:linear-gradient(135deg,var(--or-vif),#d9b054);border-color:transparent;font-weight:600}
+    .compteur{text-align:center;color:var(--estompe);font-size:.98rem;font-style:italic;margin:.7rem 0 0}
+    .lettre{font-size:1.5rem;color:var(--or-sombre);margin:2.2rem 0 .6rem;font-weight:500;border-bottom:1px solid rgba(163,120,31,.25);padding-bottom:.2rem}
+    .terme{padding:1.15rem 1.25rem;border-radius:14px;margin-bottom:.65rem;transition:border-color .2s ease}
+    .terme:hover{border-color:var(--jour-ligne)}
+    .terme .ligne1{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .terme .fr{font-size:1.32rem;font-weight:600;color:var(--encre)}
+    .terme .en{
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.02em;
+      color:var(--or-profond);border:1px solid var(--jour-ligne);
+      padding:.14rem .6rem;border-radius:999px;background:rgba(163,120,31,.07);
+      font-style:normal;white-space:nowrap;
+    }
+    .terme .def{margin:0;color:var(--encre-douce);font-size:1.08rem}
+    .terme .src{margin:.45rem 0 0;font-size:.92rem;color:var(--estompe);font-style:italic}
+    .rien{text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}
+
+    /* navigation de fin de page */
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a,.suite span{
+      font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;
+      color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease;
+    }
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    .suite span{opacity:.5;cursor:default}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="chemin.html">← Le chemin</a>
+
+    <header class="tete">
+      <div class="num-etape">Étape I</div>
+      <h1>Être où l'on est</h1>
+      <p class="chapeau">Le geste fondateur de tout le chemin — d'après <em>The Unfolding Now</em>.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+
+
+    <h2>Nous ne sommes presque jamais là</h2>
+    <p>
+      Regardez une journée ordinaire&nbsp;: combien de fois êtes-vous vraiment <em>dans</em> ce que
+      vous vivez&nbsp;? La plupart du temps, nous sommes ailleurs — dans ce qui devrait être,
+      dans ce qui manque, dans la version améliorée de nous-mêmes que nous espérons pour
+      plus tard. Et le plus surprenant, dit Almaas, c'est que la recherche spirituelle
+      elle-même devient souvent une manière de fuir&nbsp;: on court après des états, des
+      expériences, des sommets — c'est-à-dire, encore, après <em>autre chose que ce qui est là</em>.
+    </p>
+    <p>
+      La proposition de ce premier pas est déconcertante de simplicité&nbsp;:
+      <em>être où l'on est</em>. Pas où l'on voudrait être. Pas où l'on croit devoir être.
+      Où l'on est — dans cette fatigue, cette joie, cet ennui, cette inquiétude,
+      exactement telles qu'elles se donnent maintenant.
+    </p>
+
+    <div class="exergue">
+      <blockquote>
+        «&nbsp;La réalité n'est pas ce qui se reflète habituellement dans notre mental.&nbsp;»
+        <span class="source">A.&nbsp;H.&nbsp;Almaas, <em>The Unfolding Now</em>, ch. 1 — traduit par nos soins</span>
+      </blockquote>
+    </div>
+
+    <h2>Être réel</h2>
+    <p>
+      Être où l'on est commence par être <em>réel</em>&nbsp;: coïncider avec soi, sans jouer le
+      personnage — pas même le bon élève du chemin spirituel. Nous portons tous des images
+      héritées&nbsp;: celui qui tient bon, celle qui ne dérange pas, celui qui comprend vite.
+      Être réel, c'est remarquer le costume au moment où on l'enfile — et sentir ce qu'il y a
+      dessous, même si c'est plus fragile, plus flou, moins présentable. Ce qui est réel
+      n'a pas besoin d'être beau&nbsp;: il a besoin d'être <em>vrai</em>.
+    </p>
+
+    <h2>«&nbsp;Ne touche à rien&nbsp;» — la non-interférence</h2>
+    <p>
+      Vient alors l'instruction centrale, celle qu'Almaas place au cœur de la pratique&nbsp;:
+      <em>hands off</em> — ne touche pas à ton expérience. Quoi qu'il surgisse — tristesse,
+      irritation, vide, douceur — on ne le repousse pas, on ne le retient pas, on ne
+      l'améliore pas. On le laisse être, et on le regarde avec curiosité.
+    </p>
+    <p>
+      Attention au contresens&nbsp;: il ne s'agit pas de passivité dans la vie. Almaas prend
+      une image toute simple&nbsp;: si vous mordez dans un fruit gâté, recrachez-le — bien sûr.
+      Agir dans le monde reste libre et nécessaire. Ce qu'on cesse de manipuler, c'est
+      l'expérience intérieure&nbsp;: le goût de déception qui suit, l'agacement, le petit dégoût —
+      cela, on ne le chasse pas, on le laisse exister le temps qu'il se dise. La
+      non-interférence est un acte de confiance&nbsp;: laissée tranquille, l'expérience se
+      déploie d'elle-même et révèle ce qu'elle recouvre. Les taoïstes appelaient cela
+      <em>wu wei</em> — Almaas le redécouvre par la voie de l'expérience.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>Les deux voleurs de présence</h2>
+    <p>
+      Deux mécanismes, surtout, nous arrachent sans cesse à ce qui est. Le premier est le
+      <em>jugement comparatif</em>&nbsp;: cette règle intérieure qui mesure chaque instant à l'aune
+      d'un «&nbsp;mieux&nbsp;» — <em>ce n'est pas assez calme, pas assez profond, pas assez avancé</em>.
+      À l'instant où l'on compare, on a déjà quitté ce qui est. Le second est plus sombre&nbsp;:
+      la <em>haine de soi</em>, cette force qui s'attaque à ce que nous vivons et à ce que nous
+      sommes. Almaas y reconnaît un pouvoir détourné — la force d'être, retournée contre soi.
+      À ce stade, il ne s'agit pas de les vaincre&nbsp;: seulement d'apprendre à les <em>voir</em>
+      quand ils opèrent. Les voir, c'est déjà ne plus leur appartenir tout à fait.
+      (L'étape II leur consacrera tout un travail, avec le juge intérieur.)
+    </p>
+
+    <h2>Ce que ce premier pas ouvre</h2>
+    <p>
+      Être où l'on est paraît modeste. C'est pourtant le geste que tout le reste du chemin
+      ne fera qu'approfondir&nbsp;: c'est en étant exactement là que les couches se montrent —
+      le juge, les manques, puis les qualités de l'essence. Personne ne peut faire ce pas
+      à notre place, et aucun autre pas ne peut le remplacer.
+    </p>
+
+    <div class="exploration">
+      <div class="etiquette">Exploration — 15 minutes</div>
+      <h2>Où suis-je, maintenant&nbsp;?</h2>
+      <p>Dans l'esprit des «&nbsp;sessions d'exploration&nbsp;» du livre — à vivre par écrit, seul, sans se corriger&nbsp;:</p>
+      <ol>
+        <li>Posez-vous la question&nbsp;: <em>«&nbsp;Où suis-je, en ce moment&nbsp;?&nbsp;»</em> — et décrivez ce qui est vraiment là&nbsp;: sensations, humeur, tension, attente. Sans améliorer, sans dramatiser.</li>
+        <li>Remarquez chaque fois qu'une voix compare («&nbsp;je devrais être plus…&nbsp;») ou corrige. Notez-la telle quelle, puis revenez à ce qui est.</li>
+        <li>Pour finir&nbsp;: qu'est-ce qui change, dans l'expérience elle-même, du simple fait d'être restée avec elle sans y toucher&nbsp;?</li>
+      </ol>
+      <p>Quinze minutes d'écriture honnête suffisent. Il n'y a rien à réussir.</p>
+    </div>
+
+    <p class="glossnote" style="margin-top:1.6rem">
+      Termes de cette étape au <a href="glossaire.html">glossaire bilingue</a>&nbsp;: être réel <em>(being real)</em>,
+      non-interférence <em>(hands off)</em>, Nature Véritable <em>(True Nature)</em>, enquête intérieure <em>(inquiry)</em>.
+    </p>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="chemin.html">← Le chemin</a>
+      <a class="dorée" href="le-juge-interieur.html">Étape II — Le juge intérieur →</a>
+    </nav>
+
+    
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </div>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Step V — The Pearl · Essence Regained</title>
+  <meta name="description" content="Fifth step of the path: the Pearl. Becoming a true person — neither mask nor dissolution — after The Pearl Beyond Price by A.H. Almaas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* zone nuit */
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      /* zone jour */
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--encre-estompe:#84897f;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;
+      --jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{
+      margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;
+      background:var(--jour-bg);font-size:1.13rem;
+    }
+    .voile{max-width:44rem;margin:0 auto;padding:0 1.4rem}
+    .voile--large{max-width:72rem}
+    .voile--gloss{max-width:52rem}
+    .contenu{padding-bottom:4rem}
+
+    /* ================= ZONE NUIT ================= */
+    .nuit{
+      background:
+        radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),
+        radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),
+        var(--nuit-bg);
+      color:var(--nuit-texte);
+      padding-bottom:2.4rem;
+    }
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:34rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .num-etape{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;color:var(--or);text-transform:uppercase}
+    .nuit .exergue{border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:3.6rem 0 1.4rem;margin:2.4rem 0 0}
+    .nuit .exergue blockquote{margin:0 auto;max-width:36rem;font-size:clamp(1.35rem,3vw,1.7rem);font-style:italic;color:var(--nacre);line-height:1.5}
+    .nuit .exergue .source{display:block;margin-top:1rem;font-size:1rem;font-style:normal;color:var(--nuit-estompe);letter-spacing:.04em}
+    .nuit .exergue .source em{color:var(--nuit-doux)}
+
+    /* ================= ZONE JOUR (lecture) ================= */
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .contenu .exergue{
+      margin:2.6rem 0;padding:1.6rem 1.8rem;border-left:2px solid var(--or-sombre);
+      background:rgba(163,120,31,.06);border-radius:0 14px 14px 0;
+    }
+    .contenu .exergue blockquote{margin:0;font-size:1.28rem;font-style:italic;color:var(--encre-douce);line-height:1.55}
+    .contenu .exergue .source{display:block;margin-top:.7rem;font-size:.95rem;font-style:normal;color:var(--estompe)}
+    .glossnote{font-size:1rem;color:var(--estompe);font-style:italic}
+    .glossnote a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .glossnote a:hover{color:var(--or-sombre)}
+
+    /* cartes génériques */
+    .facette,.halte,.terme,.visage{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);
+    }
+    .facette{margin:1.4rem 0;padding:1.35rem 1.5rem;border-radius:14px}
+    .facette h2{margin:0 0 .45rem;font-weight:600;font-size:1.32rem;color:var(--or-profond);display:flex;align-items:baseline;gap:.6rem}
+    .facette h2 .num{font-family:Inter,sans-serif;font-size:.72rem;color:var(--estompe);letter-spacing:.1em}
+    .facette p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .facette p + p{margin-top:.7rem}
+    .facette .lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    .facette .lien:hover{color:var(--or-sombre)}
+
+    .avertissement,.conseil,.exploration{
+      margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;
+      border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06);
+    }
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .conseil{color:var(--encre-douce);font-size:1.06rem}
+    .conseil strong{color:var(--encre)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.5rem}
+    .exploration h2{margin:.1rem 0 .7rem;font-size:1.4rem;color:var(--encre)}
+    .exploration p{color:var(--encre-douce);font-size:1.06rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.3rem;color:var(--encre-douce);font-size:1.06rem}
+    .exploration li{margin-bottom:.55rem}
+
+    /* frise biographique */
+    .frise{margin:2.4rem 0;padding-left:1.4rem;border-left:1px solid rgba(163,120,31,.35)}
+    .jalon{position:relative;margin-bottom:1.5rem}
+    .jalon::before{
+      content:"";position:absolute;left:-1.75rem;top:.5rem;width:.7rem;height:.7rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.15);
+    }
+    .jalon .quand{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--or-profond);text-transform:uppercase}
+    .jalon .quoi{color:var(--encre-douce);font-size:1.06rem}
+
+    /* sentier du chemin */
+    .sentier{margin:2.6rem 0 0;padding-left:1.7rem;border-left:1px solid rgba(163,120,31,.32)}
+    .halte{position:relative;margin-bottom:1.1rem;display:block;text-decoration:none;
+      padding:1.2rem 1.35rem;border-radius:14px;transition:all .2s ease;color:inherit}
+    a.halte:hover{border-color:var(--jour-ligne);transform:translateX(3px)}
+    .halte::before{
+      content:"";position:absolute;left:-2.15rem;top:1.55rem;width:.72rem;height:.72rem;
+      transform:rotate(45deg);border:1px solid var(--or-sombre);background:rgba(163,120,31,.12);
+    }
+    a.halte::before{background:rgba(163,120,31,.5);box-shadow:0 0 8px rgba(163,120,31,.3)}
+    .halte .entete{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .halte .num{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.14em;color:var(--or-profond)}
+    .halte h2{margin:0;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .halte .bientot{
+      margin-left:auto;font-family:Inter,sans-serif;font-size:.6rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--estompe);border:1px solid var(--jour-bord);
+      padding:.16rem .5rem;border-radius:999px;
+    }
+    .halte p{margin:0;color:var(--encre-douce);font-size:1.04rem}
+    .halte .source{margin-top:.45rem;font-size:.92rem;color:var(--estompe);font-style:italic}
+
+    /* visages colorés */
+    .visages{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.7rem;margin:1.6rem 0 1.2rem}
+    .visage{padding:1rem 1.1rem;border-radius:12px;text-align:center}
+    .visage .teinte{width:.85rem;height:.85rem;border-radius:50%;margin:0 auto .5rem;box-shadow:0 0 10px currentColor}
+    .visage .nom{font-weight:600;font-size:1.08rem;color:var(--encre)}
+    .visage .en{font-family:Inter,sans-serif;font-size:.68rem;color:var(--estompe);letter-spacing:.04em}
+
+    /* glossaire */
+    .outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 82%,transparent);padding:1.4rem 0}
+    .cherche{
+      width:100%;padding:.85rem 1.2rem;border-radius:999px;
+      background:#fff;border:1px solid var(--jour-bord);
+      color:var(--encre);font-family:'Cormorant Garamond',serif;font-size:1.12rem;outline:none;
+      transition:border-color .2s ease;
+    }
+    .cherche::placeholder{color:var(--estompe);font-style:italic}
+    .cherche:focus{border-color:var(--jour-ligne)}
+    .filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}
+    .filtre{
+      font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      padding:.4rem .85rem;border-radius:999px;cursor:pointer;
+      color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent;
+      transition:all .18s ease;
+    }
+    .filtre:hover{border-color:var(--jour-ligne);color:var(--encre)}
+    .filtre.actif{color:#141005;background:linear-gradient(135deg,var(--or-vif),#d9b054);border-color:transparent;font-weight:600}
+    .compteur{text-align:center;color:var(--estompe);font-size:.98rem;font-style:italic;margin:.7rem 0 0}
+    .lettre{font-size:1.5rem;color:var(--or-sombre);margin:2.2rem 0 .6rem;font-weight:500;border-bottom:1px solid rgba(163,120,31,.25);padding-bottom:.2rem}
+    .terme{padding:1.15rem 1.25rem;border-radius:14px;margin-bottom:.65rem;transition:border-color .2s ease}
+    .terme:hover{border-color:var(--jour-ligne)}
+    .terme .ligne1{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.3rem}
+    .terme .fr{font-size:1.32rem;font-weight:600;color:var(--encre)}
+    .terme .en{
+      font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.02em;
+      color:var(--or-profond);border:1px solid var(--jour-ligne);
+      padding:.14rem .6rem;border-radius:999px;background:rgba(163,120,31,.07);
+      font-style:normal;white-space:nowrap;
+    }
+    .terme .def{margin:0;color:var(--encre-douce);font-size:1.08rem}
+    .terme .src{margin:.45rem 0 0;font-size:.92rem;color:var(--estompe);font-style:italic}
+    .rien{text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}
+
+    /* navigation de fin de page */
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a,.suite span{
+      font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;
+      color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease;
+    }
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    .suite span{opacity:.5;cursor:default}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="chemin.html">← The path</a>
+
+    <header class="tete">
+      <div class="num-etape">Step V</div>
+      <h1>The Pearl</h1>
+      <p class="chapeau">Becoming a true person — neither mask nor dissolution. After <em>The Pearl Beyond Price</em>.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+
+    <h2>A choice we believe we must make</h2>
+    <p>
+      Almost every tradition seems, at some point, to say the same thing:
+      to awaken, one must undo oneself. Let go of the character, the ambition,
+      the attachment to “I” — dissolve the person into a vaster reality.
+      And almost all of ordinary existence says the opposite: become someone,
+      build a life, love, work, matter to others. Almaas names these two poles
+      <em>the man of spirit</em> and <em>the man of the world</em>: one makes
+      impersonal truth the center of everything and subordinates — sometimes
+      denies — the very existence of a separate person; the other takes
+      personal life as an end in itself, never questioning what this living
+      person actually is.
+    </p>
+    <p>
+      Most of us live torn between the two without even noticing it: one half
+      dreaming of letting go of everything, one half clinging to a career,
+      a marriage, an image. Almaas — trained in physics before turning
+      inward — rejects this alternative as a false problem. For him, neither
+      camp is wrong: each holds half the truth, mistaken for the whole.
+    </p>
+
+    <div class="exergue">
+      <blockquote>
+        “The man of spirit has half the truth, and the man of the world
+        has the other half.”
+        <span class="source">A.&nbsp;H.&nbsp;Almaas, <em>The Pearl Beyond Price</em>, ch. 1</span>
+      </blockquote>
+    </div>
+
+    <h2>The false person</h2>
+    <p>
+      What makes the debate endless is that neither camp means the same
+      thing when it speaks of a “person.” What we spontaneously call our
+      individuality — our tastes, our roles, the image we hold of
+      ourselves — is not, for Almaas, the true person. It is the
+      <em>personality</em>: a stand-in built in childhood, made of
+      identifications with the figures around us, of strategies learned to
+      be seen, loved, kept safe. Object-relations psychology — Mahler,
+      Kernberg, Jacobson — has patiently described its fabrication; Almaas
+      reads it differently: what this psychology takes for the acquisition
+      of an identity is, he says, the construction of a mental self-image
+      that imitates a real presence, without ever being one.
+    </p>
+    <p>
+      This is why the renunciation of the man of spirit and the achievement
+      of the man of the world end up, without knowing it, defending or
+      fighting the very same thing: a costume. One can throw it away, one
+      can perfect it — either way, one still hasn't met the one wearing it.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>The Pearl</h2>
+    <p>
+      To this third term Almaas gives a precise name: the <em>Personal
+      Essence</em>, which he also calls the <em>Pearl</em> — the Pearl
+      Beyond Price. Neither the social mask of personality, nor the
+      dissolution promised by certain spiritual paths: a real individuality,
+      lived as a wholly personal presence, and yet anchored in Being itself
+      rather than in the images of the ego.
+    </p>
+    <p>
+      The image is not decorative. A pearl is born inside the oyster
+      because of an irritation: a grain of sand, a foreign body that should
+      never have been there. The oyster neither expels it nor ignores it:
+      it coats it, layer after layer, in its own living substance, until
+      the intrusion becomes an organic object, dense, precious — and above
+      all unique, since no pearl has exactly the same shape as another.
+      This is precisely, for Almaas, what can happen to childhood wounds,
+      to deficiencies, to the frictions that shaped our personality:
+      neither rejected nor denied, but passed through and digested, they
+      become the very substance of a true individuality — irreducible to
+      any other.
+    </p>
+    <p class="glossnote">
+      This is also why this site opens with a <a href="lessence.html">page on essence</a>:
+      the Pearl is not one aspect among others — it is the one that carries
+      the very experience of being someone.
+    </p>
+
+    <div class="respire">◆ ◆ ◆</div>
+
+    <h2>How it ripens</h2>
+    <p>
+      The Pearl is not cultivated by withdrawing from the world: it ripens
+      exactly where the personality was formed — in work, in love, in
+      ordinary bonds. Almaas insists: there is nothing to give up to find
+      it, contrary to what many classical paths promise. It is rather a
+      matter of looking deeply enough into what one is already pursuing —
+      dignity, competence, love, accomplishment — to recognize the real
+      truth that these aspirations clumsily approximate.
+    </p>
+    <p>
+      One of the most common confusions concerns <em>autonomy</em>. It gets
+      mistaken for the independence of the ego: doing what one wants,
+      resisting constraints, obeying no one. Almaas distinguishes it
+      clearly, through the example of one of his students: true autonomy
+      needs to oppose nothing and no one in order to exist. It is not a
+      reaction: it is simply the freedom of Being — the full presence of
+      the Personal Essence, as tranquil alone as in the presence of others.
+    </p>
+
+    <h2>A wider horizon</h2>
+    <p>
+      Almaas does not stop at the Pearl: once this individuality is well
+      established, the book describes how it opens by itself onto vaster,
+      impersonal dimensions of Being, up to what he calls the “Universal
+      Man” — a person become the individuated expression of a reality that
+      infinitely surpasses them. This summit is not a next stage to aim
+      for: it is simply what a sufficiently ripe Pearl eventually opens
+      onto by itself, effortlessly and without seeking it — a horizon this
+      path will meet again further on.
+    </p>
+
+    <div class="exploration">
+      <div class="etiquette">Exploration</div>
+      <h2>Playing a role, or being there</h2>
+      <p>Choose a recent relationship — a brief exchange is enough: a colleague, a friend, someone close to you.</p>
+      <ol>
+        <li>Notice a moment when you were <em>playing your character</em>:
+        the version of you prepared in advance, the one that knows what to
+        say, what role to hold, what image to maintain.</li>
+        <li>Notice, in the same relationship, a moment — even a brief one —
+        when you were <em>personally there</em>: without calculation,
+        without a prepared script, simply present to what was happening
+        and to who was in front of you.</li>
+        <li>Notice the felt difference in the body between the two: where
+        was the tension, where was the ease? This is not a difference in
+        behavior — often, from the outside, nothing shows. It is a
+        difference of presence.</li>
+      </ol>
+      <p>There is nothing to fix in what you find: the character is not a
+      fault, it is a starting point. It is not fought — one simply learns
+      to distinguish it from what it imitates.</p>
+    </div>
+
+    <p class="glossnote" style="margin-top:1.6rem">
+      Terms for this step in the <a href="glossaire.html">bilingual glossary</a>: Pearl / Personal Essence
+      <em>(Perle / Essence Personnelle)</em>, personality <em>(personnalité)</em>,
+      autonomy <em>(autonomie)</em>.
+    </p>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="les-visages-de-lessence.html">← Step IV</a>
+      <a class="dorée" href="le-point.html">Step VI — The Point →</a>
+    </nav>
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+  <script defer src="/assets/lang.js"></script>
+</body>
+</html>
