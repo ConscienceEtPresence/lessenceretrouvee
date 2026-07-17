@@ -1,30 +1,26 @@
 /* ============================================================
-   LANG.JS — Bascule FR/EN (L'essence retrouvée)
-   Pastille flottante en bas à gauche. Mémorise le choix.
-   Site FR à la racine, miroir EN sous /en/.
+   LANG.JS — Bascule FR/EN (L'essence retrouvée / Essence Regained)
+   Fonctionne à la racine d'un domaine OU dans un sous-dossier
+   (GitHub Pages projet). FR : .../page.html — EN : .../en/page.html
    ============================================================ */
 (function(){
   var KEY = 'er_lang';
-  var path = location.pathname;
-  var isEN = /^\/en(\/|$)/.test(path);
+  var segs = location.pathname.split('/');          // ex: ["","lessenceretrouvee","en","page.html"]
+  var file = segs.pop();                             // "page.html" ou ""
+  var isEN = segs[segs.length - 1] === 'en';
 
   function counterpartPath(){
-    var p;
-    if (isEN){
-      p = path.replace(/^\/en(\/|$)/, '/');
-    } else {
-      p = '/en' + (path === '/' ? '/' : path);
-    }
-    return p + location.search + location.hash;
+    var s = segs.slice();
+    if (isEN) s.pop(); else s.push('en');
+    return s.join('/') + '/' + file + location.search + location.hash;
   }
 
   /* Préférence mémorisée : appliquée uniquement sur les pages d'accueil */
   try {
     var pref = localStorage.getItem(KEY);
-    var atRoot = (path === '/' || path === '/index.html');
-    var atEnRoot = (path === '/en' || path === '/en/' || path === '/en/index.html');
-    if (pref === 'en' && atRoot){ location.replace('/en/'); return; }
-    if (pref === 'fr' && atEnRoot){ location.replace('/'); return; }
+    var atHome = (file === '' || file === 'index.html');
+    if (atHome && pref === 'en' && !isEN){ location.replace(counterpartPath()); return; }
+    if (atHome && pref === 'fr' && isEN){ location.replace(counterpartPath()); return; }
   } catch(e){}
 
   function choose(lang){
