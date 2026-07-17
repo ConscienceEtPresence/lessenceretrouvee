@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Thèmes du Cœur de Diamant — L'essence retrouvée</title>
+  <meta name="description" content="Entrer dans A.H. Almaas par les grands thèmes des cinq livres du Cœur de Diamant : vérité, compassion, trous, valeur, confiance, non-espoir, acceptation, maturité, vulnérabilité et vie vraie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;
+      --jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:54rem;margin:0 auto;padding:0 1.4rem}
+    .contenu{padding-bottom:4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,3rem);margin:.1rem 0 .35rem;color:#f4f7ff;line-height:1.12}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:38rem;margin:0 auto;color:var(--nuit-doux);font-size:1.16rem;text-align:center;font-style:italic}
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu h3{font-family:Inter,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-profond);margin:1rem 0 .25rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .methode,.atelier,.avertissement,.table-theme{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;
+      box-shadow:0 2px 10px rgba(35,44,74,.035);
+    }
+    .methode{margin:2rem 0;padding:1.35rem 1.5rem}
+    .methode ol{margin:.3rem 0 0;padding-left:1.25rem;color:var(--encre-douce)}
+    .methode li{margin:.45rem 0}
+    .table-theme{margin:1.6rem 0 2.2rem;padding:1rem 1.25rem}
+    .table-theme a{display:inline-block;margin:.25rem .55rem .25rem 0;font-size:1.02rem}
+    .atelier{position:relative;margin:1.15rem 0;padding:1.35rem 1.45rem 1.3rem 4.35rem}
+    .atelier .num{position:absolute;left:1.25rem;top:1.45rem;font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.12em;color:var(--or-profond)}
+    .atelier h2{margin:0 0 .25rem;font-weight:600;font-size:1.34rem;color:var(--encre)}
+    .atelier .source{margin:0 0 .9rem;font-size:.95rem;color:var(--estompe);font-style:italic}
+    .atelier p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .atelier p + p{margin-top:.7rem}
+    .atelier .question{margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(35,44,74,.08);color:var(--encre)}
+    .avertissement{margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-color:var(--jour-ligne);background:rgba(163,120,31,.06)}
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    @media (max-width:560px){
+      .atelier{padding:1.2rem 1.2rem 1.2rem 1.35rem}
+      .atelier .num{position:static;display:block;margin-bottom:.3rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1>Entrer par les <em>thèmes</em></h1>
+      <p class="chapeau">Le Cœur de Diamant comme série d'ateliers intérieurs : un thème vécu, une défense à voir, une qualité de l'Être à reconnaître.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+    <p>
+      En relisant les cinq volumes du <em>Cœur de Diamant</em>, une chose saute aux yeux&nbsp;:
+      Almaas ne transmet pas seulement des concepts. Il prend presque toujours un thème
+      humain très ordinaire — valeur, espoir, curiosité, maturité, vulnérabilité,
+      souffrance, vérité — et il le suit jusqu'à ce que le thème révèle sa racine dans
+      la personnalité, puis sa profondeur dans l'Essence.
+    </p>
+    <p>
+      Cette page sert donc d'entrée plus vivante dans le site. Elle ne résume pas tous
+      les chapitres, et elle ne remplace pas les livres. Elle montre plutôt la manière
+      d'Almaas&nbsp;: partir de ce que nous vivons, regarder comment l'ego le transforme en
+      stratégie, puis laisser l'expérience s'ouvrir vers une compréhension plus vraie.
+    </p>
+
+    <div class="methode">
+      <h2>Le geste pédagogique d'Almaas</h2>
+      <ol>
+        <li>Il part d'une situation reconnaissable&nbsp;: manque, attente, jugement, désir, peur, aspiration spirituelle.</li>
+        <li>Il montre le mouvement de la personnalité&nbsp;: compensation, défense, rejet du présent, idéal de soi.</li>
+        <li>Il fait apparaître la qualité cachée&nbsp;: valeur, confiance, volonté, compassion, présence, contact direct.</li>
+        <li>Il ramène à une pratique&nbsp;: rester avec l'expérience, ne pas conclure trop vite, aimer la vérité plus que le confort.</li>
+      </ol>
+    </div>
+
+    <div class="table-theme" aria-label="Accès rapide aux thèmes">
+      <a href="#verite">Vérité et compassion</a>
+      <a href="#trous">Les trous</a>
+      <a href="#valeur">Valeur</a>
+      <a href="#confiance">Confiance</a>
+      <a href="#curiosite">Curiosité</a>
+      <a href="#non-espoir">Non-espoir</a>
+      <a href="#volonte">Volonté</a>
+      <a href="#gouffre">Le gouffre</a>
+      <a href="#vulnerabilite">Vulnérabilité</a>
+      <a href="#maturite">Maturité</a>
+      <a href="#contact">Contact direct</a>
+      <a href="#vie-vraie">Vie vraie</a>
+    </div>
+
+    <article class="atelier" id="verite">
+      <div class="num">01</div>
+      <h2>Vérité et compassion</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant I</em>, chap. 7, “La vérité et la compassion”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On imagine souvent que la vérité intérieure doit être dure, presque chirurgicale&nbsp;: voir clair, se corriger, ne plus se raconter d'histoire.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Sans compassion, la vérité devient facilement un instrument du juge intérieur. On se force à voir, donc on se défend davantage. La compassion n'édulcore pas la vérité&nbsp;: elle crée le climat dans lequel l'âme ose regarder.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>La vérité devient une présence chaude, précise, libératrice. Elle ne sert plus à condamner la personnalité, mais à comprendre pourquoi elle s'est construite ainsi.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle vérité sur moi est-ce que je ne peux regarder que si elle est accueillie avec douceur&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="trous">
+      <div class="num">02</div>
+      <h2>Les trous</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant I</em>, chap. 2, “La Théorie des trous”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>Quand un manque apparaît, nous pensons qu'il faut le combler&nbsp;: être aimé, réussir, obtenir une réponse, trouver quelqu'un ou quelque chose qui fera disparaître le vide.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Le trou n'est pas seulement une absence psychologique. Il indique souvent une qualité essentielle perdue de vue&nbsp;: amour, valeur, force, volonté, soutien. La personnalité se forme autour de ces absences et tente de les remplir de l'extérieur.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>En restant présent au trou, on peut découvrir que le manque pointe vers la qualité même qu'il semble nier. Le vide devient une porte, non une preuve que quelque chose manque définitivement.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quand je sens un manque, quelle qualité suis-je en train de chercher au-dehors&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="valeur">
+      <div class="num">03</div>
+      <h2>Valeur</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant I</em>, chap. 6, “La Valeur”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>Nous croyons que la valeur dépend du regard reçu&nbsp;: être reconnu, désiré, utile, spécial, spirituel, intelligent, réussi.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>La recherche compulsive de confirmation peut masquer l'absence ressentie de valeur essentielle. Plus on essaie de prouver sa valeur, plus on reste lié au trou de dévalorisation.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>La valeur peut être ressentie comme une qualité de présence intrinsèque, non comme une médaille donnée par les autres. Elle soutient l'Essence personnelle et la dignité simple d'exister.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> qu'est-ce que je fais pour être confirmé, et qu'est-ce que cela me fait éviter de sentir&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="confiance">
+      <div class="num">04</div>
+      <h2>Confiance</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant I</em>, chap. 8, “La confiance”. En dialogue avec <em>Facettes de l'Unité</em> pour la confiance fondamentale.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On pense que faire confiance veut dire croire que tout va bien se passer, ou que la vie va satisfaire nos préférences.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>La confiance dont il parle est plus profonde qu'un optimisme. Elle touche la possibilité de se laisser porter par la réalité, même lorsque la personnalité ne contrôle pas le résultat.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>La confiance devient une détente ontologique&nbsp;: l'âme peut rester ouverte parce qu'elle commence à sentir que la réalité n'est pas fondamentalement hostile.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> où est-ce que je confonds confiance et garantie&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="curiosite">
+      <div class="num">05</div>
+      <h2>Curiosité</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant I</em>, chap. 16, “La curiosité”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On croit que la pratique doit être sérieuse, tendue vers un résultat&nbsp;: résoudre, comprendre, atteindre un état.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>La curiosité vraie n'est pas une collecte d'informations. Elle est le mouvement du cœur qui aime découvrir la vérité. Elle peut s'intéresser autant à la douleur qu'à la joie, parce qu'elle ne cherche pas d'abord le confort.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>L'inquiry devient vivante. On n'enquête plus pour se réparer rapidement, mais parce que l'expérience présente est digne d'être connue.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> qu'est-ce qui se passerait si je devenais curieux de mon inconfort au lieu de vouloir l'effacer&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="non-espoir">
+      <div class="num">06</div>
+      <h2>Non-espoir et acceptation</h2>
+      <p class="source">Sources principales&nbsp;: <em>Cœur de Diamant II</em>, chap. 5, “L'enseignement du non-espoir”, et chap. 6, “Acceptation”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On pense que l'espoir est toujours positif&nbsp;: espérer changer, espérer guérir, espérer devenir plus éveillé, plus aimable, plus tranquille.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Il ne condamne pas l'élan humain. Il montre plutôt qu'une partie de l'espoir psychologique peut être un rejet subtil de ce qui est là. Espérer autre chose peut devenir une manière de ne pas rencontrer le présent.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>Le non-espoir n'est pas le désespoir. C'est une sobriété radicale&nbsp;: arrêter de négocier avec le présent. De là, l'acceptation n'est plus résignation, mais contact direct avec la réalité de l'instant.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> qu'est-ce que mon espoir essaie de ne pas sentir maintenant&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="volonte">
+      <div class="num">07</div>
+      <h2>Volonté</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant II</em>, chap. 8, “Volonté”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>Nous confondons souvent volonté et effort dur&nbsp;: se forcer, tenir, contrôler, ne pas flancher.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>La volonté défensive se rigidifie parce qu'elle croit devoir protéger l'ego. La volonté essentielle, elle, soutient l'expérience sans la contracter. Elle donne une capacité de demeurer, pas seulement de pousser.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>La pratique devient plus stable et moins violente. On peut rester proche d'une émotion difficile sans s'effondrer ni se brutaliser.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> dans mon effort spirituel, qu'est-ce qui est soutien réel et qu'est-ce qui est crispation&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="gouffre">
+      <div class="num">08</div>
+      <h2>Le gouffre et le sens</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant III</em>, chap. 4, “Le gouffre”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>Nous espérons que le sens viendra d'un but accompli&nbsp;: amour trouvé, réussite, mission, famille, œuvre, reconnaissance.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Il montre la déception qui apparaît quand les objectifs sont atteints et que l'insatisfaction demeure. Tant qu'un rêve n'est pas réalisé, il peut porter l'espoir qu'il comblera tout. Une fois réalisé, le gouffre peut devenir visible.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>Le gouffre n'est pas seulement absence de sens. Il peut être la porte vers une source de sens qui ne dépend pas des scénarios personnels.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quel accomplissement est-ce que je charge secrètement de me donner enfin le droit d'exister&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="vulnerabilite">
+      <div class="num">09</div>
+      <h2>Humanité, vulnérabilité et Être</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant III</em>, chap. 13, “Humanité, Vulnérabilité et Être”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On imagine que la réalisation spirituelle rend moins humain&nbsp;: moins blessable, moins exposé, moins touché.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Beaucoup de défenses spirituelles cherchent à contourner la vulnérabilité. Mais l'Être ne supprime pas l'humanité&nbsp;: il la rend plus transparente, plus sensible, moins enfermée dans la protection.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>La vulnérabilité devient une finesse de contact. Elle n'est pas faiblesse, mais disponibilité de l'âme lorsqu'elle cesse de se durcir contre la réalité.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle part vulnérable de moi ai-je spiritualisée, expliquée ou dépassée trop vite&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="maturite">
+      <div class="num">10</div>
+      <h2>Maturité humaine</h2>
+      <p class="source">Sources principales&nbsp;: <em>Cœur de Diamant IV</em>, chap. 3, “Maturité humaine”, chap. 4, “Maturité et vérité”, chap. 5, “L'être humain intégré”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On réduit parfois la spiritualité à des états intérieurs, en oubliant la manière de vivre, d'aimer, de travailler, de répondre à la vérité dans les relations.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Une réalisation qui ne transforme pas la vie reste partielle. La maturité demande que la compréhension se traduise dans le caractère, l'action, la parole, la capacité de ne pas se mentir.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>L'intégration devient aussi importante que l'expérience. La spiritualité cesse d'être un refuge et devient une manière plus réelle d'être humain.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle vérité ai-je comprise intérieurement, mais pas encore laissée changer ma manière de vivre&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="contact">
+      <div class="num">11</div>
+      <h2>Contact direct</h2>
+      <p class="source">Source principale&nbsp;: <em>Cœur de Diamant IV</em>, chap. 8, “Fesses nues sur la glace”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>Nous voulons un contact avec la réalité, mais en gardant les protections familières&nbsp;: nos idées, nos méthodes, nos conclusions, nos images de nous-même.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Le désir et l'espoir peuvent rester attachés à ce qui est déjà connu. Chercher le réel à partir du vieux mental risque de produire seulement une version améliorée du passé.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>Le contact direct suppose une nudité intérieure&nbsp;: moins d'écran entre l'expérience et nous. C'est inconfortable, mais c'est précisément ce qui rend la réalité fraîche, immédiate, non fabriquée.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle protection subtile me garde à distance de l'expérience nue&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="vie-vraie">
+      <div class="num">12</div>
+      <h2>Pauvreté d'esprit et vie vraie</h2>
+      <p class="source">Sources principales&nbsp;: <em>Cœur de Diamant V</em>, chap. 1, “Pauvre en esprit”, chap. 4, “La souffrance et sa cessation”, chap. 8, “Vivre une vraie vie”.</p>
+      <h3>Ce que l'on croit</h3>
+      <p>On voudrait que la pratique donne enfin quelque chose&nbsp;: sécurité, image de soi spirituelle, état spécial, solution définitive à la souffrance.</p>
+      <h3>Ce qu'Almaas décortique</h3>
+      <p>Les derniers volumes du <em>Cœur de Diamant</em> deviennent plus dépouillés. Ils interrogent nos attachements aux objets de salut, même spirituels, et demandent si la vérité reste vraie hors des séances, dans la vie ordinaire.</p>
+      <h3>Ce qui peut s'ouvrir</h3>
+      <p>La vie vraie n'est pas un idéal héroïque. C'est une existence où la compréhension devient actuelle, incarnée, moins dépendante d'un contexte privilégié.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> où est-ce que je réserve la vérité à mes moments spirituels, au lieu de la laisser entrer dans ma vie réelle&nbsp;?</p>
+    </article>
+
+    <div class="avertissement">
+      <h2>Ce qu'il faudrait encore développer</h2>
+      <p>
+        Les cinq volumes contiennent beaucoup d'autres portes&nbsp;: permettre, grandir,
+        se libérer, attachement et espace, amour, être soi-même, non-attente,
+        limites, courage du cœur, concepts et pensée, absence absolue, quintessence divine.
+        Cette page est une première entrée immersive&nbsp;; elle peut devenir, peu à peu,
+        une véritable bibliothèque d'ateliers.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="index.html">← Accueil</a>
+      <a class="dorée" href="pratiquer.html">Pratiquer →</a>
+      <a href="lire-almaas.html">Lire Almaas →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </div>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>
