@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Almaas en 12 notions clés — L'essence retrouvée</title>
+  <meta name="description" content="Douze notions pour entrer dans la pensée d'A.H. Almaas : Essence, présence, personnalité, trous, inquiry, Guidance Diamant, Perle, Point, Idées Sacrées et dimensions sans forme.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;
+      --jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:48rem;margin:0 auto;padding:0 1.4rem}
+    .contenu{padding-bottom:4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,2.9rem);margin:.1rem 0 .35rem;color:#f4f7ff}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:35rem;margin:0 auto;color:var(--nuit-doux);font-size:1.15rem;text-align:center;font-style:italic}
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .notion{position:relative;margin:1rem 0;padding:1.25rem 1.35rem 1.25rem 4.2rem;background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px}
+    .notion .num{position:absolute;left:1.25rem;top:1.35rem;font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.12em;color:var(--or-profond)}
+    .notion h2{margin:0 0 .35rem;font-weight:600;font-size:1.32rem;color:var(--encre)}
+    .notion p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .notion p + p{margin-top:.65rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .avertissement,.conseil{margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-radius:14px;border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06)}
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p,.conseil{color:var(--encre-douce);font-size:1.06rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/><line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/><line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1>Almaas en <em>12 notions clés</em></h1>
+      <p class="chapeau">Une boussole pour entrer dans l'Approche Diamant sans perdre la précision des termes.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+    <p>
+      On peut lire Almaas par les livres, par l'ennéagramme, par l'amour, par la pratique.
+      Mais son système devient beaucoup plus lisible quand on voit comment quelques notions
+      se tiennent ensemble. Cette page ne remplace ni <a href="la-carte.html">la carte</a> ni
+      le <a href="glossaire.html">glossaire</a>&nbsp;: elle donne les douze prises les plus utiles
+      pour commencer.
+    </p>
+
+    <article class="notion">
+      <div class="num">01</div>
+      <h2>Nature véritable</h2>
+      <p>Le fond réel de l'expérience&nbsp;: non pas une croyance spirituelle, mais la présence vivante qui peut se manifester comme Être, conscience, amour, intelligence, espace ou silence.</p>
+      <p>À lire&nbsp;: <a href="lessence.html">la question de l'essence</a>, <a href="glossaire.html?q=nature%20véritable">Nature véritable</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">02</div>
+      <h2>Essence et présence</h2>
+      <p>L'essence est la Nature véritable reconnue comme présence palpable. Elle n'est pas une émotion agréable&nbsp;: elle a substance, densité, couleur, fonction, et peut se différencier en qualités.</p>
+      <p>À lire&nbsp;: <a href="les-visages-de-lessence.html">les visages de l'essence</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">03</div>
+      <h2>L'âme</h2>
+      <p>Chez Almaas, l'âme n'est pas un objet religieux posé dans le corps. C'est le champ vivant de l'expérience humaine&nbsp;: corps, affects, pensée, histoire, conscience et profondeur essentielle.</p>
+      <p>À lire&nbsp;: <a href="glossaire.html?q=âme">Âme</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">04</div>
+      <h2>Personnalité</h2>
+      <p>La personnalité n'est pas simplement “fausse”. C'est une structure d'adaptation faite d'images de soi, de défenses et de relations d'objet. Elle protège, fonctionne, imite l'essence — et peut devenir transparente.</p>
+      <p>À lire&nbsp;: <a href="lessence.html">comment l'essence se recouvre</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">05</div>
+      <h2>Trous et déficience</h2>
+      <p>Un trou est l'absence ressentie d'une qualité essentielle perdue de vue. Il peut d'abord révéler douleur, honte, défense ou relation d'objet&nbsp;; avec présence et compréhension, il peut devenir porte vers la qualité signalée.</p>
+      <p>À lire&nbsp;: <a href="les-trous.html">les trous</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">06</div>
+      <h2>Inquiry</h2>
+      <p>L'inquiry est l'enquête intérieure ouverte&nbsp;: rester avec ce qui apparaît, sans but fixé, en laissant l'expérience dévoiler ses couches. Ce n'est ni rumination, ni psychothérapie seule, ni méditation formelle seule.</p>
+      <p>À lire&nbsp;: <a href="pratiquer.html">pratiquer l'inquiry</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">07</div>
+      <h2>Guidance Diamant</h2>
+      <p>Ce n'est pas une voix intérieure qui donne des ordres. C'est un véhicule diamant&nbsp;: une intelligence discriminante où précision, compassion, force, ouverture et amour de la vérité travaillent ensemble.</p>
+      <p>À lire&nbsp;: <a href="l-intelligence.html">l'intelligence</a>, <a href="glossaire.html?q=Guidance%20Diamant">Guidance Diamant</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">08</div>
+      <h2>Aspects essentiels</h2>
+      <p>Force, Joie, Paix, Volonté, Compassion, Brillance, Amour&nbsp;: les aspects ne sont pas des états d'âme. Ce sont des qualités de l'Être, chacune avec une fonction dans la maturation de l'âme.</p>
+      <p>À lire&nbsp;: <a href="les-visages-de-lessence.html">les visages de l'essence</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">09</div>
+      <h2>La Perle</h2>
+      <p>La Perle, ou Essence personnelle, résout un faux choix&nbsp;: se dissoudre dans l'impersonnel ou rester enfermé dans le masque social. Elle est la possibilité d'être une vraie personne, présente et ouverte.</p>
+      <p>À lire&nbsp;: <a href="la-perle.html">la Perle</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">10</div>
+      <h2>Le Point</h2>
+      <p>Le Point est l'Identité essentielle&nbsp;: le sentiment simple et direct “je suis”, avant l'image de soi et le besoin d'être confirmé. Il est central dans le travail sur le narcissisme fondamental.</p>
+      <p>À lire&nbsp;: <a href="le-point.html">le Point</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">11</div>
+      <h2>Idées Sacrées et ennéagramme</h2>
+      <p>Pour Almaas, le type n'est pas seulement un caractère. Il s'organise autour d'une perception sacrée perdue de vue, puis d'une illusion, d'une difficulté, d'une réaction et d'une fixation.</p>
+      <p>À lire&nbsp;: <a href="enneagramme-essence.html">l'ennéagramme de l'essence</a>.</p>
+    </article>
+
+    <article class="notion">
+      <div class="num">12</div>
+      <h2>Dimensions sans forme et totalité</h2>
+      <p>Au-delà des qualités personnelles, l'Être se révèle comme dimensions sans forme&nbsp;: amour sans limites, conscience pure, vide lumineux, Absolu. Mais aucune réalisation ne clôt le chemin&nbsp;: Almaas insiste sur l'intégration et la totalité.</p>
+      <p>À lire&nbsp;: <a href="l-immensite.html">l'immensité</a>, <a href="la-carte.html">la carte</a>.</p>
+    </article>
+
+    <div class="avertissement">
+      <h2>Ne pas transformer la carte en échelle</h2>
+      <p>Ces douze notions ne forment pas douze marches. Dans l'expérience, l'essence, les trous,
+      les aspects, la Perle, le Point et les dimensions sans forme peuvent se révéler en spirale.
+      La carte sert à s'orienter, pas à juger où l'on devrait être.</p>
+    </div>
+
+    <div class="conseil">
+      <strong>Le fil le plus simple&nbsp;:</strong> qualité essentielle → perte de vue → trou ou déficience
+      → compensation par la personnalité → inquiry → compréhension → reconnaissance possible de la qualité.
+    </div>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="index.html">← Accueil</a>
+      <a class="dorée" href="chemin.html">Suivre le chemin →</a>
+      <a href="glossaire.html">Glossaire →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </div>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>
