@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Diamond Heart I — Essence Regained</title>
+  <meta name="description" content="A guided reading of Diamond Heart, Book One: A. H. Almaas's 17 talks, their themes, examples, and shifts of vision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;
+      --jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:56rem;margin:0 auto;padding:0 1.4rem}
+    .contenu{padding-bottom:4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,3rem);margin:.1rem 0 .35rem;color:#f4f7ff;line-height:1.12}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:39rem;margin:0 auto;color:var(--nuit-doux);font-size:1.16rem;text-align:center;font-style:italic}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .intro,.carte,.atelier,.note{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;
+      box-shadow:0 2px 10px rgba(35,44,74,.035);
+    }
+    .intro,.carte,.note{margin:2rem 0;padding:1.35rem 1.5rem}
+    .carte h2,.note h2{margin:0 0 .7rem;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .carte ol{margin:.2rem 0 0;padding-left:1.25rem;color:var(--encre-douce)}
+    .carte li{margin:.45rem 0}
+    .toc{margin:1.6rem 0 2.2rem;padding:1rem 1.25rem;background:rgba(163,120,31,.06);border:1px solid var(--jour-ligne);border-radius:14px}
+    .toc a{display:inline-block;margin:.25rem .55rem .25rem 0;font-size:1.02rem}
+    .atelier{position:relative;margin:1.15rem 0;padding:1.35rem 1.45rem 1.3rem 4.35rem}
+    .atelier .num{position:absolute;left:1.25rem;top:1.45rem;font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.12em;color:var(--or-profond)}
+    .atelier h2{margin:0 0 .25rem;font-weight:600;font-size:1.34rem;color:var(--encre)}
+    .atelier .source{margin:0 0 .9rem;font-size:.95rem;color:var(--estompe);font-style:italic}
+    .atelier h3{font-family:Inter,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-profond);margin:1rem 0 .25rem}
+    .atelier p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .atelier p + p{margin-top:.7rem}
+    .atelier .question{margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(35,44,74,.08);color:var(--encre)}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    @media (max-width:560px){
+      .atelier{padding:1.2rem 1.2rem 1.2rem 1.35rem}
+      .atelier .num{position:static;display:block;margin-bottom:.3rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="themes-coeur-de-diamant.html">← Diamond Heart themes</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1><em>Diamond Heart I</em></h1>
+      <p class="chapeau">Seventeen talks for learning to see differently: covered Essence, holes, truth, maturity, and the living work of a school.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+    <div class="intro">
+      <p>
+        This page follows Book One chapter by chapter. Its aim is not to replace the
+        reading, but to convey Almaas's gesture: he begins from a concrete situation,
+        shifts our ordinary interpretation, and reveals the essential quality hidden
+        behind the problem.
+      </p>
+      <p>
+        Book One is therefore not a simple introduction. It already lays out much of
+        the grammar of the Diamond Approach: personality, Essence, holes, truth,
+        compassion, trust, struggle, allowing, maturity, relationship to the teaching,
+        and living transmission.
+      </p>
+    </div>
+
+    <div class="carte">
+      <h2>The Movement of the Book</h2>
+      <ol>
+        <li>Essence is primary, but it becomes covered by personality.</li>
+        <li>Lacks and desires reveal essential qualities lost from view.</li>
+        <li>Truth requires precision, compassion, trust, and real struggle.</li>
+        <li>Practice matures into responsibility, impeccability, curiosity, and transmission.</li>
+      </ol>
+    </div>
+
+    <div class="toc" aria-label="Book One chapters">
+      <a href="#c1">1. In the world</a>
+      <a href="#c2">2. Holes</a>
+      <a href="#c3">3. Diamond Approach</a>
+      <a href="#c4">4. Faith</a>
+      <a href="#c5">5. Nobility</a>
+      <a href="#c6">6. Value</a>
+      <a href="#c7">7. Compassion</a>
+      <a href="#c8">8. Trust</a>
+      <a href="#c9">9. Essence and life</a>
+      <a href="#c10">10. Struggle</a>
+      <a href="#c11">11. Truth</a>
+      <a href="#c12">12. Allowing</a>
+      <a href="#c13">13. Growing up</a>
+      <a href="#c14">14. Teaching</a>
+      <a href="#c15">15. Warrior</a>
+      <a href="#c16">16. Curiosity</a>
+      <a href="#c17">17. Honey</a>
+    </div>
+
+    <article class="atelier" id="c1">
+      <div class="num">01</div>
+      <h2>In the World but Not of It</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 1.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Ordinary life: career, independence, relationship, the wish to be oneself, the wish for loving fusion. He does not dismiss them and does not ask us to leave the world.</p>
+      <h3>The Shift of Vision</h3>
+      <p>These worldly desires become readable as distorted reflections of essential reality. Independence seeks the Personal Essence; loving fusion seeks a quality of love or unity already present as Essence.</p>
+      <h3>Examples</h3>
+      <p>He takes self-assertion, success, work, intimate relationship, and the desire for merging, then shows that the issue is not having these desires but believing their outer object is the real source.</p>
+      <p class="question"><strong>First inquiry:</strong> in what I pursue in the world, what deeper quality am I really seeking?</p>
+    </article>
+
+    <article class="atelier" id="c2">
+      <div class="num">02</div>
+      <h2>The Theory of Holes</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 2.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Lack, emotional dependency, the end of a relationship, the need to be appreciated, recognized, or loved.</p>
+      <h3>The Shift of Vision</h3>
+      <p>A hole is not merely a psychological wound. It is the trace of an essential quality lost from view. When a relationship fills that hole, its loss feels like losing a part of oneself.</p>
+      <h3>Examples</h3>
+      <p>He focuses on value: when another person's appreciation disappears, the sense of worthlessness may reveal a value hole and then open into essential value itself.</p>
+      <p class="question"><strong>First inquiry:</strong> what repeated desire indicates a hole asking to be seen rather than filled?</p>
+    </article>
+
+    <article class="atelier" id="c3">
+      <div class="num">03</div>
+      <h2>The Diamond Approach to the Work</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 3.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The difficulty of spiritual work: lack of will, fear of commitment, inability to surrender, and patterns one cannot simply change.</p>
+      <h3>The Shift of Vision</h3>
+      <p>He does not simply blame the student. He shows that will, commitment, and surrender are often blocked by unconscious fears. Psychological precision becomes a spiritual ally.</p>
+      <h3>Examples</h3>
+      <p>He points to will paralyzed by deep fear, commitment felt as loss of freedom or identity, and moral injunctions that fail because they do not reach the unconscious root.</p>
+      <p class="question"><strong>First inquiry:</strong> if I cannot commit, what unconscious fear is my lack of commitment protecting?</p>
+    </article>
+
+    <article class="atelier" id="c4">
+      <div class="num">04</div>
+      <h2>Faith and Commitment</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 4.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The confusion between belief, faith, direct knowing, and staying committed when essential experience is no longer immediately present.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Real faith is not based on abstract belief but on tasted knowledge. It becomes a bridge between a past direct experience and a knowledge not yet stabilized.</p>
+      <h3>Examples</h3>
+      <p>He distinguishes mental belief, faith born of belief, faith born of knowledge, and stable knowing. Commitment is linked to fear of losing the familiar identity.</p>
+      <p class="question"><strong>First inquiry:</strong> what do I merely believe, and what do I already know from experience, however faintly?</p>
+    </article>
+
+    <article class="atelier" id="c5">
+      <div class="num">05</div>
+      <h2>Nobility and Suffering</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 5.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Suffering, attachment to outer pleasures, and the fear that living for truth would mean losing ordinary life.</p>
+      <h3>The Shift of Vision</h3>
+      <p>He distinguishes ignoble and noble suffering. The first comes from seeking substitutes for Essence; the second accompanies letting go of the attachments that block the realization of Personal Essence.</p>
+      <h3>Examples</h3>
+      <p>He mentions attachment to partner, work, money, body, home, and comfort, then shows that they can be filled by Essence instead of serving as replacements for it.</p>
+      <p class="question"><strong>First inquiry:</strong> what suffering comes from attachment, and what suffering comes from beginning to be faithful to truth?</p>
+    </article>
+
+    <article class="atelier" id="c6">
+      <div class="num">06</div>
+      <h2>Value</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 6.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The sense that life has or lacks meaning, self-esteem, superego value, and learned standards of success or failure.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Value does not come from inner superego approval or outer recognition. It can reveal itself as an intrinsic presence, dense, felt, almost substantial.</p>
+      <h3>Examples</h3>
+      <p>The discussion begins with student reports: meaning, freedom, strength, glory, joy. Almaas traces these experiences to essential value rather than a favorable opinion about oneself.</p>
+      <p class="question"><strong>First inquiry:</strong> does my value depend on approval, or can I sense what is precious in me before judgment?</p>
+    </article>
+
+    <article class="atelier" id="c7">
+      <div class="num">07</div>
+      <h2>Truth and Compassion</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 7.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Our habit of choosing happiness, comfort, or a pleasant self-image over truth.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Compassion is not only the wish to relieve pain. It is what allows us to tolerate the pain of seeing truth. Without compassion, truth feels threatening; with it, truth becomes workable.</p>
+      <h3>Examples</h3>
+      <p>He uses the story of Khidr and the Land of Truth: some choose happiness, others suffering, but the decisive point is to desire truth for its own sake.</p>
+      <p class="question"><strong>First inquiry:</strong> where do I prefer consolation to a truth that might liberate me?</p>
+    </article>
+
+    <article class="atelier" id="c8">
+      <div class="num">08</div>
+      <h2>Trust</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 8.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Trust in oneself, another person, the group, a truth, and the fear of becoming vulnerable.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Trust is not naivete and not a guarantee of being protected. It is the capacity to open to what is here without immediately defending. It is related to truth and compassion.</p>
+      <h3>Examples</h3>
+      <p>Students speak of safety, deserving trust, vulnerability, and trusting oneself. Almaas distinguishes several levels: practical trust, trust in another's intention, and deeper trust in the reality of experience.</p>
+      <p class="question"><strong>First inquiry:</strong> what arises when I actually begin to trust: relaxation, fear, withdrawal, need for proof?</p>
+    </article>
+
+    <article class="atelier" id="c9">
+      <div class="num">09</div>
+      <h2>Essence Is the Life</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 9.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The desire to get something from spiritual work, and projection: seeing outside what we cannot yet recognize inside.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Fulfillment is not getting what personality wants. It is being Essence. Yet we often project Essence onto a beloved person, a teacher, a situation, or an ideal.</p>
+      <h3>Examples</h3>
+      <p>He moves from negative projection, such as fear or hostility attributed to others, to positive projection: falling in love because the other seems to carry our own love, value, or essential beauty.</p>
+      <p class="question"><strong>First inquiry:</strong> what beauty I see outside might be a quality of my Essence I do not yet dare to recognize?</p>
+    </article>
+
+    <article class="atelier" id="c10">
+      <div class="num">10</div>
+      <h2>The Value of Struggling</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 10.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The wish that the teacher solve our problems, give us an answer, relieve us, or make life easier.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Struggle is not a failure of the path. It is the digestion of the work itself. An answer received too quickly does not become knowledge; friction with the problem roots realization.</p>
+      <h3>Examples</h3>
+      <p>He compares struggle to digestion, internal combustion, making wine, and concentrating juice. Difficulties become intelligent roadblocks that force us back toward ourselves.</p>
+      <p class="question"><strong>First inquiry:</strong> what problem do I want to delegate when it is asking me to develop my own perception?</p>
+    </article>
+
+    <article class="atelier" id="c11">
+      <div class="num">11</div>
+      <h2>Truth</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 11.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The phrase “truth liberates,” moral honesty, facts, insights, and the difference between saying something accurate and acting from the whole truth.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Truth is not merely a correct fact. It has an inner taste: certainty, freedom, intimacy with oneself. Relative truth is alive when it carries the fragrance of deeper truth.</p>
+      <h3>Examples</h3>
+      <p>He uses concrete cases: hiding someone in danger, whether to speak to a sister who cannot hear, distinguishing factual accuracy from action attuned to the whole situation.</p>
+      <p class="question"><strong>First inquiry:</strong> am I stating a fact to be right, or serving the truth of the whole situation?</p>
+    </article>
+
+    <article class="atelier" id="c12">
+      <div class="num">12</div>
+      <h2>Allowing</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 12.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Our ideas about growth: becoming happier, more lovable, more successful, keeping the same identity but improving it.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Transformation means becoming other than what we imagined. Allowing is neither forcing nor remaining passive: it lets the real process open possibilities personality cannot conceive.</p>
+      <h3>Examples</h3>
+      <p>He plays with the image of larva and butterfly, then with deliberately unexpected images: fruit, tree, planet, star. The point is that Essence unfolds beyond our larval projects.</p>
+      <p class="question"><strong>First inquiry:</strong> what image of my transformation is already limiting what might reveal itself?</p>
+    </article>
+
+    <article class="atelier" id="c13">
+      <div class="num">13</div>
+      <h2>Growing Up</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 13.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Complaints, expectations toward a partner or teacher, and the need for someone to give us love, safety, esteem, or support.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Growing up is not becoming cold or defensively independent. It is ceasing to ask the world to be mother or father, and discovering in Essence the support, love, and reality that cannot be obtained outside.</p>
+      <h3>Examples</h3>
+      <p>He compares society to an unrecognized nursery, shows complaint as a call to mother, and reads ordinary relationships as repetitions of infantile demands.</p>
+      <p class="question"><strong>First inquiry:</strong> whom am I still asking to give me what only Essence can reveal in me?</p>
+    </article>
+
+    <article class="atelier" id="c14">
+      <div class="num">14</div>
+      <h2>The Student's Relationship to the Teaching</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 14.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The way we treat inner work: side activity, authority to resist, resource to consume, or real basis of transformation.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Our relationship to the teaching reflects our relationship to Essence. Resistances, objections, and projections are not to be condemned but understood: they show where personality defends its world.</p>
+      <h3>Examples</h3>
+      <p>He speaks of time, energy, money, rules, reactions to the teacher, unconscious loyalty to parents and conditioning. For a site reader, the question becomes: what real place does truth have in my life?</p>
+      <p class="question"><strong>First inquiry:</strong> do I treat practice as an addition, or as a basis that can transform my life?</p>
+    </article>
+
+    <article class="atelier" id="c15">
+      <div class="num">15</div>
+      <h2>The Impeccable Warrior</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 15.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>Complacency: knowing what is true and then falling back into the same pattern through weakness, distraction, comfort, or uncertainty.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Impeccability is not perfectionism. It means actually doing one's best with what one knows now. It supports the healthy part against complacency without becoming punishment.</p>
+      <h3>Examples</h3>
+      <p>He takes very ordinary examples: choosing again the person who rejects, staying busy to avoid, arriving late because of dessert, working or not working with emotions and superego.</p>
+      <p class="question"><strong>First inquiry:</strong> where do I know enough to act, but let uncertainty protect my complacency?</p>
+    </article>
+
+    <article class="atelier" id="c16">
+      <div class="num">16</div>
+      <h2>Curiosity</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 16.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The spiritual search itself: avoiding pain, seeking pleasure, and even seeking truth as a new way to get something.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Curiosity is not oriented toward a result. It is the spirit of truth in the heart, the living movement that looks at what is here because it is worthy of being known.</p>
+      <h3>Examples</h3>
+      <p>He comments on a story attributed to Jesus: two groups remain caught in pain and pleasure; the third is not moved by a goal but by the spirit of truth. He compares this to children's spontaneous curiosity.</p>
+      <p class="question"><strong>First inquiry:</strong> am I seeking truth to obtain a state, or because present experience calls me?</p>
+    </article>
+
+    <article class="atelier" id="c17">
+      <div class="num">17</div>
+      <h2>Gathering Honey</h2>
+      <p class="source"><em>Diamond Heart I</em>, chapter 17.</p>
+      <h3>What Almaas Takes Up</h3>
+      <p>The difference between information and living knowledge, and the role of a school or group in concentrating Essence.</p>
+      <h3>The Shift of Vision</h3>
+      <p>Spiritual knowledge is not only what we read. It is distilled in the human being. The image of honey points to material, concentrated knowledge gathered through the work of many.</p>
+      <h3>Examples</h3>
+      <p>He uses bees, nectars, the hive, human vessels, and physical activities done in presence. Transmission becomes embodied practice, not the accumulation of ideas.</p>
+      <p class="question"><strong>First inquiry:</strong> does what I learn remain information, or is it becoming a substance of presence in my life?</p>
+    </article>
+
+    <div class="note">
+      <h2>Provisional Conclusion</h2>
+      <p>
+        Book One is more radical than the first version of our page suggested. It does
+        not simply offer a few famous themes; it teaches us to recognize how any ordinary
+        situation can be a distorted reflection, a doorway, or a defense before Essence.
+        This logic should guide the pages for Books Two to Five.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="themes-coeur-de-diamant.html">← Heart themes</a>
+      <a class="dorée" href="pratiquer.html">Practice →</a>
+      <a href="lire-almaas.html">Reading Almaas →</a>
+    </nav>
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+  <script defer src="../assets/lang.js"></script>
+</body>
+</html>
