@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Talks — Essence Regained</title>
+  <meta name="description" content="Entering A. H. Almaas through thematic talks: truth, compassion, holes, value, trust, no hope, acceptance, maturity, vulnerability, and true life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;
+      --jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:54rem;margin:0 auto;padding:0 1.4rem}
+    .contenu{padding-bottom:4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,3rem);margin:.1rem 0 .35rem;color:#f4f7ff;line-height:1.12}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:38rem;margin:0 auto;color:var(--nuit-doux);font-size:1.16rem;text-align:center;font-style:italic}
+    .contenu h2{font-weight:500;font-size:1.6rem;color:var(--or-sombre);margin:2.8rem 0 .7rem}
+    .contenu h3{font-family:Inter,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-profond);margin:1rem 0 .25rem}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .respire{text-align:center;color:var(--or-sombre);letter-spacing:.6em;margin:2.5rem 0;font-size:.9rem}
+    .methode,.atelier,.avertissement,.table-theme{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;
+      box-shadow:0 2px 10px rgba(35,44,74,.035);
+    }
+    .methode{margin:2rem 0;padding:1.35rem 1.5rem}
+    .methode ol{margin:.3rem 0 0;padding-left:1.25rem;color:var(--encre-douce)}
+    .methode li{margin:.45rem 0}
+    .table-theme{margin:1.6rem 0 2.2rem;padding:1rem 1.25rem}
+    .table-theme a{display:inline-block;margin:.25rem .55rem .25rem 0;font-size:1.02rem}
+    .atelier{position:relative;margin:1.15rem 0;padding:1.35rem 1.45rem 1.3rem 4.35rem}
+    .atelier .num{position:absolute;left:1.25rem;top:1.45rem;font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.12em;color:var(--or-profond)}
+    .atelier h2{margin:0 0 .25rem;font-weight:600;font-size:1.34rem;color:var(--encre)}
+    .atelier .source{margin:0 0 .9rem;font-size:.95rem;color:var(--estompe);font-style:italic}
+    .atelier p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .atelier p + p{margin-top:.7rem}
+    .atelier .question{margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(35,44,74,.08);color:var(--encre)}
+    .avertissement{margin:2.4rem 0 0;padding:1.4rem 1.55rem;border-color:var(--jour-ligne);background:rgba(163,120,31,.06)}
+    .avertissement h2{margin:0 0 .5rem;font-weight:600;font-size:1.3rem;color:var(--encre)}
+    .avertissement p{margin:0 0 .6rem;color:var(--encre-douce);font-size:1.05rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    @media (max-width:560px){
+      .atelier{padding:1.2rem 1.2rem 1.2rem 1.35rem}
+      .atelier .num{position:static;display:block;margin-bottom:.3rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← Essence Regained</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1>Entering through <em>talks</em></h1>
+      <p class="chapeau">Inner conversations that change perception: a lived theme, a defense to see, a quality of Being to recognize.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+    <p>
+      Reading through Almaas's major talks, one thing becomes clear:
+      he is not simply transmitting concepts. Again and again, he takes a very
+      ordinary human theme — value, hope, curiosity, maturity, vulnerability, suffering,
+      truth — and follows it until the theme reveals its root in personality and its
+      depth in Essence.
+    </p>
+    <p>
+      This page is a more experiential doorway into the site. It does not replace the
+      books and it keeps the sources visible, but it presents the texts as talks:
+      we enter through a human question, and the listening gradually changes the way
+      we see. It shows Almaas's way of teaching: begin from what we are living,
+      see how ego turns it into a strategy,
+      and let experience open into a truer understanding.
+    </p>
+
+    <div class="methode">
+      <h2>The Gesture of a Talk</h2>
+      <ol>
+        <li>He starts from a recognizable situation: lack, expectation, judgment, desire, fear, spiritual aspiration.</li>
+        <li>He shows the movement of personality: compensation, defense, rejection of the present, self-ideal.</li>
+        <li>He reveals the hidden quality: value, trust, will, compassion, presence, direct contact.</li>
+        <li>He brings it back to practice: stay with experience, do not conclude too quickly, love truth more than comfort.</li>
+      </ol>
+      <p style="margin:.95rem 0 0;color:var(--encre-douce)">
+        For a reading closer to the unfolding of the series:
+        <a href="causeries-premiere-serie.html">first series</a> ·
+        <a href="causeries-deuxieme-serie.html">second series</a>.
+      </p>
+    </div>
+
+    <div class="table-theme" aria-label="Quick access to talks">
+      <a href="#truth">Truth and compassion</a>
+      <a href="#holes">The holes</a>
+      <a href="#value">Value</a>
+      <a href="#trust">Trust</a>
+      <a href="#curiosity">Curiosity</a>
+      <a href="#no-hope">No hope</a>
+      <a href="#will">Will</a>
+      <a href="#chasm">The chasm</a>
+      <a href="#vulnerability">Vulnerability</a>
+      <a href="#maturity">Maturity</a>
+      <a href="#contact">Direct contact</a>
+      <a href="#true-life">True life</a>
+    </div>
+
+    <article class="atelier" id="truth">
+      <div class="num">01</div>
+      <h2>Truth and Compassion</h2>
+      <p class="source">Main source: <em>Diamond Heart I</em>, chapter 7, “Truth and Compassion”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We often imagine that inner truth has to be hard, almost surgical: seeing clearly, correcting oneself, no longer telling oneself stories.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>Without compassion, truth easily becomes another instrument of the inner judge. We force ourselves to see, so we defend ourselves even more. Compassion does not dilute truth: it creates the atmosphere in which the soul dares to look.</p>
+      <h3>What Can Open</h3>
+      <p>Truth becomes a warm, precise, liberating presence. It no longer condemns the personality; it understands why the personality had to form as it did.</p>
+      <p class="question"><strong>First inquiry:</strong> what truth about myself can I only look at if it is met with kindness?</p>
+    </article>
+
+    <article class="atelier" id="holes">
+      <div class="num">02</div>
+      <h2>The Holes</h2>
+      <p class="source">Main source: <em>Diamond Heart I</em>, chapter 2, “The Theory of Holes”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>When lack appears, we think it must be filled: be loved, succeed, get an answer, find someone or something that will make the emptiness disappear.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>A hole is not merely a psychological absence. It often points to an essential quality that has been lost from view: love, value, strength, will, support. Personality forms around these absences and tries to fill them from outside.</p>
+      <h3>What Can Open</h3>
+      <p>By staying present with the hole, we may discover that the lack points toward the very quality it seems to deny. The emptiness becomes a door, not proof that something is permanently missing.</p>
+      <p class="question"><strong>First inquiry:</strong> when I feel a lack, what quality am I trying to find outside myself?</p>
+    </article>
+
+    <article class="atelier" id="value">
+      <div class="num">03</div>
+      <h2>Value</h2>
+      <p class="source">Main source: <em>Diamond Heart I</em>, chapter 6, “Value”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We believe that value depends on the gaze we receive: being recognized, desired, useful, special, spiritual, intelligent, successful.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>The compulsive search for confirmation can mask the felt absence of essential value. The more we try to prove our value, the more bound we remain to the hole of worthlessness.</p>
+      <h3>What Can Open</h3>
+      <p>Value can be felt as an intrinsic quality of presence, not as a medal given by others. It supports the Personal Essence and the simple dignity of existing.</p>
+      <p class="question"><strong>First inquiry:</strong> what do I do to be confirmed, and what does that help me avoid feeling?</p>
+    </article>
+
+    <article class="atelier" id="trust">
+      <div class="num">04</div>
+      <h2>Trust</h2>
+      <p class="source">Main source: <em>Diamond Heart I</em>, chapter 8, “Trust”. In dialogue with <em>Facets of Unity</em> on basic trust.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We think trust means believing that everything will go well, or that life will satisfy our preferences.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>The trust he is pointing to is deeper than optimism. It concerns the possibility of letting reality carry us, even when personality does not control the result.</p>
+      <h3>What Can Open</h3>
+      <p>Trust becomes an ontological relaxation: the soul can remain open because it begins to sense that reality is not fundamentally hostile.</p>
+      <p class="question"><strong>First inquiry:</strong> where do I confuse trust with a guarantee?</p>
+    </article>
+
+    <article class="atelier" id="curiosity">
+      <div class="num">05</div>
+      <h2>Curiosity</h2>
+      <p class="source">Main source: <em>Diamond Heart I</em>, chapter 16, “Curiosity”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We think practice must be solemn and outcome-oriented: solve, understand, reach a state.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>True curiosity is not information gathering. It is the heart's movement of loving discovery. It can be interested in pain as much as joy, because it is not primarily seeking comfort.</p>
+      <h3>What Can Open</h3>
+      <p>Inquiry becomes alive. We no longer investigate only to fix ourselves quickly, but because present experience is worthy of being known.</p>
+      <p class="question"><strong>First inquiry:</strong> what would happen if I became curious about my discomfort instead of trying to erase it?</p>
+    </article>
+
+    <article class="atelier" id="no-hope">
+      <div class="num">06</div>
+      <h2>No Hope and Acceptance</h2>
+      <p class="source">Main sources: <em>Diamond Heart II</em>, chapter 5, “The Teaching of No Hope”, and chapter 6, “Acceptance”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We assume hope is always positive: hoping to change, hoping to heal, hoping to become more awake, lovable, or peaceful.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>He is not condemning the human impulse. He shows that part of psychological hope can be a subtle rejection of what is here. Hoping for something else can become a way of not meeting the present.</p>
+      <h3>What Can Open</h3>
+      <p>No hope is not despair. It is radical sobriety: stopping the negotiation with the present. From there, acceptance is not resignation but direct contact with the reality of the moment.</p>
+      <p class="question"><strong>First inquiry:</strong> what is my hope trying not to feel right now?</p>
+    </article>
+
+    <article class="atelier" id="will">
+      <div class="num">07</div>
+      <h2>Will</h2>
+      <p class="source">Main source: <em>Diamond Heart II</em>, chapter 8, “Will”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We often confuse will with hard effort: forcing, holding on, controlling, not failing.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>Defensive will becomes rigid because it believes it has to protect the ego. Essential Will supports experience without contracting it. It gives the capacity to remain, not only to push.</p>
+      <h3>What Can Open</h3>
+      <p>Practice becomes steadier and less violent. We can stay close to a difficult emotion without collapsing or brutalizing ourselves.</p>
+      <p class="question"><strong>First inquiry:</strong> in my spiritual effort, what is real support and what is contraction?</p>
+    </article>
+
+    <article class="atelier" id="chasm">
+      <div class="num">08</div>
+      <h2>The Chasm and Meaning</h2>
+      <p class="source">Main source: <em>Diamond Heart III</em>, chapter 4, “The Chasm”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We hope meaning will come from an achieved goal: love found, success, mission, family, work, recognition.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>He shows the disappointment that appears when goals are achieved and dissatisfaction remains. As long as a dream is unrealized, it can carry the hope that it will satisfy everything. Once realized, the chasm may become visible.</p>
+      <h3>What Can Open</h3>
+      <p>The chasm is not only an absence of meaning. It can be the doorway to a source of meaning that does not depend on personal scenarios.</p>
+      <p class="question"><strong>First inquiry:</strong> what achievement am I secretly asking to finally give me permission to exist?</p>
+    </article>
+
+    <article class="atelier" id="vulnerability">
+      <div class="num">09</div>
+      <h2>Humanness, Vulnerability, and Being</h2>
+      <p class="source">Main source: <em>Diamond Heart III</em>, chapter 13, “Humanness, Vulnerability, and Being”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We imagine spiritual realization makes us less human: less woundable, less exposed, less affected.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>Many spiritual defenses try to bypass vulnerability. But Being does not erase humanness: it makes it more transparent, more sensitive, less locked inside protection.</p>
+      <h3>What Can Open</h3>
+      <p>Vulnerability becomes a subtle capacity for contact. It is not weakness but the availability of the soul when it stops hardening against reality.</p>
+      <p class="question"><strong>First inquiry:</strong> what vulnerable part of me have I spiritualized, explained, or transcended too quickly?</p>
+    </article>
+
+    <article class="atelier" id="maturity">
+      <div class="num">10</div>
+      <h2>Human Maturity</h2>
+      <p class="source">Main sources: <em>Diamond Heart IV</em>, chapter 3, “Human Maturity”, chapter 4, “Maturity and Truth”, and chapter 5, “The Integrated Human Being”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>Sometimes we reduce spirituality to inner states, forgetting the way we live, love, work, and respond to truth in relationships.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>A realization that does not transform life remains partial. Maturity asks that understanding show up in character, action, speech, and the capacity not to lie to oneself.</p>
+      <h3>What Can Open</h3>
+      <p>Integration becomes as important as experience. Spirituality stops being a refuge and becomes a more real way of being human.</p>
+      <p class="question"><strong>First inquiry:</strong> what truth have I understood inwardly but not yet allowed to change how I live?</p>
+    </article>
+
+    <article class="atelier" id="contact">
+      <div class="num">11</div>
+      <h2>Direct Contact</h2>
+      <p class="source">Main source: <em>Diamond Heart IV</em>, chapter 8, “Bare Bottoms on Ice”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We want contact with reality while keeping our familiar protections: our ideas, methods, conclusions, and self-images.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>Desire and hope can remain attached to what is already known. Seeking the real from the old mind risks producing only an improved version of the past.</p>
+      <h3>What Can Open</h3>
+      <p>Direct contact requires an inner nakedness: fewer screens between experience and ourselves. It is uncomfortable, but that is precisely what makes reality fresh, immediate, and unmanufactured.</p>
+      <p class="question"><strong>First inquiry:</strong> what subtle protection keeps me at a distance from naked experience?</p>
+    </article>
+
+    <article class="atelier" id="true-life">
+      <div class="num">12</div>
+      <h2>Poor in Spirit and True Life</h2>
+      <p class="source">Main sources: <em>Diamond Heart V</em>, chapter 1, “Poor in Spirit”, chapter 4, “Suffering and Its Cessation”, and chapter 8, “Living a True Life”.</p>
+      <h3>What We Tend to Believe</h3>
+      <p>We want practice to finally give us something: safety, a spiritual self-image, a special state, a definitive solution to suffering.</p>
+      <h3>What Almaas Unpacks</h3>
+      <p>The later talks become more stripped down. They question our attachments to saving objects, even spiritual ones, and ask whether truth remains true outside sessions, in ordinary life.</p>
+      <h3>What Can Open</h3>
+      <p>True life is not a heroic ideal. It is an existence in which understanding becomes actual, embodied, and less dependent on a privileged context.</p>
+      <p class="question"><strong>First inquiry:</strong> where do I reserve truth for spiritual moments instead of letting it enter my real life?</p>
+    </article>
+
+    <div class="avertissement">
+      <h2>What Still Needs to Be Developed</h2>
+      <p>
+        Two series are now developed talk by talk:
+        <a href="causeries-premiere-serie.html">the first series</a>, which lays out the
+        grammar of holes, truth, value, and trust, and
+        <a href="causeries-deuxieme-serie.html">the second series</a>, which deepens
+        freedom, no hope, acceptance, will, love, and being oneself.
+        Later series can open further doors: vulnerability, maturity, direct contact,
+        non-waiting, boundaries, the courageous heart, concepts and thinking,
+        absolute absence, divine quintessence.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="index.html">← Home</a>
+      <a class="dorée" href="causeries-premiere-serie.html">First series →</a>
+      <a href="causeries-deuxieme-serie.html">Second series →</a>
+    </nav>
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </div>
+  <script defer src="../assets/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Les causeries — deuxième série — L'essence retrouvée</title>
+  <meta name="description" content="Deuxième série de causeries d'après A.H. Almaas : liberté, esprit, compréhension implicite, attachement, non-espoir, acceptation, volonté, amour et être soi-même.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;
+      --jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:56rem;margin:0 auto;padding:0 1.4rem}
+    .contenu{padding-bottom:4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,3rem);margin:.1rem 0 .35rem;color:#f4f7ff;line-height:1.12}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:40rem;margin:0 auto;color:var(--nuit-doux);font-size:1.16rem;text-align:center;font-style:italic}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .intro,.carte,.atelier,.note{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;
+      box-shadow:0 2px 10px rgba(35,44,74,.035);
+    }
+    .intro,.carte,.note{margin:2rem 0;padding:1.35rem 1.5rem}
+    .carte h2,.note h2{margin:0 0 .7rem;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .carte ol{margin:.2rem 0 0;padding-left:1.25rem;color:var(--encre-douce)}
+    .carte li{margin:.45rem 0}
+    .toc{margin:1.6rem 0 2.2rem;padding:1rem 1.25rem;background:rgba(163,120,31,.06);border:1px solid var(--jour-ligne);border-radius:14px}
+    .toc a{display:inline-block;margin:.25rem .55rem .25rem 0;font-size:1.02rem}
+    .atelier{position:relative;margin:1.15rem 0;padding:1.35rem 1.45rem 1.3rem 4.35rem}
+    .atelier .num{position:absolute;left:1.25rem;top:1.45rem;font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.12em;color:var(--or-profond)}
+    .atelier h2{margin:0 0 .25rem;font-weight:600;font-size:1.34rem;color:var(--encre)}
+    .atelier .source{margin:0 0 .9rem;font-size:.95rem;color:var(--estompe);font-style:italic}
+    .atelier h3{font-family:Inter,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-profond);margin:1rem 0 .25rem}
+    .atelier p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .atelier p + p{margin-top:.7rem}
+    .atelier .question{margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(35,44,74,.08);color:var(--encre)}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    @media (max-width:560px){
+      .atelier{padding:1.2rem 1.2rem 1.2rem 1.35rem}
+      .atelier .num{position:static;display:block;margin-bottom:.3rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="causeries.html">← Les causeries</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1><em>Deuxième série</em></h1>
+      <p class="chapeau">Douze causeries où l'effort de se transformer est lui-même retourné : liberté, non-espoir, acceptation, volonté, amour et être soi-même.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+    <div class="intro">
+      <p>
+        Cette deuxième série a une beauté particulière. Almaas y prend souvent le
+        désir même de transformation — vouloir être libre, comprendre, aimer, changer,
+        être soi-même — et montre comment ce désir peut devenir la nouvelle forme du
+        refus de l'instant.
+      </p>
+      <p>
+        Le fil n'est donc pas d'ajouter une couche spirituelle à la personnalité. C'est
+        de voir comment la personnalité transforme même la pratique en acquisition.
+        Peu à peu, la causerie fait passer le lecteur d'une question psychologique
+        ordinaire à un retournement de perception&nbsp;: la liberté n'est pas plus loin,
+        l'amour n'est pas un objet, la volonté vraie n'est pas la contrainte, et être
+        soi-même n'est pas obéir à n'importe quelle impulsion.
+      </p>
+    </div>
+
+    <div class="carte">
+      <h2>Le mouvement de la série</h2>
+      <ol>
+        <li>La liberté n'est pas un état à posséder, mais le relâchement de la fixation.</li>
+        <li>Comprendre ne sert pas d'abord à se sentir mieux ; la compréhension doit devenir implicite.</li>
+        <li>Le non-espoir et l'acceptation révèlent notre rejet permanent du présent.</li>
+        <li>La volonté, l'amour et le fait d'être soi-même deviennent des expressions de l'Être, non des stratégies du moi.</li>
+      </ol>
+    </div>
+
+    <div class="toc" aria-label="Causeries de la deuxième série">
+      <a href="#c1">1. Se libérer</a>
+      <a href="#c2">2. Esprit et Essence</a>
+      <a href="#c3">3. Compréhension implicite</a>
+      <a href="#c4">4. Attachement</a>
+      <a href="#c5">5. Non-espoir</a>
+      <a href="#c6">6. Acceptation</a>
+      <a href="#c7">7. Changement</a>
+      <a href="#c8">8. Volonté</a>
+      <a href="#c9">9. Absence de soi</a>
+      <a href="#c10">10. Amour</a>
+      <a href="#c11">11. Ami et amant</a>
+      <a href="#c12">12. Être soi-même</a>
+    </div>
+
+    <article class="atelier" id="c1">
+      <div class="num">01</div>
+      <h2>Se libérer</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 1.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>L'appétit de libération qui naît après un goût de l'Essence. On a senti quelque chose de vrai, alors on veut la liberté totale, comme si elle était un état à atteindre et à conserver.</p>
+      <h3>Le retournement</h3>
+      <p>La liberté n'est pas d'abord une qualité particulière de l'Essence. Elle apparaît quand l'esprit ne se fixe plus, quand le cœur cesse de s'agripper, quand la personnalité relâche son emprise dans l'instant.</p>
+      <h3>Exemples</h3>
+      <p>Almaas parle d'un état très ordinaire et familier : l'esprit non préoccupé, le cœur sans accrochage. Il détaille aussi des facteurs comme énergie, détermination, joie, bonté, paix, absorption et éveil, qui mûrissent en objectivité.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> où suis-je en train de vouloir tenir la liberté, au lieu de laisser la fixation se relâcher maintenant&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c2">
+      <div class="num">02</div>
+      <h2>Esprit et Essence</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 2.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le mot “esprit”, que nous réduisons souvent aux pensées, aux images mentales ou au cerveau. Almaas part de cette imprécision et l'élargit pas à pas.</p>
+      <h3>Le retournement</h3>
+      <p>L'esprit peut désigner tout le contenu de l'expérience, puis l'espace où ce contenu apparaît, puis la conscience elle-même. Essence et esprit ne sont plus seulement deux domaines opposés&nbsp;: la réalité se révèle comme vacuité, présence, intelligence et radiance.</p>
+      <h3>Exemples</h3>
+      <p>Il compare l'usage ordinaire du mot, la psychologie occidentale, Freud, certaines traditions orientales, la vacuité, les formes de conscience et la Brillance. Il mentionne aussi le nom soufi “Hu” pour situer l'Absolu au-delà même de la couleur et de la conscience.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> est-ce que je prends mes pensées pour tout mon esprit, ou puis-je sentir le champ entier où l'expérience apparaît&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c3">
+      <div class="num">03</div>
+      <h2>Compréhension implicite</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 3.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Notre motivation ordinaire : comprendre pour ne plus souffrir, travailler sur soi pour se sentir mieux, connaître l'Essence pour obtenir enfin du bonheur.</p>
+      <h3>Le retournement</h3>
+      <p>La compréhension libère, mais si elle est utilisée comme un moyen de confort, elle renforce la même orientation égocentrée. Elle doit devenir implicite&nbsp;: assimilée, métabolisée, présente comme une seconde nature.</p>
+      <h3>Exemples</h3>
+      <p>Almaas prend l'image de soi, le désir de réparer la personnalité, puis le piège plus subtil de s'attacher à l'Essence. Sans Essence, la personnalité souffre ; attachée à l'Essence, elle transforme même la réalisation en problème.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> est-ce que je cherche à comprendre pour changer mon état, ou pour laisser la vérité transformer mon être&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c4">
+      <div class="num">04</div>
+      <h2>Attachement et espace</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 4.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>L'attachement partout : aux personnes, aux états, aux pensées, aux rêves, aux objets, aux expériences spirituelles et même à certaines formes de conscience.</p>
+      <h3>Le retournement</h3>
+      <p>Nous croyons vouloir l'objet, mais ce que nous entretenons souvent, c'est l'attachement lui-même. L'objet change ; la colle reste. Plus profondément, l'attachement suppose une identité qui s'agrippe à quelque chose.</p>
+      <h3>Exemples</h3>
+      <p>Almaas prend l'attachement à une personne, à une voiture, à une maison, à une haine, puis remonte jusqu'à l'attachement à l'identité. La question “Qui suis-je&nbsp;?” devient une méthode pour voir chaque niveau d'identification.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle identité suis-je en train de protéger à travers cet attachement&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c5">
+      <div class="num">05</div>
+      <h2>L'enseignement du non-espoir</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 5.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le grand paradoxe du travail spirituel : plus on goûte à la liberté, plus le désir de la posséder augmente. L'espoir se renforce exactement là où la pratique semble porter ses fruits.</p>
+      <h3>Le retournement</h3>
+      <p>Le non-espoir n'est pas le désespoir. Il révèle que le désir d'être libre peut nous diviser : une part perçoit ce qui est, une autre veut autre chose. Tant que la liberté est désirée contre le présent, elle reste hors de portée.</p>
+      <h3>Exemples</h3>
+      <p>Almaas décrit l'étudiant qui obtient des compréhensions, puis devient plus avide d'Essence. Il compare aussi l'attitude intérieure de guerre à une stratégie politique qui prétend vouloir la paix en renforçant les armes.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> qu'est-ce que mon espoir spirituel refuse de rencontrer dans l'expérience présente&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c6">
+      <div class="num">06</div>
+      <h2>Acceptation</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 6.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le “non” fondamental de la personnalité : nous rejetons ce que nous sentons, puis nous rejetons notre rejet, puis nous essayons de nous débarrasser du conflit.</p>
+      <h3>Le retournement</h3>
+      <p>L'acceptation n'est pas une résignation, ni une technique pour faire disparaître l'attachement. C'est une attitude de non-rejet. Quand ce qui est est accepté, la libération suit naturellement, sans être prise comme but.</p>
+      <h3>Exemples</h3>
+      <p>Almaas remonte avant même le surmoi parental : il parle de la régulation autonome du nourrisson, de la confiance organismique, de la projection et de la séparation progressive d'avec l'unité ressentie.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> puis-je sentir le “non” qui précède mon effort pour devenir plus calme, plus ouvert ou plus spirituel&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c7">
+      <div class="num">07</div>
+      <h2>Changement et vérité</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 7.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Des réactions très concrètes dans un groupe : vouloir protéger les nouveaux, se sentir supérieur, ne pas écouter, être irrité, préférer être ailleurs, vouloir être parfait.</p>
+      <h3>Le retournement</h3>
+      <p>Nous voulons changer, mais selon nos anciennes idées de ce que le changement devrait être. Or ces idées appartiennent justement à la condition actuelle. Le changement réel retourne tout le cadre, pas seulement quelques comportements.</p>
+      <h3>Exemples</h3>
+      <p>Almaas laisse les commentaires des étudiants montrer le mécanisme : chacun commente la réalité depuis une prétention implicite à savoir comment les choses devraient se passer. Puis il ramène à la vérité de l'expérience immédiate.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle vérité suis-je en train de refuser parce qu'elle bouleverserait mon idée même du changement&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c8">
+      <div class="num">08</div>
+      <h2>Volonté</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 8.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Notre idée habituelle de la volonté : faire arriver quelque chose, pousser, corriger l'expérience, amener la vie là où nous croyons qu'elle devrait être.</p>
+      <h3>Le retournement</h3>
+      <p>La volonté véritable est presque l'inverse de cette contrainte. Elle est l'abandon à ce qui est vécu maintenant, l'accord avec l'ordre naturel. La fausse volonté commence dès que nous disons non à l'expérience.</p>
+      <h3>Exemples</h3>
+      <p>Almaas prend le mécontentement amoureux, l'effort pour combler les trous, puis la pression sociale fondée sur objectifs, plans et projection. Rester dans la vérité peut donner l'impression d'aller contre tout le courant culturel.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> ma volonté soutient-elle la réalité de ce qui est, ou essaie-t-elle de traîner mon expérience ailleurs&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c9">
+      <div class="num">09</div>
+      <h2>Soi et absence de soi</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 9.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La perspective ordinaire du moi : une île avec ses besoins, désirs, droits, projets, préférences, blessures et stratégies de protection.</p>
+      <h3>Le retournement</h3>
+      <p>L'absence de soi n'est pas une haine de soi. C'est la fin de la centralité automatique de l'île. Quand cette perspective se détend, les autres ne sont plus seulement vus selon ce qu'ils donnent ou retirent à “moi”.</p>
+      <h3>Exemples</h3>
+      <p>Almaas développe longuement l'image des îles : guerre, amitié, aide, déception, tout peut rester organisé autour du point de vue du moi. Il termine en montrant que l'ouverture permet une action spontanée, non passive.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> comment mon île colore-t-elle ma manière de voir les autres îles&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c10">
+      <div class="num">10</div>
+      <h2>Amour</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 10.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le mot “amour”, utilisé partout, souvent sans précision. Nous pensons surtout à une émotion envers une personne spéciale, dans une relation spéciale, sous certaines conditions.</p>
+      <h3>Le retournement</h3>
+      <p>L'amour n'est pas principalement un objet que l'on donne ou reçoit. Il est le rayonnement d'une harmonie de tout l'organisme. Quand l'amour est réel, il unit sans effacer la singularité&nbsp;: on peut être pleinement soi et non séparé.</p>
+      <h3>Exemples</h3>
+      <p>Almaas examine le “je t'aime”, les conditions posées à l'autre, le besoin d'être aimé, puis l'amour comme débordement. Il montre que la personne aimante ne possède pas l'amour&nbsp;: elle devient un canal de son action.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> où est-ce que je réduis l'amour à un besoin, une préférence ou une condition&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c11">
+      <div class="num">11</div>
+      <h2>Ami(e) et amant(e)</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 11.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Une question d'étudiant sur l'amitié. Almaas part de l'ami ordinaire : celui avec qui bavarder, qui nous soutient, qui est d'accord avec nous, qui nous aide à ne pas nous sentir seuls.</p>
+      <h3>Le retournement</h3>
+      <p>L'ami et l'amant ne sont pas seulement des rôles relationnels. Ils révèlent des capacités intérieures : objectivité, confiance, vulnérabilité, cœur ouvert, participation entière à l'existence.</p>
+      <h3>Exemples</h3>
+      <p>Il distingue l'ami, le partenaire intime et l'amant, puis montre que l'amant existe en nous. L'amant célèbre l'existence, aime la vie, la vérité, la compréhension, et ne cherche pas à arriver ailleurs.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> est-ce que j'utilise la relation pour ne pas être seul, ou pour laisser apparaître l'ami et l'amant en moi&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c12">
+      <div class="num">12</div>
+      <h2>Être soi-même</h2>
+      <p class="source">Source&nbsp;: <em>Cœur de Diamant II</em>, chap. 12.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La phrase la plus évidente et la plus mystérieuse : “je veux être moi-même”. Tout le monde croit savoir ce que cela veut dire, mais ce “soi” devient insaisissable dès qu'on le regarde vraiment.</p>
+      <h3>Le retournement</h3>
+      <p>Être soi-même n'est pas simplement exprimer sa colère, son amour, sa tristesse ou ses envies. C'est découvrir la vérité précise qui est pertinente pour son âme maintenant, sans transformer une vérité en loi pour tous.</p>
+      <h3>Exemples</h3>
+      <p>Almaas interroge les désirs personnels, les idéaux spirituels impersonnels, l'ego pris comme problème, puis la nécessité d'être personnel dans sa vérité. Une vérité peut être la valeur pour l'un, la compassion pour l'autre.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle vérité est pertinente pour moi maintenant, et non pour l'image de moi que je voudrais défendre&nbsp;?</p>
+    </article>
+
+    <div class="note">
+      <h2>Ce que cette série apporte au site</h2>
+      <p>
+        Elle donne au visiteur un passage plus transformant : non pas seulement
+        “voici les notions”, mais “voici comment une notion retourne ma manière de
+        vivre”. C'est particulièrement précieux pour quelqu'un qui découvre Almaas
+        sans vouloir rester au niveau intellectuel.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="causeries-premiere-serie.html">← Première série</a>
+      <a class="dorée" href="causeries.html">Toutes les causeries</a>
+      <a href="lire-almaas.html">Lire Almaas →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </div>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>

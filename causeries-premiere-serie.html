@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Les causeries — première série — L'essence retrouvée</title>
+  <meta name="description" content="Première série de causeries d'après A.H. Almaas : 17 thèmes, leurs exemples, leurs sources et le retournement de regard qu'ils proposent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;
+      --estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;
+      --jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:56rem;margin:0 auto;padding:0 1.4rem}
+    .contenu{padding-bottom:4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}
+    .nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic;transition:color .18s ease}
+    .nuit .retour:hover{color:var(--or-vif)}
+    header.tete{text-align:center;padding:2.6rem 0 .6rem}
+    .gemme{width:44px;height:44px;margin:0 auto 1rem;display:block}
+    .gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}
+    .gemme .f{opacity:.4}
+    .nuit h1{font-weight:500;font-size:clamp(2rem,5vw,3rem);margin:.1rem 0 .35rem;color:#f4f7ff;line-height:1.12}
+    .nuit h1 em{font-style:italic;color:var(--or-vif)}
+    .nuit .chapeau{max-width:39rem;margin:0 auto;color:var(--nuit-doux);font-size:1.16rem;text-align:center;font-style:italic}
+    .contenu p{margin:0 0 1.15rem;color:var(--encre)}
+    .contenu em{color:#101a3c}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .intro,.carte,.atelier,.note{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;
+      box-shadow:0 2px 10px rgba(35,44,74,.035);
+    }
+    .intro,.carte,.note{margin:2rem 0;padding:1.35rem 1.5rem}
+    .carte h2,.note h2{margin:0 0 .7rem;font-weight:600;font-size:1.35rem;color:var(--encre)}
+    .carte ol{margin:.2rem 0 0;padding-left:1.25rem;color:var(--encre-douce)}
+    .carte li{margin:.45rem 0}
+    .toc{margin:1.6rem 0 2.2rem;padding:1rem 1.25rem;background:rgba(163,120,31,.06);border:1px solid var(--jour-ligne);border-radius:14px}
+    .toc a{display:inline-block;margin:.25rem .55rem .25rem 0;font-size:1.02rem}
+    .atelier{position:relative;margin:1.15rem 0;padding:1.35rem 1.45rem 1.3rem 4.35rem}
+    .atelier .num{position:absolute;left:1.25rem;top:1.45rem;font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.12em;color:var(--or-profond)}
+    .atelier h2{margin:0 0 .25rem;font-weight:600;font-size:1.34rem;color:var(--encre)}
+    .atelier .source{margin:0 0 .9rem;font-size:.95rem;color:var(--estompe);font-style:italic}
+    .atelier h3{font-family:Inter,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-profond);margin:1rem 0 .25rem}
+    .atelier p{margin:0;color:var(--encre-douce);font-size:1.06rem}
+    .atelier p + p{margin-top:.7rem}
+    .atelier .question{margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(35,44,74,.08);color:var(--encre)}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3.2rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+    @media (max-width:560px){
+      .atelier{padding:1.2rem 1.2rem 1.2rem 1.35rem}
+      .atelier .num{position:static;display:block;margin-bottom:.3rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="causeries.html">← Les causeries</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/>
+        <line class="f" x1="9" y1="16" x2="35" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="16.5" y2="16"/>
+        <line class="f" x1="22" y1="5" x2="27.5" y2="16"/>
+        <line class="f" x1="16.5" y1="16" x2="22" y2="39"/>
+        <line class="f" x1="27.5" y1="16" x2="22" y2="39"/>
+      </svg>
+      <h1><em>Première série</em></h1>
+      <p class="chapeau">Dix-sept causeries pour apprendre à voir autrement : l'Essence recouverte, les trous, la vérité, la maturité et le travail vivant d'une école.</p>
+    </header>
+  </div></div>
+
+  <div class="voile contenu">
+    <div class="intro">
+      <p>
+        Cette première série reprend les causeries dans leur ordre source. L'objectif n'est pas de
+        remplacer la lecture, mais de faire sentir le geste d'Almaas&nbsp;: il part d'une
+        situation concrète, déplace notre interprétation ordinaire, puis montre la
+        qualité essentielle cachée derrière le problème.
+      </p>
+      <p>
+        La série n'est donc pas une simple introduction. Elle pose déjà presque toute
+        la grammaire de l'Approche Diamant&nbsp;: personnalité, Essence, trous, vérité,
+        compassion, confiance, lutte, permission, maturité, relation à l'enseignement
+        et transmission vivante.
+      </p>
+    </div>
+
+    <div class="carte">
+      <h2>Le mouvement de la série</h2>
+      <ol>
+        <li>L'Essence est première, mais elle est recouverte par la personnalité.</li>
+        <li>Les manques et les désirs révèlent des qualités essentielles perdues de vue.</li>
+        <li>La vérité demande précision, compassion, confiance et lutte réelle.</li>
+        <li>La pratique mûrit en responsabilité, impeccabilité, curiosité et transmission.</li>
+      </ol>
+    </div>
+
+    <div class="toc" aria-label="Causeries de la première série">
+      <a href="#c1">1. Dans le monde</a>
+      <a href="#c2">2. Les trous</a>
+      <a href="#c3">3. Approche Diamant</a>
+      <a href="#c4">4. Foi</a>
+      <a href="#c5">5. Noblesse</a>
+      <a href="#c6">6. Valeur</a>
+      <a href="#c7">7. Compassion</a>
+      <a href="#c8">8. Confiance</a>
+      <a href="#c9">9. Essence et vie</a>
+      <a href="#c10">10. Lutte</a>
+      <a href="#c11">11. Vérité</a>
+      <a href="#c12">12. Permettre</a>
+      <a href="#c13">13. Grandir</a>
+      <a href="#c14">14. Enseignement</a>
+      <a href="#c15">15. Guerrier</a>
+      <a href="#c16">16. Curiosité</a>
+      <a href="#c17">17. Miel</a>
+    </div>
+
+    <article class="atelier" id="c1">
+      <div class="num">01</div>
+      <h2>Dans le monde, mais pas du monde</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 1.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La vie ordinaire : carrière, indépendance, couple, désir d'être soi, désir de fusion amoureuse. Il ne les méprise pas et ne demande pas de quitter le monde.</p>
+      <h3>Le retournement</h3>
+      <p>Ces désirs mondains deviennent lisibles comme des reflets déformés d'une réalité essentielle. L'indépendance cherche l'Essence personnelle ; la fusion amoureuse cherche une qualité d'amour ou d'unité déjà présente comme Essence.</p>
+      <h3>Exemples</h3>
+      <p>Il prend l'affirmation de soi, la réussite, le métier, la relation intime, le désir de fusion, puis montre que le problème n'est pas d'avoir ces désirs, mais de croire que leur objet extérieur est la source réelle.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> dans ce que je poursuis dans le monde, quelle qualité plus profonde suis-je vraiment en train de chercher&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c2">
+      <div class="num">02</div>
+      <h2>La Théorie des trous</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 2.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le manque, la dépendance affective, la perte d'une relation, le besoin d'être apprécié, reconnu ou aimé.</p>
+      <h3>Le retournement</h3>
+      <p>Le trou n'est pas seulement une blessure psychologique. Il est l'empreinte d'une qualité essentielle perdue de vue. Quand une relation remplit ce trou, sa perte semble arracher une partie de soi.</p>
+      <h3>Exemples</h3>
+      <p>Il utilise surtout la valeur : quand l'appréciation de l'autre disparaît, l'impression de nullité peut révéler un trou de valeur, puis ouvrir à la valeur essentielle elle-même.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quel désir répété indique qu'un trou cherche à être vu plutôt que comblé&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c3">
+      <div class="num">03</div>
+      <h2>L'Approche Diamant du travail sur soi</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 3.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La difficulté du travail spirituel : manque de volonté, peur de s'engager, incapacité à s'abandonner, comportements que l'on n'arrive pas à changer.</p>
+      <h3>Le retournement</h3>
+      <p>Il ne blâme pas simplement l'étudiant. Il montre que volonté, engagement et abandon sont souvent bloqués par des peurs inconscientes. La précision psychologique devient une aide spirituelle.</p>
+      <h3>Exemples</h3>
+      <p>Il évoque la volonté paralysée par des peurs profondes, l'engagement vécu comme perte de liberté ou d'identité, et les injonctions morales qui échouent parce qu'elles ne touchent pas la racine inconsciente.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> si je n'arrive pas à m'engager, quelle peur inconsciente mon manque d'engagement protège-t-il&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c4">
+      <div class="num">04</div>
+      <h2>La foi et l'engagement</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 4.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La confusion entre croire, avoir foi, savoir directement et rester engagé quand l'expérience essentielle n'est plus immédiatement présente.</p>
+      <h3>Le retournement</h3>
+      <p>La foi réelle ne repose pas sur une croyance abstraite, mais sur une connaissance goûtée. Elle devient un pont entre une expérience directe passée et la stabilité d'une connaissance encore à intégrer.</p>
+      <h3>Exemples</h3>
+      <p>Il distingue croyance mentale, foi issue de la croyance, foi issue de la connaissance, puis connaissance stable. L'engagement est mis en rapport avec la peur de perdre l'identité connue.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> qu'est-ce que je crois seulement, et qu'est-ce que je connais déjà par expérience, même faiblement&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c5">
+      <div class="num">05</div>
+      <h2>La noblesse et la souffrance</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 5.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La souffrance, l'attachement aux plaisirs extérieurs et l'idée que vivre pour la vérité ferait perdre la vie ordinaire.</p>
+      <h3>Le retournement</h3>
+      <p>Il distingue souffrance ignoble et souffrance noble. La première vient de chercher des substituts à l'Essence ; la seconde accompagne le lâcher-prise des attachements qui empêchent l'Essence personnelle de se réaliser.</p>
+      <h3>Exemples</h3>
+      <p>Il mentionne l'attachement au partenaire, au travail, à l'argent, au corps, à la maison ou au confort, puis montre qu'ils peuvent être remplis par l'Essence au lieu de servir de remplacement.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle souffrance vient d'un attachement, et quelle souffrance vient du fait que je commence à être fidèle à la vérité&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c6">
+      <div class="num">06</div>
+      <h2>La Valeur</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 6.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le sentiment que la vie a ou n'a pas de sens, l'estime de soi, la valeur accordée par le surmoi, les critères appris de réussite ou d'échec.</p>
+      <h3>Le retournement</h3>
+      <p>La valeur ne vient pas de l'approbation intérieure du surmoi ni de la reconnaissance extérieure. Elle peut se révéler comme une présence intrinsèque, dense, sensible, presque substantielle.</p>
+      <h3>Exemples</h3>
+      <p>La discussion part de témoignages d'étudiants : sens de vivre, liberté, force, gloire, joie. Almaas ramène ces expériences à la valeur essentielle plutôt qu'à une opinion favorable sur soi.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> ma valeur dépend-elle d'une approbation, ou puis-je sentir ce qui en moi est précieux avant tout jugement&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c7">
+      <div class="num">07</div>
+      <h2>La vérité et la compassion</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 7.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Notre habitude de choisir le bonheur, le confort ou une image agréable de nous-mêmes plutôt que la vérité.</p>
+      <h3>Le retournement</h3>
+      <p>La compassion n'est pas seulement le désir de soulager la douleur. Elle est ce qui permet de tolérer la douleur de voir vrai. Sans compassion, la vérité devient menaçante ; avec elle, la vérité devient praticable.</p>
+      <h3>Exemples</h3>
+      <p>Il s'appuie sur l'histoire de Khidr et du Pays de la Vérité : certains choisissent le bonheur, d'autres la souffrance, mais le point décisif est de désirer la vérité pour elle-même.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> où est-ce que je préfère une consolation à une vérité qui pourrait me libérer&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c8">
+      <div class="num">08</div>
+      <h2>La confiance</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 8.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La confiance envers soi, envers l'autre, envers le groupe, envers une vérité, et la peur de devenir vulnérable.</p>
+      <h3>Le retournement</h3>
+      <p>La confiance n'est pas naïveté ni garantie d'être protégé. Elle est la capacité de s'ouvrir à ce qui est là sans se défendre immédiatement. Elle est liée à la vérité et à la compassion.</p>
+      <h3>Exemples</h3>
+      <p>Les étudiants parlent de sécurité, de mérite, de vulnérabilité et de se faire confiance. Almaas distingue plusieurs niveaux : confiance pratique, confiance dans l'intention de l'autre, et confiance plus profonde dans la réalité de l'expérience.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> qu'est-ce qui surgit quand je commence réellement à faire confiance&nbsp;: détente, peur, retrait, besoin de preuve&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c9">
+      <div class="num">09</div>
+      <h2>L'Essence est la vie</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 9.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le désir d'obtenir quelque chose par le travail spirituel, et le mécanisme de projection : nous voyons dehors ce que nous ne pouvons pas encore reconnaître dedans.</p>
+      <h3>Le retournement</h3>
+      <p>L'accomplissement n'est pas d'obtenir ce que veut la personnalité. C'est d'être l'Essence. Mais nous projetons souvent l'Essence sur une personne aimée, un enseignant, une situation ou un idéal.</p>
+      <h3>Exemples</h3>
+      <p>Il passe de la projection négative, comme la peur ou l'hostilité attribuée aux autres, à la projection positive : tomber amoureux parce que l'autre semble porter notre propre amour, valeur ou beauté essentielle.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle beauté que je vois dehors pourrait être une qualité de mon Essence que je n'ose pas encore reconnaître&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c10">
+      <div class="num">10</div>
+      <h2>La valeur de la lutte intérieure</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 10.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Le désir que l'enseignant règle nos problèmes, nous donne une réponse, nous soulage ou rende la vie plus facile.</p>
+      <h3>Le retournement</h3>
+      <p>La lutte n'est pas un échec de la voie. Elle est la digestion même du travail. Une réponse reçue trop vite ne devient pas connaissance ; la friction avec le problème enracine la réalisation.</p>
+      <h3>Exemples</h3>
+      <p>Il compare la lutte à une digestion, à une combustion interne, à la fabrication du vin, à une concentration de jus. Les difficultés deviennent des barrages intelligents qui obligent à revenir vers soi.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quel problème voudrais-je déléguer, alors qu'il me demande de développer ma propre perception&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c11">
+      <div class="num">11</div>
+      <h2>La vérité</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 11.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La phrase “la vérité libère”, l'honnêteté morale, les faits, les intuitions et la différence entre dire une chose exacte et agir depuis la totalité de la vérité.</p>
+      <h3>Le retournement</h3>
+      <p>La vérité n'est pas seulement un fait correct. Elle a une saveur intérieure : certitude, liberté, intimité avec soi. La vérité relative est vivante quand elle porte le parfum de la vérité plus profonde.</p>
+      <h3>Exemples</h3>
+      <p>Il utilise des cas concrets : cacher quelqu'un en danger, parler ou non à une sœur qui n'est pas prête à entendre, distinguer les faits d'une action vraiment ajustée à toute la situation.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> suis-je en train de dire un fait pour avoir raison, ou de servir la vérité de toute la situation&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c12">
+      <div class="num">12</div>
+      <h2>Permettre</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 12.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Nos idées sur la croissance : devenir plus heureux, plus aimable, plus réussi, garder la même identité mais améliorée.</p>
+      <h3>Le retournement</h3>
+      <p>Transformer veut dire devenir autre que ce que l'on imaginait. Permettre, ce n'est ni forcer ni rester passif : c'est laisser le processus réel ouvrir des possibilités que la personnalité ne peut pas concevoir.</p>
+      <h3>Exemples</h3>
+      <p>Il joue avec l'image de la larve et du papillon, puis avec des images volontairement inattendues : fruit, arbre, planète, étoile. Le point est que l'Essence se déploie au-delà de nos projets de larve.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> quelle image de ma transformation limite déjà ce qui pourrait se révéler&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c13">
+      <div class="num">13</div>
+      <h2>Grandir</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 13.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>Les plaintes, les attentes envers le partenaire ou l'enseignant, le besoin que quelqu'un nous donne amour, sécurité, estime ou soutien.</p>
+      <h3>Le retournement</h3>
+      <p>Grandir n'est pas devenir froid ou indépendant au sens défensif. C'est cesser de demander au monde d'être mère ou père, et découvrir dans l'Essence le soutien, l'amour et la réalité qui ne peuvent pas être obtenus de l'extérieur.</p>
+      <h3>Exemples</h3>
+      <p>Il compare la société à une garderie non reconnue, montre la plainte comme appel à une mère, et lit les relations ordinaires comme répétition de demandes infantiles.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> à qui est-ce que je demande encore de me donner ce que seule l'Essence peut révéler en moi&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c14">
+      <div class="num">14</div>
+      <h2>La relation de l'étudiant avec l'enseignement</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 14.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La manière dont on traite le travail intérieur : activité secondaire, autorité à contester, ressource à consommer, ou base réelle de transformation.</p>
+      <h3>Le retournement</h3>
+      <p>La relation à l'enseignement reflète la relation à l'Essence. Les résistances, objections et projections ne sont pas à condamner, mais à comprendre : elles montrent où la personnalité défend son monde.</p>
+      <h3>Exemples</h3>
+      <p>Il parle du temps, de l'énergie, de l'argent, des règles, des réactions à l'enseignant, de la loyauté inconsciente envers les parents et le conditionnement. Pour un lecteur du site, cela devient une question : quelle place réelle la vérité a-t-elle dans ma vie&nbsp;?</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> est-ce que je traite la pratique comme un supplément, ou comme une base qui peut transformer ma vie&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c15">
+      <div class="num">15</div>
+      <h2>Le guerrier impeccable</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 15.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La complaisance : savoir ce qui est vrai, puis retomber dans le même schéma, par faiblesse, distraction, confort ou incertitude.</p>
+      <h3>Le retournement</h3>
+      <p>L'impeccabilité n'est pas perfectionnisme. Elle signifie faire réellement de son mieux, avec ce que l'on sait maintenant. Elle soutient la partie saine contre la complaisance, sans devenir punition.</p>
+      <h3>Exemples</h3>
+      <p>Il prend des exemples très ordinaires : choisir encore la personne qui rejette, rester occupé pour éviter, arriver en retard parce qu'on prend un dessert, travailler ou non avec les émotions et le surmoi.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> où est-ce que je sais assez pour agir, mais laisse l'incertitude protéger ma complaisance&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c16">
+      <div class="num">16</div>
+      <h2>La curiosité</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 16.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La quête spirituelle elle-même : éviter la douleur, chercher le plaisir, puis même chercher la vérité comme un nouveau moyen d'obtenir quelque chose.</p>
+      <h3>Le retournement</h3>
+      <p>La curiosité n'est pas orientée vers un résultat. Elle est l'esprit de vérité dans le cœur, le mouvement vivant qui regarde ce qui est là parce que cela mérite d'être connu.</p>
+      <h3>Exemples</h3>
+      <p>Il commente une histoire attribuée à Jésus : deux groupes restent pris dans douleur et plaisir ; le troisième n'est pas mû par un but, mais par l'esprit de vérité. Il compare cela à la curiosité spontanée des enfants.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> est-ce que je cherche la vérité pour obtenir un état, ou parce que l'expérience présente m'appelle&nbsp;?</p>
+    </article>
+
+    <article class="atelier" id="c17">
+      <div class="num">17</div>
+      <h2>Recueillir le miel</h2>
+      <p class="source"><em>Cœur de Diamant I</em>, chap. 17.</p>
+      <h3>Ce qu'Almaas prend</h3>
+      <p>La différence entre information et connaissance vivante, et le rôle d'une école ou d'un groupe dans la concentration de l'Essence.</p>
+      <h3>Le retournement</h3>
+      <p>La connaissance spirituelle n'est pas seulement ce que l'on lit. Elle se distille dans l'être humain. L'image du miel montre une connaissance matérielle, concentrée, recueillie par le travail de plusieurs.</p>
+      <h3>Exemples</h3>
+      <p>Il utilise les abeilles, les nectars, la ruche, les flacons humains, puis les activités physiques faites en présence. La transmission devient une pratique incarnée, pas une accumulation d'idées.</p>
+      <p class="question"><strong>Première enquête&nbsp;:</strong> ce que j'apprends reste-t-il information, ou commence-t-il à devenir une substance de présence dans ma vie&nbsp;?</p>
+    </article>
+
+    <div class="note">
+      <h2>Conclusion provisoire</h2>
+      <p>
+        Cette première série est plus radicale qu'un simple sommaire ne le montre. Elle ne donne
+        pas seulement quelques thèmes célèbres ; il apprend à reconnaître comment toute
+        situation ordinaire peut être un reflet déformé, une porte, ou une défense devant
+        l'Essence. C'est cette logique qui guide aussi la deuxième série.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="causeries.html">← Les causeries</a>
+      <a class="dorée" href="causeries-deuxieme-serie.html">Deuxième série →</a>
+      <a href="lire-almaas.html">Lire Almaas →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </div>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>
