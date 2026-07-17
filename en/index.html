@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Essence Regained — after A. H. Almaas</title>
-  <meta name="description" content="The question of essence, after A. H. Almaas: what in us has never disappeared, how we lose sight of it, how it can be found again. His philosophy, his spirituality, his Diamond Approach — and a bilingual glossary, English–French.">
+  <meta name="description" content="The question of essence, after A. H. Almaas: what in us has never disappeared, how we lose sight of it, how it can be found again. A sourced, bilingual entry into the Diamond Approach.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,6 +105,19 @@
       border:1px solid var(--jour-bord);padding:.18rem .5rem;border-radius:999px;
     }
 
+    .sommaire{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;max-width:66rem;margin:0 auto}
+    .sommaire-col{
+      background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;
+      padding:1.35rem 1.4rem;box-shadow:0 2px 10px rgba(35,44,74,.035);
+    }
+    .sommaire-col h3{margin:0 0 .55rem;font-weight:600;font-size:1.24rem;color:var(--encre)}
+    .sommaire-col p{margin:0 0 .9rem;color:var(--encre-douce);font-size:1.02rem}
+    .sommaire-col a{
+      display:block;color:var(--or-profond);text-decoration:none;border-top:1px solid rgba(35,44,74,.08);
+      padding:.55rem 0;font-size:1.03rem;
+    }
+    .sommaire-col a:hover{color:var(--or-sombre)}
+
     .fratrie{text-align:center;padding:3rem 0 2rem;border-top:1px solid rgba(35,44,74,.1)}
     .fratrie p{color:var(--estompe);font-size:1.02rem;font-style:italic;margin:0 0 1rem}
     .fratrie a{
@@ -154,7 +167,7 @@
       <p class="invitation apparait d3">
         There is something in you that has never disappeared. Life has covered it over —
         it has not destroyed it. This site explores <strong>the question of essence</strong>,
-        guided by the work of A.&nbsp;H.&nbsp;Almaas — philosopher and spiritual teacher,
+        guided by the work of A.&nbsp;H.&nbsp;Almaas — contemporary mystical thinker and spiritual teacher,
         founder of the Diamond Approach.
       </p>
 
@@ -162,6 +175,7 @@
         <a class="porte" href="#manque">Is something missing?</a>
         <a class="porte porte--principale" href="chemin.html">Follow the path</a>
         <a class="porte" href="douze-notions.html">12 key notions</a>
+        <a class="porte" href="#sommaire">Contents</a>
         <a class="porte" href="#espaces">Explore freely</a>
       </nav>
       <p class="aide apparait d5">
@@ -180,6 +194,38 @@
   </div></div>
 
   <div class="voile">
+
+    <!-- ================= CONTENTS ================= -->
+    <section id="sommaire">
+      <h2 class="titre-section">Contents</h2>
+      <p class="chapeau">
+        A clear way into Almaas: begin from experience, place the sources,
+        then deepen the notions.
+      </p>
+      <div class="sommaire">
+        <div class="sommaire-col">
+          <h3>Begin</h3>
+          <p>The most accessible doors for a first visit.</p>
+          <a href="chemin.html">The guided path</a>
+          <a href="douze-notions.html">The 12 key notions</a>
+          <a href="lessence.html">The question of essence</a>
+        </div>
+        <div class="sommaire-col">
+          <h3>Place</h3>
+          <p>What comes from Almaas, what comes from traditions, and what is commentary.</p>
+          <a href="situer.html">Place Almaas and his sources</a>
+          <a href="lapproche.html">The Diamond Approach</a>
+          <a href="lhomme.html">The man and the path</a>
+        </div>
+        <div class="sommaire-col">
+          <h3>Deepen</h3>
+          <p>Finer maps for reading, checking, and returning to the texts.</p>
+          <a href="la-carte.html">The general map</a>
+          <a href="glossaire.html">The bilingual glossary</a>
+          <a href="lire-almaas.html">Reading Almaas</a>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= LE CHEMIN ================= -->
     <section id="chemin">
