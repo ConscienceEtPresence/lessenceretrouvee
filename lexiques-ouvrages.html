@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Lexiques par ouvrage — L'essence retrouvée</title>
+  <meta name="description" content="Lexiques par ouvrage de l'œuvre d'A.H. Almaas : termes français-anglais, familles de notions et portes de recherche pour lire plus précisément.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;--or:#e8c97a;--or-vif:#f5d77b;--jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4)}
+    *{box-sizing:border-box}html{background:var(--jour-bg);scroll-behavior:smooth}body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.7;background:var(--jour-bg);font-size:1.13rem}.voile{max-width:66rem;margin:0 auto;padding:0 1.4rem}.nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}.nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}.nuit .retour:hover{color:var(--or-vif)}header.tete{text-align:center;padding:2.8rem 0 .8rem}.gemme{width:48px;height:48px;margin:0 auto 1rem;display:block}.gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}.gemme .f{opacity:.4}.nuit h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.2rem);margin:.1rem 0 .4rem;color:#f4f7ff;line-height:1.12}.nuit h1 em{font-style:italic;color:var(--or-vif)}.nuit .chapeau{max-width:42rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;text-align:center;font-style:italic}.contenu{padding:3rem 0 4rem}.intro,.lexique,.note{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;box-shadow:0 2px 10px rgba(35,44,74,.035)}.intro{max-width:48rem;margin:0 auto 2rem;padding:1.4rem 1.55rem}.intro p{margin:0 0 1rem;color:var(--encre)}.intro p:last-child{margin-bottom:0}.outils{position:sticky;top:0;z-index:10;background:linear-gradient(var(--jour-bg) 78%,rgba(246,241,230,0));padding:1.2rem 0 1.5rem}.cherche{width:100%;padding:.88rem 1.15rem;border-radius:999px;background:#fff;border:1px solid var(--jour-bord);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;color:var(--encre);outline:none}.cherche:focus{border-color:var(--jour-ligne)}.filtres{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;margin-top:.85rem}.filtre{font-family:Inter,sans-serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:.38rem .78rem;border-radius:999px;cursor:pointer;color:var(--encre-douce);border:1px solid var(--jour-bord);background:transparent}.filtre:hover,.filtre.actif{border-color:var(--jour-ligne);color:var(--encre)}.filtre.actif{background:rgba(163,120,31,.08)}.compteur{text-align:center;color:var(--estompe);font-size:.96rem;font-style:italic;margin:.65rem 0 0}.lexiques{display:grid;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));gap:1rem}.lexique{padding:1.2rem 1.3rem}.lexique .famille{font-family:Inter,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin-bottom:.35rem}.lexique h2{margin:0 0 .45rem;font-weight:600;font-size:1.33rem;color:var(--encre)}.lexique p{margin:0 0 .75rem;color:var(--encre-douce);font-size:1.02rem}.termes{display:flex;flex-wrap:wrap;gap:.38rem;margin:.75rem 0 .85rem}.terme{font-family:Inter,sans-serif;font-size:.72rem;line-height:1.35;color:var(--encre-douce);border:1px solid rgba(35,44,74,.11);border-radius:999px;padding:.24rem .58rem;background:rgba(255,255,255,.52)}.terme strong{color:var(--encre);font-weight:600}.source{margin-top:.65rem;padding-top:.65rem;border-top:1px solid rgba(35,44,74,.08);font-size:.94rem;color:var(--estompe);font-style:italic}.lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}.lien:hover{color:var(--or-sombre)}.note{margin:2rem 0 0;padding:1.25rem 1.4rem;background:rgba(163,120,31,.06);border-color:var(--jour-ligne)}.note h2{margin:0 0 .4rem;font-weight:600;font-size:1.25rem;color:var(--encre)}.note p{margin:0;color:var(--encre-douce);font-size:1.03rem}.rien{display:none;text-align:center;color:var(--estompe);font-style:italic;padding:3rem 0}.suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}.suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte)}.suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}.suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}footer{text-align:center;padding:2.4rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}@media (max-width:620px){.lexiques{grid-template-columns:1fr}.outils{position:static}}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true"><path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/><line class="f" x1="9" y1="16" x2="35" y2="16"/><line class="f" x1="22" y1="5" x2="16.5" y2="16"/><line class="f" x1="22" y1="5" x2="27.5" y2="16"/><line class="f" x1="16.5" y1="16" x2="22" y2="39"/><line class="f" x1="27.5" y1="16" x2="22" y2="39"/></svg>
+      <h1>Lexiques <em>par ouvrage</em></h1>
+      <p class="chapeau">Pour chercher chirurgicalement : un livre, ses notions, leurs équivalents anglais, et la porte du site qui les éclaire.</p>
+    </header>
+  </div></div>
+
+  <main class="voile contenu">
+    <div class="intro">
+      <p>
+        Le glossaire général donne les définitions transversales. Cette page ajoute
+        un deuxième geste : retrouver les familles de notions par ouvrage, pour
+        comprendre comment un livre particulier organise le vocabulaire d'Almaas.
+      </p>
+      <p>
+        Les entrées ci-dessous synthétisent les glossaires et guides Markdown du
+        dossier <em>ALMAAS MD</em>. Elles gardent les termes en français et en anglais
+        afin d'éviter les contresens de traduction.
+      </p>
+    </div>
+
+    <div class="outils">
+      <input id="recherche" class="cherche" type="search" placeholder="Chercher un livre, une notion, un terme anglais..." aria-label="Chercher dans les lexiques">
+      <div class="filtres" aria-label="Filtres">
+        <button class="filtre actif" data-filtre="tous">Tous</button>
+        <button class="filtre" data-filtre="fondation">Fondations</button>
+        <button class="filtre" data-filtre="causeries">Causeries</button>
+        <button class="filtre" data-filtre="pratique">Pratique</button>
+        <button class="filtre" data-filtre="identite">Identité</button>
+        <button class="filtre" data-filtre="amour">Amour</button>
+        <button class="filtre" data-filtre="enneagramme">Ennéagramme</button>
+      </div>
+      <div id="compteur" class="compteur"></div>
+    </div>
+
+    <section class="lexiques" id="liste">
+      <article class="lexique" data-cat="fondation causeries"><div class="famille">Cœur de Diamant I</div><h2>Les premiers retournements</h2><p>Le livre installe les thèmes fondateurs : voir les trous sans les remplir, laisser vérité et compassion travailler ensemble, retrouver valeur et confiance.</p><div class="termes"><span class="terme"><strong>Trou</strong> / Hole</span><span class="terme"><strong>Valeur</strong> / Value</span><span class="terme"><strong>Compassion</strong> / Compassion</span><span class="terme"><strong>Confiance</strong> / Trust</span><span class="terme"><strong>Permettre</strong> / Allowing</span><span class="terme"><strong>Curiosité</strong> / Curiosity</span></div><p class="source">Sources : <em>Cœur de Diamant I</em>, guide Markdown livre 1. Voir aussi <a class="lien" href="causeries-premiere-serie.html">première série</a>.</p></article>
+      <article class="lexique" data-cat="fondation causeries pratique"><div class="famille">Cœur de Diamant II</div><h2>Liberté, espace, volonté</h2><p>La deuxième série affine la pratique : se libérer des buts, comprendre le non-espoir, accepter l'expérience, distinguer volonté essentielle et volonté contractée.</p><div class="termes"><span class="terme"><strong>Non-espoir</strong> / No Hope</span><span class="terme"><strong>Acceptation</strong> / Acceptance</span><span class="terme"><strong>Espace</strong> / Space</span><span class="terme"><strong>Volonté</strong> / Will</span><span class="terme"><strong>Amour</strong> / Love</span><span class="terme"><strong>Être soi-même</strong> / Being Yourself</span></div><p class="source">Sources : <em>Cœur de Diamant II</em>, guide Markdown livre 2. Voir <a class="lien" href="causeries-deuxieme-serie.html">deuxième série</a>.</p></article>
+      <article class="lexique" data-cat="causeries identite"><div class="famille">Cœur de Diamant III</div><h2>Questions fondamentales</h2><p>Le lecteur est conduit vers l'enquête existentielle : présence réelle, “qui suis-je ?”, gouffre du sens, limites, vulnérabilité et compréhension.</p><div class="termes"><span class="terme"><strong>Recherche</strong> / Search</span><span class="terme"><strong>Présence</strong> / Presence</span><span class="terme"><strong>Gouffre</strong> / Chasm</span><span class="terme"><strong>Idéal de l'ego</strong> / Ego Ideal</span><span class="terme"><strong>Non-attente</strong> / Non-waiting</span><span class="terme"><strong>Limites</strong> / Boundaries</span><span class="terme"><strong>Vulnérabilité</strong> / Vulnerability</span></div><p class="source">Sources : <em>Cœur de Diamant III</em>, guide Markdown livre 3. Voir <a class="lien" href="causeries-troisieme-serie.html">troisième série</a>.</p></article>
+      <article class="lexique" data-cat="causeries pratique"><div class="famille">Cœur de Diamant IV</div><h2>Maturité et réalité non conceptuelle</h2><p>La quatrième série déplace la réalisation vers la vie : personnalité clarifiée, maturité humaine, relation réelle, pensée, concepts et réalité non conceptuelle.</p><div class="termes"><span class="terme"><strong>Personnalité clarifiée</strong> / Clarified Personality</span><span class="terme"><strong>Maturité</strong> / Maturity</span><span class="terme"><strong>Intégration</strong> / Integration</span><span class="terme"><strong>Cœur courageux</strong> / Courageous Heart</span><span class="terme"><strong>Concepts</strong> / Concepts</span><span class="terme"><strong>Non-conceptuel</strong> / Nonconceptual</span></div><p class="source">Sources : <em>Cœur de Diamant IV</em>, guide Markdown livre 4. Voir <a class="lien" href="causeries-quatrieme-serie.html">quatrième série</a>.</p></article>
+      <article class="lexique" data-cat="causeries pratique"><div class="famille">Cœur de Diamant V</div><h2>Dépouillement et vie vraie</h2><p>La cinquième série retire les derniers appuis : pauvreté d'esprit, abandon des sécurités spirituelles, absence absolue, vie vraie, service de la réalité.</p><div class="termes"><span class="terme"><strong>Pauvre en esprit</strong> / Poor in Spirit</span><span class="terme"><strong>Absence absolue</strong> / Absolute Absence</span><span class="terme"><strong>Au-delà de la conscience</strong> / Beyond Consciousness</span><span class="terme"><strong>Vie vraie</strong> / True Life</span><span class="terme"><strong>Réalité objective</strong> / Objective Reality</span><span class="terme"><strong>Quintessence</strong> / Quintessence</span></div><p class="source">Sources : <em>Cœur de Diamant V</em>, guide Markdown livre 5. Voir <a class="lien" href="causeries-cinquieme-serie.html">cinquième série</a>.</p></article>
+      <article class="lexique" data-cat="fondation"><div class="famille">Essence et Élixir</div><h2>Le vocabulaire de base</h2><p>Ces notes structurent le socle : l'Essence n'est pas une idée, mais présence vécue ; les aspects essentiels sont des qualités différenciées de cette présence.</p><div class="termes"><span class="terme"><strong>Essence</strong> / Essence</span><span class="terme"><strong>Présence</strong> / Presence</span><span class="terme"><strong>Aspect essentiel</strong> / Essential Aspect</span><span class="terme"><strong>Substance</strong> / Substance</span><span class="terme"><strong>Lataïf</strong> / Lataif</span><span class="terme"><strong>Personnalité</strong> / Personality</span><span class="terme"><strong>Vide déficitaire</strong> / Deficient Emptiness</span></div><p class="source">Sources : guides et glossaires Markdown <em>Essence et l'Élixir d'illumination</em>. Voir <a class="lien" href="lessence.html">La question de l'essence</a>.</p></article>
+      <article class="lexique" data-cat="identite fondation"><div class="famille">La Perle Inestimable</div><h2>Devenir une personne réelle</h2><p>Le vocabulaire tourne autour de l'Essence personnelle : comment l'ego imite une réalité plus profonde, et comment la personnalité peut être métabolisée dans l'Être.</p><div class="termes"><span class="terme"><strong>Essence personnelle</strong> / Personal Essence</span><span class="terme"><strong>Perle sans prix</strong> / Pearl Beyond Price</span><span class="terme"><strong>Relations d'objet</strong> / Object Relations</span><span class="terme"><strong>Métabolisme psychique</strong> / Psychic Metabolism</span><span class="terme"><strong>Absorption</strong> / Absorption</span><span class="terme"><strong>Autonomie</strong> / Autonomy</span><span class="terme"><strong>Contact</strong> / Contact</span></div><p class="source">Sources : guides Markdown <em>La Perle Inestimable</em>. Voir <a class="lien" href="la-perle.html">La Perle</a>.</p></article>
+      <article class="lexique" data-cat="identite"><div class="famille">The Point of Existence</div><h2>Soi, narcissisme, identité</h2><p>Le Point éclaire le narcissisme normal, la représentation de soi et la blessure qui apparaît quand l'identité construite n'est plus confirmée.</p><div class="termes"><span class="terme"><strong>Point</strong> / Point</span><span class="terme"><strong>Identité essentielle</strong> / Essential Identity</span><span class="terme"><strong>Soi essentiel</strong> / Essential Self</span><span class="terme"><strong>Narcissisme</strong> / Narcissism</span><span class="terme"><strong>Blessure narcissique</strong> / Narcissistic Wound</span><span class="terme"><strong>Représentation de soi</strong> / Self-representation</span></div><p class="source">Sources : résumé et glossaire Markdown <em>The Point of Existence</em>. Voir <a class="lien" href="le-point.html">Le Point</a>.</p></article>
+      <article class="lexique" data-cat="pratique"><div class="famille">Le Vaisseau Spatial Inquiry</div><h2>La méthode de l'enquête</h2><p>L'inquiry est présentée comme une aventure de l'Être : ouverture, non-savoir, amour de la vérité et participation au dynamisme de la réalité.</p><div class="termes"><span class="terme"><strong>Inquiry</strong> / Inquiry</span><span class="terme"><strong>Non-savoir</strong> / Not-knowing</span><span class="terme"><strong>Ouverture</strong> / Openness</span><span class="terme"><strong>Guidance Diamant</strong> / Diamond Guidance</span><span class="terme"><strong>Force optimisante</strong> / Optimizing Force</span><span class="terme"><strong>Dynamisme</strong> / Dynamism</span></div><p class="source">Sources : guide et glossaire Markdown <em>Le Vaisseau Spatial Inquiry</em>. Voir <a class="lien" href="pratiquer.html">Pratiquer</a>.</p></article>
+      <article class="lexique" data-cat="pratique"><div class="famille">Brilliancy</div><h2>L'intelligence comme présence</h2><p>La Brillance demande de distinguer l'intelligence essentielle de la performance mentale : elle synthétise, précise, complète et illumine l'expérience.</p><div class="termes"><span class="terme"><strong>Brillance</strong> / Brilliancy</span><span class="terme"><strong>Intelligence</strong> / Intelligence</span><span class="terme"><strong>Synthèse</strong> / Synthesis</span><span class="terme"><strong>Complétude</strong> / Completeness</span><span class="terme"><strong>Noûs divin</strong> / Divine Nous</span><span class="terme"><strong>Véhicule diamant</strong> / Diamond Vehicle</span></div><p class="source">Sources : rapports et glossaires Markdown <em>Brilliancy</em>. Voir <a class="lien" href="l-intelligence.html">L'intelligence</a>.</p></article>
+      <article class="lexique" data-cat="amour"><div class="famille">Love Unveiled</div><h2>Les couleurs de l'amour</h2><p>Le lexique de l'amour devient phénoménologique : rose, or, grenade, tendresse, douceur, fusion, incarnation et dévoilement.</p><div class="termes"><span class="terme"><strong>Amour personnel</strong> / Personal Love</span><span class="terme"><strong>Amour or</strong> / Merging Gold</span><span class="terme"><strong>Amour grenade</strong> / Pomegranate Love</span><span class="terme"><strong>Tendresse</strong> / Tenderness</span><span class="terme"><strong>Amour incarné</strong> / Embodied Love</span><span class="terme"><strong>Dévoilement</strong> / Unveiling</span></div><p class="source">Sources : guide et glossaire Markdown <em>Love Unveiled</em>. Voir <a class="lien" href="le-chemin-de-lamour.html">Le chemin de l'amour</a>.</p></article>
+      <article class="lexique" data-cat="amour pratique"><div class="famille">Nondual Love</div><h2>L'amour comme nature de la réalité</h2><p>Ce vocabulaire déplace l'amour hors de la seule relation : lumière, monde réel, corps de lumière, abandon, Dieu personnel, libération complète.</p><div class="termes"><span class="terme"><strong>Amour non duel</strong> / Nondual Love</span><span class="terme"><strong>Corps de lumière</strong> / Light Body</span><span class="terme"><strong>Monde réel</strong> / Real World</span><span class="terme"><strong>Dieu personnel</strong> / Personal God</span><span class="terme"><strong>Abandon</strong> / Surrender</span><span class="terme"><strong>Libération</strong> / Release</span></div><p class="source">Sources : guide et glossaire Markdown <em>Nondual Love</em>.</p></article>
+      <article class="lexique" data-cat="amour"><div class="famille">The Inner Beloved</div><h2>Le cœur et le Bien-Aimé</h2><p>Le cœur devient la scène d'une quête plus profonde : division, fidélité, pauvreté, aspiration, cavité primitive et reconnaissance du Bien-Aimé.</p><div class="termes"><span class="terme"><strong>Bien-Aimé</strong> / Beloved</span><span class="terme"><strong>Cœur divisé</strong> / Divided Heart</span><span class="terme"><strong>Fidélité</strong> / Fidelity</span><span class="terme"><strong>Pauvreté du cœur</strong> / Poverty of Heart</span><span class="terme"><strong>Aspiration</strong> / Yearning</span><span class="terme"><strong>Cavité primitive</strong> / Primal Cavity</span></div><p class="source">Sources : guide et glossaire Markdown <em>The Inner Beloved</em>.</p></article>
+      <article class="lexique" data-cat="enneagramme"><div class="famille">Facettes de l'Unité</div><h2>Idées Saintes et confiance fondamentale</h2><p>Ce livre transforme l'ennéagramme en carte de perception : les fixations viennent d'une perte de contact avec la réalité objective et les Idées Saintes.</p><div class="termes"><span class="terme"><strong>Idées Saintes</strong> / Holy Ideas</span><span class="terme"><strong>Confiance fondamentale</strong> / Basic Trust</span><span class="terme"><strong>Lumière du Jour</strong> / Living Daylight</span><span class="terme"><strong>Holding</strong> / Holding Environment</span><span class="terme"><strong>Monde réel</strong> / Real World</span><span class="terme"><strong>Fixation</strong> / Fixation</span></div><p class="source">Sources : guide et glossaire Markdown <em>Facets of Unity</em>. Voir <a class="lien" href="enneagramme-essence.html">L'ennéagramme de l'essence</a>.</p></article>
+      <article class="lexique" data-cat="enneagramme"><div class="famille">Clefs pour l'Ennéagramme</div><h2>Type, réaction, aspect idéalisé</h2><p>Les “clefs” relient chaque point à une difficulté spécifique et à une qualité de l'Être que le type tente d'imiter ou de retrouver.</p><div class="termes"><span class="terme"><strong>Difficulté spécifique</strong> / Specific Difficulty</span><span class="terme"><strong>Réaction spécifique</strong> / Specific Reaction</span><span class="terme"><strong>Aspect idéalisé</strong> / Idealized Aspect</span><span class="terme"><strong>Qualité essentielle</strong> / Essential Quality</span><span class="terme"><strong>Force véritable</strong> / True Strength</span><span class="terme"><strong>Volonté personnelle</strong> / Personal Will</span></div><p class="source">Sources : guide et glossaire Markdown <em>Keys to the Enneagram</em>.</p></article>
+    </section>
+
+    <p id="rien" class="rien">Aucun lexique ne correspond à cette recherche.</p>
+
+    <div class="note">
+      <h2>Pourquoi cette page change l'expérience</h2>
+      <p>
+        Elle donne au site une profondeur de consultation : on peut lire librement,
+        mais aussi revenir à un ouvrage précis, identifier son vocabulaire, puis
+        poursuivre vers le glossaire général ou la page thématique correspondante.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="ouvrages.html">← Bibliothèque des ouvrages</a>
+      <a class="dorée" href="glossaire.html">Glossaire général →</a>
+      <a href="index.html">Accueil</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </main>
+  <script>
+    const recherche = document.getElementById('recherche');
+    const cartes = Array.from(document.querySelectorAll('.lexique'));
+    const boutons = Array.from(document.querySelectorAll('.filtre'));
+    const compteur = document.getElementById('compteur');
+    const rien = document.getElementById('rien');
+    let filtre = 'tous';
+    function appliquer(){
+      const q = recherche.value.trim().toLowerCase();
+      let visibles = 0;
+      cartes.forEach(carte => {
+        const okFiltre = filtre === 'tous' || carte.dataset.cat.includes(filtre);
+        const okTexte = !q || carte.textContent.toLowerCase().includes(q);
+        const show = okFiltre && okTexte;
+        carte.style.display = show ? '' : 'none';
+        if(show) visibles++;
+      });
+      compteur.textContent = visibles + ' lexique' + (visibles > 1 ? 's visibles' : ' visible');
+      rien.style.display = visibles ? 'none' : 'block';
+    }
+    boutons.forEach(b => b.addEventListener('click', () => {
+      filtre = b.dataset.filtre;
+      boutons.forEach(x => x.classList.toggle('actif', x === b));
+      appliquer();
+    }));
+    recherche.addEventListener('input', appliquer);
+    appliquer();
+  </script>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>

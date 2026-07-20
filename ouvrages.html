@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Bibliothèque des ouvrages — L'essence retrouvée</title>
+  <meta name="description" content="Une bibliothèque guidée de l'œuvre d'A.H. Almaas : par où entrer, quel livre lire pour quelle question, et comment les ouvrages se répondent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;--or:#e8c97a;--or-vif:#f5d77b;--jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;--or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4)}
+    *{box-sizing:border-box}html{background:var(--jour-bg);scroll-behavior:smooth}body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.7;background:var(--jour-bg);font-size:1.13rem}.voile{max-width:68rem;margin:0 auto;padding:0 1.4rem}.nuit{background:radial-gradient(1100px 700px at 50% -10%, rgba(232,201,122,.07), transparent 60%),radial-gradient(900px 600px at 85% 40%, rgba(125,150,220,.05), transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.4rem}.nuit .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}.nuit .retour:hover{color:var(--or-vif)}header.tete{text-align:center;padding:2.8rem 0 .8rem}.gemme{width:48px;height:48px;margin:0 auto 1rem;display:block}.gemme path,.gemme line{stroke:var(--or);stroke-width:1.2;fill:none}.gemme .f{opacity:.4}.nuit h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.2rem);margin:.1rem 0 .4rem;color:#f4f7ff;line-height:1.12}.nuit h1 em{font-style:italic;color:var(--or-vif)}.nuit .chapeau{max-width:42rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;text-align:center;font-style:italic}.contenu{padding:3rem 0 4rem}.intro,.outil,.livre,.route,.note{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;box-shadow:0 2px 10px rgba(35,44,74,.035)}.intro{max-width:48rem;margin:0 auto 2.2rem;padding:1.45rem 1.6rem}.intro p{margin:0 0 1rem;color:var(--encre)}.intro p:last-child{margin-bottom:0}.barre{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;margin:1.8rem 0 2.6rem}.barre a{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--or-profond);border:1px solid var(--jour-ligne);border-radius:999px;padding:.48rem .85rem;text-decoration:none;background:rgba(163,120,31,.06)}.barre a:hover{background:rgba(163,120,31,.12)}h2.section{font-weight:500;font-size:clamp(1.7rem,3vw,2.2rem);text-align:center;margin:3rem 0 .7rem;color:var(--encre)}.section-note{text-align:center;max-width:43rem;margin:0 auto 1.7rem;color:var(--encre-douce);font-size:1.08rem}.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.9rem;margin:1.4rem 0 2.4rem}.route{padding:1.1rem 1.2rem}.route .label{font-family:Inter,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin-bottom:.35rem}.route h3{margin:0 0 .35rem;font-weight:600;font-size:1.2rem;color:var(--encre)}.route p{margin:0;color:var(--encre-douce);font-size:1.02rem}.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));gap:1rem}.livre{padding:1.25rem 1.35rem}.livre .source{font-family:Inter,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--estompe);margin-bottom:.35rem}.livre h3{margin:0 0 .55rem;font-weight:600;font-size:1.35rem;color:var(--encre)}.livre p{margin:0 0 .75rem;color:var(--encre-douce);font-size:1.03rem}.livre ul{margin:.2rem 0 .8rem;padding-left:1.1rem;color:var(--encre-douce);font-size:1.01rem}.livre li{margin:.25rem 0}.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:.7rem 0}.tag{font-family:Inter,sans-serif;font-size:.66rem;color:var(--or-profond);border:1px solid rgba(163,120,31,.32);border-radius:999px;padding:.18rem .52rem;background:rgba(163,120,31,.05)}.lien{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}.lien:hover{color:var(--or-sombre)}.note{margin:2.4rem 0 0;padding:1.3rem 1.45rem;background:rgba(163,120,31,.06);border-color:var(--jour-ligne)}.note h2{margin:0 0 .45rem;font-weight:600;font-size:1.25rem;color:var(--encre)}.note p{margin:0;color:var(--encre-douce);font-size:1.04rem}.suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}.suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte)}.suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}.suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}footer{text-align:center;padding:2.4rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}@media (max-width:620px){.grille{grid-template-columns:1fr}.routes{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header class="tete">
+      <svg class="gemme" viewBox="0 0 44 44" aria-hidden="true"><path d="M 9 16 L 22 5 L 35 16 L 22 39 Z"/><line class="f" x1="9" y1="16" x2="35" y2="16"/><line class="f" x1="22" y1="5" x2="16.5" y2="16"/><line class="f" x1="22" y1="5" x2="27.5" y2="16"/><line class="f" x1="16.5" y1="16" x2="22" y2="39"/><line class="f" x1="27.5" y1="16" x2="22" y2="39"/></svg>
+      <h1>Bibliothèque <em>des ouvrages</em></h1>
+      <p class="chapeau">Une carte pour entrer dans Almaas par livre, par question, par niveau de profondeur.</p>
+    </header>
+  </div></div>
+
+  <main class="voile contenu">
+    <div class="intro">
+      <p>
+        L'œuvre d'Almaas ne se comprend pas comme une suite linéaire. Elle ressemble
+        plutôt à une constellation : certains livres ouvrent la pratique, d'autres
+        expliquent la structure de l'âme, d'autres développent l'amour, l'ennéagramme,
+        la Perle, le Point, la Brillance ou l'Absolu.
+      </p>
+      <p>
+        Cette bibliothèque s'appuie sur les guides et glossaires Markdown du dossier
+        source <em>ALMAAS MD</em>, ainsi que sur les ouvrages disponibles localement.
+        Elle ne remplace pas les livres : elle aide à savoir où aller, et pourquoi.
+      </p>
+    </div>
+
+    <nav class="barre" aria-label="Accès rapide">
+      <a href="#entrer">Entrer par question</a>
+      <a href="#fondations">Fondations</a>
+      <a href="#personne">Personne et identité</a>
+      <a href="#pratique">Pratique</a>
+      <a href="#amour">Amour</a>
+      <a href="#enneagramme">Ennéagramme</a>
+      <a href="#maturite">Maturité et synthèses</a>
+    </nav>
+
+    <section id="entrer">
+      <h2 class="section">Entrer par ce qui vous travaille</h2>
+      <p class="section-note">Le visiteur peut choisir une porte existentielle, puis rejoindre les ouvrages qui approfondissent cette porte.</p>
+      <div class="routes">
+        <div class="route"><div class="label">Manque</div><h3>Je sens un vide</h3><p>Commencer par <em>Essence</em>, <em>Le Vide</em> et les premières causeries sur les trous.</p></div>
+        <div class="route"><div class="label">Juge</div><h3>Je me juge sans cesse</h3><p>Aller vers <em>Se libérer du surmoi</em>, puis la pratique de l'inquiry.</p></div>
+        <div class="route"><div class="label">Pratique</div><h3>Je veux enquêter</h3><p>Ouvrir <em>The Unfolding Now</em> et <em>Le Vaisseau Spatial Inquiry</em>.</p></div>
+        <div class="route"><div class="label">Identité</div><h3>Je ne sais pas qui je suis</h3><p>Passer par <em>The Point of Existence</em>, puis par la Perle.</p></div>
+        <div class="route"><div class="label">Relation</div><h3>Je veux comprendre l'amour</h3><p>Lire le triptyque amour : rose, or, non duel, Bien-Aimé intérieur.</p></div>
+        <div class="route"><div class="label">Caractère</div><h3>Je connais l'ennéagramme</h3><p>Relier types, Idées Saintes, réactions spécifiques et qualités essentielles.</p></div>
+      </div>
+    </section>
+
+    <section id="fondations">
+      <h2 class="section">Fondations</h2>
+      <p class="section-note">Les livres qui posent le vocabulaire central : Essence, trous, personnalité, surmoi, qualités essentielles.</p>
+      <div class="grille">
+        <article class="livre"><div class="source">Fondation</div><h3>Essence / L'Élixir d'illumination</h3><p>La porte de base : l'Essence comme présence vivante, ses aspects, sa perte de vue dans l'enfance et sa redécouverte par l'expérience.</p><ul><li>À lire pour comprendre ce que le site appelle “essence”.</li><li>Lexique source : Essence, Présence, Aspect essentiel, Lataïf, Trous.</li></ul><div class="tags"><span class="tag">essence</span><span class="tag">aspects</span><span class="tag">trous</span></div></article>
+        <article class="livre"><div class="source">Fondation</div><h3>Le Vide</h3><p>La distinction décisive entre vide déficitaire, trou psychologique et espace libérateur. Utile pour éviter de confondre manque et ouverture.</p><ul><li>À lire quand le manque est l'entrée principale.</li><li>Complète directement la <a class="lien" href="les-trous.html">page sur les trous</a>.</li></ul><div class="tags"><span class="tag">vide</span><span class="tag">espace</span><span class="tag">déficience</span></div></article>
+        <article class="livre"><div class="source">Fondation</div><h3>Se libérer du surmoi</h3><p>Le manuel le plus concret pour comprendre le juge intérieur : attaque, inhibition, défense, relations et expression de soi.</p><ul><li>À lire quand la vérité est bloquée par la honte ou la peur.</li><li>Source directe de <a class="lien" href="le-juge-interieur.html">l'espace juge intérieur</a>.</li></ul><div class="tags"><span class="tag">surmoi</span><span class="tag">juge</span><span class="tag">défense</span></div></article>
+        <article class="livre"><div class="source">Causeries</div><h3>Cœur de Diamant I-II</h3><p>Les séries les plus pédagogiques pour entrer : trous, valeur, confiance, compassion, non-espoir, acceptation, volonté, amour.</p><ul><li>Très bon point d'entrée pour un lecteur non spécialiste.</li><li>Développé sur les <a class="lien" href="causeries.html">cinq séries de causeries</a>.</li></ul><div class="tags"><span class="tag">valeur</span><span class="tag">confiance</span><span class="tag">volonté</span></div></article>
+      </div>
+    </section>
+
+    <section id="personne">
+      <h2 class="section">Personne et identité</h2>
+      <p class="section-note">Ici Almaas ne fuit pas la personne : il distingue l'ego construit, la personne réelle et l'identité essentielle.</p>
+      <div class="grille">
+        <article class="livre"><div class="source">Personne</div><h3>La Perle Inestimable</h3><p>Un livre majeur pour comprendre l'être humain véritable : ni ego renforcé, ni disparition impersonnelle, mais Essence personnelle intégrée.</p><ul><li>Axes Markdown : ego comme reflet, relations d'objet, métabolisme psychique, Perle sans prix.</li><li>À relier à <a class="lien" href="la-perle.html">la page Perle</a>.</li></ul><div class="tags"><span class="tag">Perle</span><span class="tag">ego</span><span class="tag">maturité</span></div></article>
+        <article class="livre"><div class="source">Identité</div><h3>The Point of Existence</h3><p>Le grand livre sur le soi, le narcissisme ordinaire, l'image de soi et la reconnaissance directe de l'identité essentielle.</p><ul><li>À lire quand la question est “qui suis-je ?”.</li><li>Complète <a class="lien" href="le-point.html">Le Point</a> et les causeries du livre III.</li></ul><div class="tags"><span class="tag">Point</span><span class="tag">narcissisme</span><span class="tag">identité</span></div></article>
+      </div>
+    </section>
+
+    <section id="pratique">
+      <h2 class="section">Pratique et méthode</h2>
+      <p class="section-note">Le cœur vivant : apprendre à rester avec l'expérience, sans la manipuler, et laisser la Guidance Diamant opérer.</p>
+      <div class="grille">
+        <article class="livre"><div class="source">Pratique</div><h3>The Unfolding Now</h3><p>La porte la plus directe pour pratiquer : être où l'on est, cesser d'interférer, reconnaître les rejets subtils du présent.</p><ul><li>Idéal pour commencer sans grand vocabulaire.</li><li>Source de <a class="lien" href="etre-ou-lon-est.html">Être où l'on est</a>.</li></ul><div class="tags"><span class="tag">présence</span><span class="tag">maintenant</span><span class="tag">acceptation</span></div></article>
+        <article class="livre"><div class="source">Méthode</div><h3>Le Vaisseau Spatial Inquiry</h3><p>Le grand guide de l'inquiry : ouverture, non-savoir, amour de la vérité, dynamisme de l'Être, Guidance Diamant et capacités de l'âme.</p><ul><li>À lire pour comprendre la méthode de l'intérieur.</li><li>Le site retient la traduction “Guidance Diamant”.</li></ul><div class="tags"><span class="tag">inquiry</span><span class="tag">guidance</span><span class="tag">non-savoir</span></div></article>
+        <article class="livre"><div class="source">Intelligence</div><h3>Brilliancy</h3><p>La Brillance montre que l'intelligence n'est pas seulement mentale : elle est présence synthétique, précision, complétude et clarté de l'Être.</p><ul><li>À lire pour distinguer intelligence essentielle et performance intellectuelle.</li><li>Développé dans <a class="lien" href="l-intelligence.html">L'intelligence</a>.</li></ul><div class="tags"><span class="tag">Brillance</span><span class="tag">synthèse</span><span class="tag">clarté</span></div></article>
+      </div>
+    </section>
+
+    <section id="amour">
+      <h2 class="section">Amour et Bien-Aimé</h2>
+      <p class="section-note">Les livres récents sur l'amour donnent une voie sensible : amour personnel, fusion dorée, amour non duel, passion et Absolu.</p>
+      <div class="grille">
+        <article class="livre"><div class="source">Amour</div><h3>Love Unveiled</h3><p>Une cartographie des couleurs de l'amour : amour personnel rose, amour de fusion doré, amour passionné, tendresse et dévoilement.</p><ul><li>À lire quand l'amour est vécu comme manque, désir ou blessure.</li><li>En dialogue avec <a class="lien" href="le-chemin-de-lamour.html">Le chemin de l'amour</a>.</li></ul><div class="tags"><span class="tag">rose</span><span class="tag">or</span><span class="tag">passion</span></div></article>
+        <article class="livre"><div class="source">Amour non duel</div><h3>Nondual Love</h3><p>Le passage de l'amour comme relation à l'amour comme nature de la réalité : lumière, corps de lumière, monde réel, Dieu personnel, abandon.</p><ul><li>À lire après avoir compris les dimensions personnelles de l'amour.</li><li>Utile pour ne pas réduire l'amour à l'affectif.</li></ul><div class="tags"><span class="tag">non-duel</span><span class="tag">lumière</span><span class="tag">abandon</span></div></article>
+        <article class="livre"><div class="source">Cœur</div><h3>The Inner Beloved</h3><p>Le voyage du cœur vers le Bien-Aimé intérieur : mécontentement, cœur divisé, fidélité, pauvreté du cœur et mystère amoureux de l'Absolu.</p><ul><li>À lire quand la quête spirituelle prend la forme d'une nostalgie du cœur.</li><li>Relie amour, Absolu et soufisme sans les confondre.</li></ul><div class="tags"><span class="tag">Bien-Aimé</span><span class="tag">cœur</span><span class="tag">pauvreté</span></div></article>
+      </div>
+    </section>
+
+    <section id="enneagramme">
+      <h2 class="section">Ennéagramme et Idées Saintes</h2>
+      <p class="section-note">Almaas ne se contente pas de profils psychologiques : il relie fixation, perte de l'Idée Sainte et qualité essentielle.</p>
+      <div class="grille">
+        <article class="livre"><div class="source">Ennéagramme</div><h3>Facettes de l'Unité</h3><p>La grande entrée par les Idées Saintes : confiance fondamentale, environnement de holding, monde réel, et neuf manières de perdre la réalité de vue.</p><ul><li>À lire pour comprendre l'ennéagramme comme voie de perception.</li><li>En lien avec <a class="lien" href="enneagramme-essence.html">l'ennéagramme de l'essence</a>.</li></ul><div class="tags"><span class="tag">Idées Saintes</span><span class="tag">confiance</span><span class="tag">fixations</span></div></article>
+        <article class="livre"><div class="source">Ennéagramme</div><h3>Clefs pour l'Ennéagramme</h3><p>Le complément plus ciblé : chaque point révèle une difficulté spécifique, une réaction spécifique et un aspect idéalisé de l'Être.</p><ul><li>À lire pour passer du type psychologique à l'aspect essentiel.</li><li>Utile pour les lecteurs venant du Miroir intérieur.</li></ul><div class="tags"><span class="tag">types</span><span class="tag">réactions</span><span class="tag">aspects</span></div></article>
+      </div>
+    </section>
+
+    <section id="maturite">
+      <h2 class="section">Maturité, dépouillement et synthèses</h2>
+      <p class="section-note">Les ouvrages et causeries plus avancés ne cherchent pas seulement l'expérience : ils demandent intégration, vie vraie et ouverture au sans-forme.</p>
+      <div class="grille">
+        <article class="livre"><div class="source">Causeries</div><h3>Cœur de Diamant III à V</h3><p>La progression devient plus existentielle : questions fondamentales, gouffre, limites, maturité, cœur courageux, absence absolue, vie vraie.</p><ul><li>Le site les reprend en <a class="lien" href="causeries-troisieme-serie.html">troisième</a>, <a class="lien" href="causeries-quatrieme-serie.html">quatrième</a> et <a class="lien" href="causeries-cinquieme-serie.html">cinquième</a> séries.</li></ul><div class="tags"><span class="tag">maturité</span><span class="tag">absence</span><span class="tag">vie vraie</span></div></article>
+        <article class="livre"><div class="source">Synthèse</div><h3>The Inner Journey Home</h3><p>Une vue d'ensemble profonde de l'âme, de l'Essence, des dimensions sans forme et de la maison intérieure. À lire plutôt après les bases.</p><ul><li>Important pour voir comment les dimensions se tiennent.</li><li>À croiser avec <a class="lien" href="la-carte.html">la carte générale</a>.</li></ul><div class="tags"><span class="tag">âme</span><span class="tag">dimensions</span><span class="tag">totalité</span></div></article>
+        <article class="livre"><div class="source">Témoignage</div><h3>Voyage dans la nuit lumineuse</h3><p>Un texte plus intime, traversant les dimensions profondes de l'Absolu, de la nuit, de l'absence et de l'ouverture mystérieuse.</p><ul><li>À lire quand le vocabulaire de l'Absolu devient vivant.</li><li>Complète <a class="lien" href="l-immensite.html">l'immensité</a>.</li></ul><div class="tags"><span class="tag">Absolu</span><span class="tag">nuit</span><span class="tag">mystère</span></div></article>
+      </div>
+    </section>
+
+    <div class="note">
+      <h2>Pour aller plus finement</h2>
+      <p>
+        La bibliothèque donne la carte. Pour chercher un terme dans un livre précis,
+        allez vers les <a class="lien" href="lexiques-ouvrages.html">lexiques par ouvrage</a>.
+        Pour une définition transversale, utilisez le <a class="lien" href="glossaire.html">glossaire bilingue</a>.
+      </p>
+    </div>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="index.html">← Accueil</a>
+      <a class="dorée" href="lexiques-ouvrages.html">Lexiques par ouvrage →</a>
+      <a href="lire-almaas.html">Lire Almaas →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </main>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>
