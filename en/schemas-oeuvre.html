@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Diagrams of the Work — Essence Regained</title>
+  <meta name="description" content="Pedagogical diagrams for visualizing the major movements in A.H. Almaas's work: holes, inquiry, inner judge, Pearl, Point, love and the enneagram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:56rem;margin:0 auto;padding:0 1.4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%,rgba(232,201,122,.07),transparent 60%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.6rem}
+    .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}
+    .retour:hover{color:var(--or-vif)}
+    header{text-align:center;padding:2.8rem 0 .7rem}
+    .num{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+    h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.1rem);line-height:1.08;margin:.15rem 0 .45rem;color:#f4f7ff}
+    .chapeau{max-width:38rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;font-style:italic}
+    main{padding:3rem 0 4rem}
+    h2{font-weight:500;font-size:1.62rem;color:var(--or-sombre);margin:3rem 0 .75rem}
+    p{margin:0 0 1.15rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .schema{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;padding:1.2rem;margin:1.2rem 0 1rem}
+    .flux{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.8rem,1fr));gap:.65rem;align-items:stretch}
+    .pas{border:1px solid rgba(163,120,31,.25);border-radius:12px;padding:.85rem .8rem;text-align:center;background:#fffaf0;min-height:7.2rem;display:flex;flex-direction:column;justify-content:center}
+    .pas .k{font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin-bottom:.25rem}
+    .pas .v{font-weight:600;color:var(--encre);font-size:1.04rem;line-height:1.25}
+    .pas .d{font-size:.9rem;color:var(--encre-douce);line-height:1.35;margin-top:.25rem}
+    .legende{font-size:1rem;color:var(--encre-douce);margin:.85rem 0 0}
+    .deux{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.85rem;margin:1.1rem 0}
+    .bloc{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1rem 1.1rem}
+    .bloc h3{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin:0 0 .35rem}
+    .bloc p{font-size:1rem;color:var(--encre-douce);margin:0}
+    .note{font-size:1rem;color:var(--estompe);font-style:italic;margin-top:1.5rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.doree{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← Essence Regained</a>
+    <header>
+      <div class="num">Visual maps</div>
+      <h1>Diagrams of the Work</h1>
+      <p class="chapeau">Seeing the major movements: not to simplify the work, but to enter more quickly into its deep articulations.</p>
+    </header>
+  </div></div>
+
+  <main class="voile">
+    <p>
+      The diagrams below are pedagogical maps made for this site. They do not replace
+      the books, and they do not claim to give an official order. Their function is
+      to make visible a recurring dynamic in Almaas: an ordinary experience is looked
+      at precisely, the defensive structure shows itself, and then a quality of Being
+      may appear where one thought there was only lack.
+    </p>
+
+    <h2>1. Theory of holes</h2>
+    <div class="schema" aria-label="Diagram theory of holes">
+      <div class="flux">
+        <div class="pas"><div class="k">Quality</div><div class="v">Love, strength, value</div><div class="d">An essential presence available at first.</div></div>
+        <div class="pas"><div class="k">Loss</div><div class="v">Cut off from awareness</div><div class="d">The quality is no longer recognized or supported.</div></div>
+        <div class="pas"><div class="k">Hole</div><div class="v">Felt lack</div><div class="d">Void, shame, powerlessness, need.</div></div>
+        <div class="pas"><div class="k">Filling</div><div class="v">False aspect</div><div class="d">Projection, belief, image or behavior.</div></div>
+        <div class="pas"><div class="k">Inquiry</div><div class="v">Staying with it</div><div class="d">Feeling without fleeing or filling.</div></div>
+        <div class="pas"><div class="k">Return</div><div class="v">Quality recognized</div><div class="d">Presence returns from within.</div></div>
+      </div>
+      <p class="legende">The reversal is essential: one does not look for a better filling; one crosses the hole toward the quality it signals.</p>
+    </div>
+
+    <h2>2. Inquiry</h2>
+    <div class="schema" aria-label="Diagram inquiry">
+      <div class="flux">
+        <div class="pas"><div class="k">Start</div><div class="v">Present experience</div><div class="d">Sensation, emotion, thought, defense.</div></div>
+        <div class="pas"><div class="k">Attitude</div><div class="v">Openness</div><div class="d">No fixed position, no quick conclusion.</div></div>
+        <div class="pas"><div class="k">Door</div><div class="v">Not-knowing</div><div class="d">Letting experience reveal what it is.</div></div>
+        <div class="pas"><div class="k">Engine</div><div class="v">Living question</div><div class="d">Curiosity, love of truth, personal thread.</div></div>
+        <div class="pas"><div class="k">Guidance</div><div class="v">Discrimination</div><div class="d">Diamond Guidance refines true and false.</div></div>
+        <div class="pas"><div class="k">Fruit</div><div class="v">Understanding</div><div class="d">A more objective perception integrates.</div></div>
+      </div>
+      <p class="legende">Inquiry is not a technique for obtaining a state. It is conscious participation in the unfolding of experience.</p>
+    </div>
+
+    <h2>3. Inner judge</h2>
+    <div class="schema" aria-label="Diagram inner judge">
+      <div class="flux">
+        <div class="pas"><div class="k">Attack</div><div class="v">You should</div><div class="d">Criticism, shame, moral pressure.</div></div>
+        <div class="pas"><div class="k">Effect</div><div class="v">Contraction</div><div class="d">The body closes, experience hides.</div></div>
+        <div class="pas"><div class="k">Defense</div><div class="v">Obey or rebel</div><div class="d">Two ways of remaining caught by the judge.</div></div>
+        <div class="pas"><div class="k">Understand</div><div class="v">See the function</div><div class="d">Old protection, internalized standards.</div></div>
+        <div class="pas"><div class="k">Support</div><div class="v">Strength and compassion</div><div class="d">No longer fleeing, no longer brutalizing oneself.</div></div>
+        <div class="pas"><div class="k">Opening</div><div class="v">Simple truth</div><div class="d">Experience can show itself as it is.</div></div>
+      </div>
+    </div>
+
+    <h2>4. Pearl and Point</h2>
+    <div class="deux">
+      <div class="bloc">
+        <h3>The Pearl</h3>
+        <p>The Personal Essence: not a facade personality, but an integrated personal presence, capable of relationship, action and autonomy.</p>
+      </div>
+      <div class="bloc">
+        <h3>The Point</h3>
+        <p>The Essential Identity: a simple center of presence, deeper than self-image and the narcissistic need to be confirmed.</p>
+      </div>
+    </div>
+    <p>
+      In this region of the work, Almaas does not deny the person: he distinguishes
+      the person constructed around representations from the person becoming transparent
+      to Being. The need to be seen, support, narcissistic hurt and the empty shell become
+      passages toward an identity that is less imaginary and more real.
+    </p>
+
+    <h2>5. Path of love</h2>
+    <div class="schema" aria-label="Diagram love">
+      <div class="flux">
+        <div class="pas"><div class="k">Lack</div><div class="v">Seeking outside</div><div class="d">The other must fill the heart.</div></div>
+        <div class="pas"><div class="k">Pink</div><div class="v">Personal love</div><div class="d">Sweetness, appreciation, living heart.</div></div>
+        <div class="pas"><div class="k">Gold</div><div class="v">Merging</div><div class="d">Fullness independent of the outer object.</div></div>
+        <div class="pas"><div class="k">Pomegranate</div><div class="v">Passionate love</div><div class="d">Desire that loves, transforming intensity.</div></div>
+        <div class="pas"><div class="k">Nondual</div><div class="v">Love without separation</div><div class="d">The heart recognizes unity.</div></div>
+      </div>
+    </div>
+
+    <h2>6. Enneagram and essence</h2>
+    <div class="schema" aria-label="Diagram enneagram">
+      <div class="flux">
+        <div class="pas"><div class="k">Holy view</div><div class="v">Objective reality</div><div class="d">A true way of seeing Being.</div></div>
+        <div class="pas"><div class="k">Loss</div><div class="v">Blind spot</div><div class="d">The view contracts around a belief.</div></div>
+        <div class="pas"><div class="k">Fixation</div><div class="v">Type strategy</div><div class="d">A repetitive logic organizes personality.</div></div>
+        <div class="pas"><div class="k">Reaction</div><div class="v">Passion</div><div class="d">Energy becomes compulsive emotion.</div></div>
+        <div class="pas"><div class="k">Return</div><div class="v">Essential quality</div><div class="d">The Holy Idea becomes living experience again.</div></div>
+      </div>
+      <p class="legende">Here again, the point is not to label a person, but to recover the objective view that fixation replaces.</p>
+    </div>
+
+    <p class="note">
+      Working sources: <em>Diamond Heart</em>, <em>Essence</em>, <em>The Pearl Beyond Price</em>,
+      <em>The Point of Existence</em>, <em>Spacecruiser Inquiry</em>, the love guides and
+      the enneagram books. The formulations are original syntheses.
+    </p>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="parcours-decouverte.html">← Discovery Path</a>
+      <a class="doree" href="pratiquer.html">Practice →</a>
+      <a href="lexiques-ouvrages.html">Lexicons →</a>
+    </nav>
+
+    <footer>Essence Regained — after A.H. Almaas · All rights reserved</footer>
+  </main>
+  <script defer src="../assets/lang.js"></script>
+</body>
+</html>

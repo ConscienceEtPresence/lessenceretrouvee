@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Discovery Path — Essence Regained</title>
+  <meta name="description" content="A guided entry into A.H. Almaas's work: overview, short practice and deeper exploration for discovering the Diamond Approach without flattening its depth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:47rem;margin:0 auto;padding:0 1.4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%,rgba(232,201,122,.07),transparent 60%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.6rem}
+    .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}
+    .retour:hover{color:var(--or-vif)}
+    header{text-align:center;padding:2.8rem 0 .7rem}
+    .num{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+    h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.1rem);line-height:1.08;margin:.15rem 0 .45rem;color:#f4f7ff}
+    .chapeau{max-width:36rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;font-style:italic}
+    main{padding:3rem 0 4rem}
+    h2{font-weight:500;font-size:1.62rem;color:var(--or-sombre);margin:2.8rem 0 .75rem}
+    p{margin:0 0 1.15rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.85rem;margin:1.4rem 0 2rem}
+    .carte{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1.15rem 1.2rem}
+    .carte h3{font-family:Inter,sans-serif;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin:0 0 .45rem}
+    .carte p{font-size:1.02rem;color:var(--encre-douce);margin:0}
+    .porte{display:block;background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;padding:1.25rem 1.35rem;margin:1rem 0;text-decoration:none;color:inherit;transition:all .2s ease}
+    .porte:hover{transform:translateY(-2px);border-color:var(--jour-ligne)}
+    .porte .rang{font-family:Inter,sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--estompe)}
+    .porte h3{font-size:1.35rem;font-weight:600;margin:.15rem 0 .35rem;color:var(--encre)}
+    .porte p{font-size:1.04rem;color:var(--encre-douce);margin:0}
+    .exploration{margin:2.4rem 0 0;padding:1.45rem 1.55rem;border-radius:14px;border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.45rem}
+    .exploration h2{margin:.1rem 0 .7rem;color:var(--encre);font-size:1.38rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.25rem;color:var(--encre-douce);font-size:1.05rem}
+    .exploration li{margin-bottom:.55rem}
+    .note{font-size:1rem;color:var(--estompe);font-style:italic;margin-top:1.5rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.doree{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← Essence Regained</a>
+    <header>
+      <div class="num">Guided entry</div>
+      <h1>Discovery Path</h1>
+      <p class="chapeau">A doorway in several rhythms: feel first, understand next, and deepen without losing the living texture of experience.</p>
+    </header>
+  </div></div>
+
+  <main class="voile">
+    <p>
+      This path is not a reduced summary of Almaas. It offers a first crossing,
+      as one might enter a large house through a clear doorway before visiting its
+      more hidden rooms. The idea is simple: visitors can skim, then return to the
+      same place with more precision, vocabulary, practice and references.
+    </p>
+    <p>
+      The Diamond Approach is not merely a system of ideas. It teaches another way
+      of looking at immediate experience: lack as a clue to a quality, defense as an
+      intelligible protection, the question as a living movement, understanding as
+      a transformation of perception.
+    </p>
+
+    <h2>Choose your rhythm</h2>
+    <div class="grille" aria-label="Reading rhythms">
+      <div class="carte">
+        <h3>Overview — 7 min</h3>
+        <p>Read this page straight through to sense the general logic: lack, defense, inquiry, essential qualities.</p>
+      </div>
+      <div class="carte">
+        <h3>Understand — 30 min</h3>
+        <p>Open the four main doors: holes, practice, talks, then the library.</p>
+      </div>
+      <div class="carte">
+        <h3>Deepen — visits</h3>
+        <p>Return through lexicons, diagrams and talks: each notion becomes a more precise entry point.</p>
+      </div>
+    </div>
+
+    <h2>The path in six doors</h2>
+
+    <a class="porte" href="les-trous.html">
+      <span class="rang">I — Start from lack</span>
+      <h3>What is missing may point to what is lost from view</h3>
+      <p>The theory of holes gives a decisive reversal: a painful emptiness is not only a psychological deficit; it can be the trace of an essential quality cut off from consciousness.</p>
+    </a>
+
+    <a class="porte" href="le-juge-interieur.html">
+      <span class="rang">II — Meet the defense</span>
+      <h3>The inner judge also protects what it attacks</h3>
+      <p>The superego is not only a harsh voice to silence. It often maintains an old organization of safety. Understanding it makes it possible not to obey it blindly.</p>
+    </a>
+
+    <a class="porte" href="pratiquer.html">
+      <span class="rang">III — Learn inquiry</span>
+      <h3>The question becomes a way of inhabiting experience</h3>
+      <p>Inquiry is not mental analysis: it is an open, precise and embodied exploration of what is alive now, carried by love of truth and Diamond Guidance.</p>
+    </a>
+
+    <a class="porte" href="les-visages-de-lessence.html">
+      <span class="rang">IV — Recognize the qualities</span>
+      <h3>Essence appears through many faces</h3>
+      <p>Strength, compassion, will, peace, joy, love, value, brilliancy: each quality answers a sector of experience and illuminates a particular wound.</p>
+    </a>
+
+    <a class="porte" href="la-perle.html">
+      <span class="rang">V — Become real in life</span>
+      <h3>The Pearl does not erase the person; it makes the person real</h3>
+      <p>Realization is not an escape from the human. Almaas emphasizes integration: becoming a person inhabited by Being, capable of autonomy, relationship and real action.</p>
+    </a>
+
+    <a class="porte" href="ouvrages.html">
+      <span class="rang">VI — Return to the books</span>
+      <h3>The site orients; the books work in depth</h3>
+      <p>The library, lexicons and talks help readers choose a book by need: void, love, identity, enneagram, inquiry, intelligence or dimensions of Being.</p>
+    </a>
+
+    <div class="exploration">
+      <div class="etiquette">First inquiry gesture — 10 minutes</div>
+      <h2>Moving from theme to experience</h2>
+      <ol>
+        <li>Choose a simple sentence: “I lack strength”, “I want to be seen”, “I cannot trust”.</li>
+        <li>Do not look for the explanation right away. Locate the sentence's effect in the body.</li>
+        <li>Ask gently: what do I believe I will lose if I stay with this? what am I trying to obtain from outside?</li>
+        <li>Notice the defense: judgment, distraction, justification, fog, mental acceleration.</li>
+        <li>End with a provisional truth, not a final one: “for now, I see that...”.</li>
+      </ol>
+      <p>
+        This gesture is not meant to produce a beautiful conclusion. It helps move
+        from idea to sensation, then from sensation to living understanding.
+      </p>
+    </div>
+
+    <p class="note">
+      Working sources: local syntheses of <em>Diamond Heart</em>, <em>Essence</em>,
+      <em>The Pearl Beyond Price</em>, <em>Spacecruiser Inquiry</em> and book-by-book lexicons.
+      The path remains a pedagogical map of the site, not an official order of the Diamond Approach.
+    </p>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="index.html">← Home</a>
+      <a class="doree" href="schemas-oeuvre.html">See the diagrams →</a>
+      <a href="les-trous.html">The holes →</a>
+    </nav>
+
+    <footer>Essence Regained — after A.H. Almaas · All rights reserved</footer>
+  </main>
+  <script defer src="../assets/lang.js"></script>
+</body>
+</html>

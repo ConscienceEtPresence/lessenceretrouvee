@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Schémas de l'œuvre — L'essence retrouvée</title>
+  <meta name="description" content="Des schémas pédagogiques pour visualiser les grands mouvements de l'œuvre d'A.H. Almaas : trous, inquiry, juge intérieur, Perle, Point, amour et ennéagramme.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:56rem;margin:0 auto;padding:0 1.4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%,rgba(232,201,122,.07),transparent 60%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.6rem}
+    .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}
+    .retour:hover{color:var(--or-vif)}
+    header{text-align:center;padding:2.8rem 0 .7rem}
+    .num{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+    h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.1rem);line-height:1.08;margin:.15rem 0 .45rem;color:#f4f7ff}
+    .chapeau{max-width:38rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;font-style:italic}
+    main{padding:3rem 0 4rem}
+    h2{font-weight:500;font-size:1.62rem;color:var(--or-sombre);margin:3rem 0 .75rem}
+    p{margin:0 0 1.15rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .schema{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;padding:1.2rem;margin:1.2rem 0 1rem}
+    .flux{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.8rem,1fr));gap:.65rem;align-items:stretch}
+    .pas{border:1px solid rgba(163,120,31,.25);border-radius:12px;padding:.85rem .8rem;text-align:center;background:#fffaf0;min-height:7.2rem;display:flex;flex-direction:column;justify-content:center}
+    .pas .k{font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin-bottom:.25rem}
+    .pas .v{font-weight:600;color:var(--encre);font-size:1.04rem;line-height:1.25}
+    .pas .d{font-size:.9rem;color:var(--encre-douce);line-height:1.35;margin-top:.25rem}
+    .legende{font-size:1rem;color:var(--encre-douce);margin:.85rem 0 0}
+    .deux{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.85rem;margin:1.1rem 0}
+    .bloc{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1rem 1.1rem}
+    .bloc h3{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin:0 0 .35rem}
+    .bloc p{font-size:1rem;color:var(--encre-douce);margin:0}
+    .note{font-size:1rem;color:var(--estompe);font-style:italic;margin-top:1.5rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.doree{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header>
+      <div class="num">Cartes visuelles</div>
+      <h1>Schémas de l'œuvre</h1>
+      <p class="chapeau">Voir les grands mouvements : non pas pour simplifier l'œuvre, mais pour entrer plus vite dans ses articulations profondes.</p>
+    </header>
+  </div></div>
+
+  <main class="voile">
+    <p>
+      Les schémas ci-dessous sont des cartes pédagogiques du site. Ils ne remplacent
+      pas les livres, et ils ne prétendent pas donner un ordre officiel. Leur fonction
+      est de rendre visible la dynamique récurrente chez Almaas : une expérience ordinaire
+      est regardée avec précision, la structure défensive se montre, puis une qualité
+      de l'Être peut apparaître là où l'on croyait seulement trouver un manque.
+    </p>
+
+    <h2>1. Théorie des trous</h2>
+    <div class="schema" aria-label="Schéma théorie des trous">
+      <div class="flux">
+        <div class="pas"><div class="k">Qualité</div><div class="v">Amour, force, valeur</div><div class="d">Une présence essentielle disponible au départ.</div></div>
+        <div class="pas"><div class="k">Perte</div><div class="v">Coupure de conscience</div><div class="d">La qualité n'est plus reconnue ou soutenue.</div></div>
+        <div class="pas"><div class="k">Trou</div><div class="v">Manque ressenti</div><div class="d">Vide, honte, impuissance, besoin.</div></div>
+        <div class="pas"><div class="k">Remplissage</div><div class="v">Faux aspect</div><div class="d">Projection, croyance, image ou comportement.</div></div>
+        <div class="pas"><div class="k">Inquiry</div><div class="v">Rester avec</div><div class="d">Sentir sans fuir ni combler.</div></div>
+        <div class="pas"><div class="k">Retour</div><div class="v">Qualité reconnue</div><div class="d">La présence revient de l'intérieur.</div></div>
+      </div>
+      <p class="legende">Le retournement est essentiel : on ne cherche pas un meilleur remplissage, on traverse le trou jusqu'à la qualité qu'il signale.</p>
+    </div>
+
+    <h2>2. Inquiry</h2>
+    <div class="schema" aria-label="Schéma inquiry">
+      <div class="flux">
+        <div class="pas"><div class="k">Départ</div><div class="v">Expérience présente</div><div class="d">Sensation, émotion, pensée, défense.</div></div>
+        <div class="pas"><div class="k">Attitude</div><div class="v">Ouverture</div><div class="d">Pas de position fixe, pas de conclusion rapide.</div></div>
+        <div class="pas"><div class="k">Porte</div><div class="v">Non-savoir</div><div class="d">Laisser l'expérience révéler ce qu'elle est.</div></div>
+        <div class="pas"><div class="k">Moteur</div><div class="v">Question vivante</div><div class="d">Curiosité, amour de la vérité, fil personnel.</div></div>
+        <div class="pas"><div class="k">Guidance</div><div class="v">Discrimination</div><div class="d">La Guidance Diamant affine le vrai et le faux.</div></div>
+        <div class="pas"><div class="k">Fruit</div><div class="v">Compréhension</div><div class="d">Une perception plus objective s'intègre.</div></div>
+      </div>
+      <p class="legende">L'inquiry n'est pas une technique pour obtenir un état. C'est la participation consciente au déploiement de l'expérience.</p>
+    </div>
+
+    <h2>3. Juge intérieur</h2>
+    <div class="schema" aria-label="Schéma juge intérieur">
+      <div class="flux">
+        <div class="pas"><div class="k">Attaque</div><div class="v">Tu devrais</div><div class="d">Critique, honte, pression morale.</div></div>
+        <div class="pas"><div class="k">Effet</div><div class="v">Contraction</div><div class="d">Le corps se ferme, l'expérience se cache.</div></div>
+        <div class="pas"><div class="k">Défense</div><div class="v">Obéir ou se rebeller</div><div class="d">Deux façons de rester pris dans le juge.</div></div>
+        <div class="pas"><div class="k">Comprendre</div><div class="v">Voir la fonction</div><div class="d">Protection ancienne, normes intériorisées.</div></div>
+        <div class="pas"><div class="k">Soutien</div><div class="v">Force et compassion</div><div class="d">Ne plus fuir, ne plus se brutaliser.</div></div>
+        <div class="pas"><div class="k">Ouverture</div><div class="v">Vérité simple</div><div class="d">L'expérience peut se montrer telle qu'elle est.</div></div>
+      </div>
+    </div>
+
+    <h2>4. Perle et Point</h2>
+    <div class="deux">
+      <div class="bloc">
+        <h3>La Perle</h3>
+        <p>La Personnalité Essentielle : non pas une personnalité de façade, mais une présence personnelle intégrée, capable de relation, d'action et d'autonomie.</p>
+      </div>
+      <div class="bloc">
+        <h3>Le Point</h3>
+        <p>L'Identité Essentielle : un centre simple de présence, plus profond que l'image de soi et les besoins narcissiques d'être confirmé.</p>
+      </div>
+    </div>
+    <p>
+      Dans cette zone de l'œuvre, Almaas ne nie pas la personne : il distingue la personne
+      construite autour des représentations et la personne qui devient transparente à l'Être.
+      Le besoin d'être vu, le soutien, la blessure narcissique et la coquille vide deviennent
+      des passages vers une identité moins imaginaire et plus réelle.
+    </p>
+
+    <h2>5. Chemin de l'amour</h2>
+    <div class="schema" aria-label="Schéma amour">
+      <div class="flux">
+        <div class="pas"><div class="k">Manque</div><div class="v">Chercher dehors</div><div class="d">L'autre doit combler le cœur.</div></div>
+        <div class="pas"><div class="k">Rose</div><div class="v">Amour personnel</div><div class="d">Douceur, appréciation, cœur vivant.</div></div>
+        <div class="pas"><div class="k">Or</div><div class="v">Fusion</div><div class="d">Plénitude indépendante de l'objet extérieur.</div></div>
+        <div class="pas"><div class="k">Grenade</div><div class="v">Amour passionné</div><div class="d">Désir qui aime, intensité transformante.</div></div>
+        <div class="pas"><div class="k">Non-duel</div><div class="v">Amour sans séparation</div><div class="d">Le cœur reconnaît l'unité.</div></div>
+      </div>
+    </div>
+
+    <h2>6. Ennéagramme et essence</h2>
+    <div class="schema" aria-label="Schéma ennéagramme">
+      <div class="flux">
+        <div class="pas"><div class="k">Vue sainte</div><div class="v">Réalité objective</div><div class="d">Une manière juste de voir l'Être.</div></div>
+        <div class="pas"><div class="k">Perte</div><div class="v">Point aveugle</div><div class="d">La vue se contracte autour d'une croyance.</div></div>
+        <div class="pas"><div class="k">Fixation</div><div class="v">Stratégie du type</div><div class="d">Une logique répétitive organise la personnalité.</div></div>
+        <div class="pas"><div class="k">Réaction</div><div class="v">Passion</div><div class="d">L'énergie devient émotion compulsive.</div></div>
+        <div class="pas"><div class="k">Retour</div><div class="v">Qualité essentielle</div><div class="d">L'Idée Sainte redevient expérience vivante.</div></div>
+      </div>
+      <p class="legende">Ici encore, l'enjeu n'est pas d'étiqueter une personne, mais de retrouver la vue objective que la fixation remplace.</p>
+    </div>
+
+    <p class="note">
+      Sources de travail : <em>Cœur de Diamant</em>, <em>Essence</em>, <em>La Perle Inestimable</em>,
+      <em>The Point of Existence</em>, <em>Le Vaisseau Spatial Inquiry</em>, les guides sur l'amour
+      et les ouvrages sur l'ennéagramme. Les formulations sont des synthèses originales.
+    </p>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="parcours-decouverte.html">← Parcours découverte</a>
+      <a class="doree" href="pratiquer.html">Pratiquer →</a>
+      <a href="lexiques-ouvrages.html">Lexiques →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </main>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>

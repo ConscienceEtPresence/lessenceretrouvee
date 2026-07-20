@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Parcours découverte — L'essence retrouvée</title>
+  <meta name="description" content="Un parcours d'entrée dans l'œuvre d'A.H. Almaas : survol, pratique courte et approfondissement pour découvrir l'Approche Diamant sans réduire sa profondeur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --nuit-ligne:rgba(232,201,122,.25);--nuit-carte:rgba(255,255,255,.028);--nuit-carte-bord:rgba(255,255,255,.09);
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:47rem;margin:0 auto;padding:0 1.4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%,rgba(232,201,122,.07),transparent 60%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.6rem}
+    .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}
+    .retour:hover{color:var(--or-vif)}
+    header{text-align:center;padding:2.8rem 0 .7rem}
+    .num{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+    h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.1rem);line-height:1.08;margin:.15rem 0 .45rem;color:#f4f7ff}
+    .chapeau{max-width:36rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;font-style:italic}
+    main{padding:3rem 0 4rem}
+    h2{font-weight:500;font-size:1.62rem;color:var(--or-sombre);margin:2.8rem 0 .75rem}
+    p{margin:0 0 1.15rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.85rem;margin:1.4rem 0 2rem}
+    .carte{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1.15rem 1.2rem}
+    .carte h3{font-family:Inter,sans-serif;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or-profond);margin:0 0 .45rem}
+    .carte p{font-size:1.02rem;color:var(--encre-douce);margin:0}
+    .porte{display:block;background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;padding:1.25rem 1.35rem;margin:1rem 0;text-decoration:none;color:inherit;transition:all .2s ease}
+    .porte:hover{transform:translateY(-2px);border-color:var(--jour-ligne)}
+    .porte .rang{font-family:Inter,sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--estompe)}
+    .porte h3{font-size:1.35rem;font-weight:600;margin:.15rem 0 .35rem;color:var(--encre)}
+    .porte p{font-size:1.04rem;color:var(--encre-douce);margin:0}
+    .exploration{margin:2.4rem 0 0;padding:1.45rem 1.55rem;border-radius:14px;border:1px solid var(--jour-ligne);background:rgba(163,120,31,.06)}
+    .exploration .etiquette{font-family:Inter,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--or-profond);text-transform:uppercase;margin-bottom:.45rem}
+    .exploration h2{margin:.1rem 0 .7rem;color:var(--encre);font-size:1.38rem}
+    .exploration ol{margin:.2rem 0 .8rem;padding-left:1.25rem;color:var(--encre-douce);font-size:1.05rem}
+    .exploration li{margin-bottom:.55rem}
+    .note{font-size:1rem;color:var(--estompe);font-style:italic;margin-top:1.5rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.doree{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header>
+      <div class="num">Entrée guidée</div>
+      <h1>Parcours découverte</h1>
+      <p class="chapeau">Une rampe d'entrée en plusieurs rythmes : sentir d'abord, comprendre ensuite, approfondir sans perdre la chair de l'expérience.</p>
+    </header>
+  </div></div>
+
+  <main class="voile">
+    <p>
+      Ce parcours ne résume pas Almaas au rabais. Il propose une première traversée,
+      comme on entrerait dans une grande maison par une porte claire avant d'en visiter
+      les pièces plus secrètes. L'idée est simple : le visiteur peut survoler, puis revenir
+      au même endroit avec plus de précision, de vocabulaire, de pratique et de références.
+    </p>
+    <p>
+      L'Approche Diamant n'est pas seulement un système d'idées. Elle apprend à regarder
+      l'expérience immédiate d'une autre manière : le manque comme indice d'une qualité,
+      la défense comme protection intelligible, la question comme mouvement vivant, la
+      compréhension comme transformation de la perception.
+    </p>
+
+    <h2>Choisir son rythme</h2>
+    <div class="grille" aria-label="Rythmes de lecture">
+      <div class="carte">
+        <h3>Survol — 7 min</h3>
+        <p>Lire cette page d'une traite pour sentir la logique générale : manque, défense, inquiry, qualités essentielles.</p>
+      </div>
+      <div class="carte">
+        <h3>Comprendre — 30 min</h3>
+        <p>Ouvrir les quatre portes principales : les trous, pratiquer, les causeries, puis la bibliothèque.</p>
+      </div>
+      <div class="carte">
+        <h3>Approfondir — visites</h3>
+        <p>Revenir par les lexiques, les schémas et les causeries : chaque notion devient une entrée plus précise.</p>
+      </div>
+    </div>
+
+    <h2>Le parcours en six portes</h2>
+
+    <a class="porte" href="les-trous.html">
+      <span class="rang">I — Partir du manque</span>
+      <h3>Ce qui manque peut indiquer ce qui est perdu de vue</h3>
+      <p>La théorie des trous donne un retournement décisif : un vide douloureux n'est pas seulement un déficit psychologique, il peut être la trace d'une qualité essentielle coupée de la conscience.</p>
+    </a>
+
+    <a class="porte" href="le-juge-interieur.html">
+      <span class="rang">II — Rencontrer la défense</span>
+      <h3>Le juge intérieur protège aussi ce qu'il attaque</h3>
+      <p>Le surmoi n'est pas seulement une voix méchante à faire taire. Il maintient souvent une organisation ancienne de sécurité. Le comprendre permet de ne plus lui obéir aveuglément.</p>
+    </a>
+
+    <a class="porte" href="pratiquer.html">
+      <span class="rang">III — Apprendre l'inquiry</span>
+      <h3>La question devient une manière d'habiter l'expérience</h3>
+      <p>L'inquiry n'est pas de l'analyse mentale : c'est une exploration ouverte, précise et incarnée de ce qui est vivant maintenant, portée par l'amour de la vérité et la Guidance Diamant.</p>
+    </a>
+
+    <a class="porte" href="les-visages-de-lessence.html">
+      <span class="rang">IV — Reconnaître les qualités</span>
+      <h3>L'essence se manifeste sous plusieurs visages</h3>
+      <p>Force, compassion, volonté, paix, joie, amour, valeur, brillance : chaque qualité répond à un secteur de notre expérience et éclaire une blessure particulière.</p>
+    </a>
+
+    <a class="porte" href="la-perle.html">
+      <span class="rang">V — Devenir réel dans la vie</span>
+      <h3>La Perle n'efface pas la personne, elle la rend vraie</h3>
+      <p>La réalisation n'est pas une sortie hors de l'humain. Almaas insiste sur l'intégration : devenir une personne habitée par l'Être, capable d'autonomie, de relation et d'action réelle.</p>
+    </a>
+
+    <a class="porte" href="ouvrages.html">
+      <span class="rang">VI — Retourner aux livres</span>
+      <h3>Le site oriente, les livres travaillent en profondeur</h3>
+      <p>La bibliothèque, les lexiques et les causeries permettent de choisir un livre par besoin : vide, amour, identité, ennéagramme, inquiry, intelligence ou dimensions de l'Être.</p>
+    </a>
+
+    <div class="exploration">
+      <div class="etiquette">Premier geste d'inquiry — 10 minutes</div>
+      <h2>Passer du thème à l'expérience</h2>
+      <ol>
+        <li>Choisissez une phrase simple : « il me manque de la force », « je veux être vu », « je n'arrive pas à faire confiance ».</li>
+        <li>Ne cherchez pas tout de suite l'explication. Localisez l'effet de la phrase dans le corps.</li>
+        <li>Demandez doucement : qu'est-ce que je crois perdre si je reste avec cela ? qu'est-ce que je cherche à obtenir au-dehors ?</li>
+        <li>Repérez la défense : jugement, distraction, justification, brouillard, accélération mentale.</li>
+        <li>Terminez par une phrase de vérité provisoire, non définitive : « pour l'instant, je vois que... ».</li>
+      </ol>
+      <p>
+        Ce geste n'est pas destiné à produire une belle conclusion. Il sert à passer de
+        l'idée à la sensation, puis de la sensation à une compréhension vivante.
+      </p>
+    </div>
+
+    <p class="note">
+      Sources de travail : synthèses locales de <em>Cœur de Diamant</em>, <em>Essence</em>,
+      <em>La Perle Inestimable</em>, <em>Le Vaisseau Spatial Inquiry</em> et lexiques par ouvrage.
+      Le parcours reste une carte pédagogique du site, pas un ordre officiel de l'Approche Diamant.
+    </p>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="index.html">← Accueil</a>
+      <a class="doree" href="schemas-oeuvre.html">Voir les schémas →</a>
+      <a href="les-trous.html">Les trous →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </main>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>
