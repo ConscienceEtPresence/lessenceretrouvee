@@ -195,14 +195,14 @@
       </p>
 
       <nav class="portes apparait d4" aria-label="Portes d'entrée">
-        <a class="porte porte--principale" href="parcours-decouverte.html">Commencer le parcours</a>
-        <a class="porte" href="#manque">Quelque chose vous manque&nbsp;?</a>
-        <a class="porte" href="#sommaire">Voir tout le site</a>
+        <a class="porte porte--principale" href="lhomme.html">Commencer la lecture</a>
+        <a class="porte" href="sommaire.html">Le sommaire</a>
+        <a class="porte" href="glossaire.html">Le glossaire</a>
       </nav>
       <p class="aide apparait d5">
-        Trois manières d'entrer&nbsp;: <strong>le parcours</strong> vous guide pas à pas,
-        <strong>«&nbsp;quelque chose vous manque&nbsp;?&nbsp;»</strong> part de ce que vous vivez,
-        et <strong>le sommaire</strong> ouvre l'ensemble des espaces, à explorer librement.
+        Ce site se lit comme un livre&nbsp;: de l'homme qui a fondé l'approche Diamant
+        jusqu'au voyage de retour vers l'Être. On peut le suivre dans l'ordre&nbsp;—
+        ou entrer où l'on veut par <strong>le sommaire</strong>.
       </p>
     </header>
 
@@ -217,99 +217,36 @@
 
   <div class="voile">
 
-    <!-- ================= SOMMAIRE ================= -->
-    <section id="sommaire">
-      <h2 class="titre-section">Sommaire</h2>
-      <p class="chapeau">
-        Pour entrer dans Almaas sans se perdre&nbsp;: commencer par l'expérience, situer les sources,
-        puis approfondir les notions.
-      </p>
-      <div class="sommaire">
-        <div class="sommaire-col">
-          <h3>Commencer</h3>
-          <p>Les portes les plus accessibles pour une première visite.</p>
-          <a href="parcours-decouverte.html">Parcours découverte</a>
-          <a href="chemin.html">Le chemin guidé</a>
-          <a href="causeries.html">Les causeries</a>
-          <a href="douze-notions.html">Les 12 notions clés</a>
-          <a href="lessence.html">La question de l'essence</a>
-        </div>
-        <div class="sommaire-col">
-          <h3>Situer</h3>
-          <p>Ce qui vient d'Almaas, ce qui vient des traditions, ce qui relève du commentaire.</p>
-          <a href="situer.html">Situer Almaas et ses sources</a>
-          <a href="lapproche.html">L'approche Diamant</a>
-          <a href="lhomme.html">L'homme et le parcours</a>
-        </div>
-        <div class="sommaire-col">
-          <h3>Approfondir</h3>
-          <p>Les cartes plus fines pour lire, vérifier et revenir aux textes.</p>
-          <a href="approfondir-almaas.html">Approfondir Almaas</a>
-          <a href="la-carte.html">La carte générale</a>
-          <a href="schemas-oeuvre.html">Les schémas de l'œuvre</a>
-          <a href="ouvrages.html">La bibliothèque des ouvrages</a>
-          <a href="lexiques-ouvrages.html">Les lexiques par ouvrage</a>
-          <a href="glossaire.html">Le glossaire bilingue</a>
-          <a href="lire-almaas.html">Lire Almaas</a>
-        </div>
+    <!-- ================= LE LIVRE ================= -->
+    <section id="livre">
+      <style>
+        #livre .lv-list{max-width:44rem;margin:0 auto}
+        #livre .lv-row{display:flex;gap:1.1rem;align-items:baseline;text-decoration:none;color:var(--encre);
+          padding:1rem .3rem;border-bottom:1px solid rgba(35,44,74,.1);transition:.15s}
+        #livre .lv-row:hover{background:var(--jour-carte);padding-left:.9rem}
+        #livre .lv-row .n{font-family:Inter,sans-serif;font-size:.72rem;font-weight:600;color:var(--or-sombre);
+          letter-spacing:.08em;flex:none;width:1.7rem;font-variant-numeric:tabular-nums}
+        #livre .lv-row .t{font-size:1.28rem;font-weight:600;line-height:1.25;color:#12172b}
+        #livre .lv-row .t .d{display:block;color:var(--estompe);font-size:.98rem;font-weight:400;font-style:italic}
+        #livre .lv-more{text-align:center;margin-top:1.8rem}
+        #livre .lv-more a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne);
+          font-size:1.12rem;padding-bottom:.1rem}
+        #livre .lv-more a:hover{color:var(--or-sombre)}
+      </style>
+      <h2 class="titre-section">Le livre, chapitre après chapitre</h2>
+      <p class="chapeau">Une lecture continue de l'œuvre d'Almaas. On peut la suivre dans l'ordre&nbsp;— ou entrer où l'on veut.</p>
+      <div class="lv-list">
+        <a class="lv-row" href="lhomme.html"><span class="n">01</span><span class="t">L'homme<span class="d">La naissance de l'approche Diamant.</span></span></a>
+        <a class="lv-row" href="etre-ou-lon-est.html"><span class="n">02</span><span class="t">Être où l'on est<span class="d">La présence : l'art de ne pas fuir l'instant.</span></span></a>
+        <a class="lv-row" href="le-juge-interieur.html"><span class="n">03</span><span class="t">Le juge intérieur<span class="d">Le surmoi, et l'art de s'en défendre.</span></span></a>
+        <a class="lv-row" href="les-trous.html"><span class="n">04</span><span class="t">Les trous<span class="d">Le manque qui montre le chemin.</span></span></a>
+        <a class="lv-row" href="lessence.html"><span class="n">05</span><span class="t">La question de l'essence<span class="d">Le cœur du site : ce que nous sommes vraiment.</span></span></a>
+        <a class="lv-row" href="les-visages-de-lessence.html"><span class="n">06</span><span class="t">Les visages de l'essence<span class="d">Les qualités essentielles, une par une.</span></span></a>
+        <a class="lv-row" href="la-perle.html"><span class="n">07</span><span class="t">La Perle<span class="d">Devenir une personne réelle.</span></span></a>
+        <a class="lv-row" href="le-point.html"><span class="n">08</span><span class="t">Le Point<span class="d">Qui suis-je, derrière le récit ?</span></span></a>
+        <a class="lv-row" href="l-immensite.html"><span class="n">09</span><span class="t">L'immensité<span class="d">Les dimensions sans forme de l'Être.</span></span></a>
       </div>
-    </section>
-
-    <!-- ================= LE CHEMIN ================= -->
-    <section id="chemin">
-      <h2 class="titre-section">Le chemin, en sept portes</h2>
-      <p class="chapeau">
-        Une carte pédagogique proposée par le site, inspirée de l'œuvre — pas un ordre officiel
-        de l'Approche Diamant, mais une manière claire d'entrer dans ses grands axes.
-      </p>
-      <div class="chemin">
-        <a class="etape" style="text-decoration:none" href="etre-ou-lon-est.html"><div class="pierre"></div><div class="nom">Être où l'on est</div><div class="note">la présence</div></a>
-        <a class="etape" style="text-decoration:none" href="le-juge-interieur.html"><div class="pierre"></div><div class="nom">Le juge intérieur</div><div class="note">s'en défendre</div></a>
-        <a class="etape" style="text-decoration:none" href="les-trous.html"><div class="pierre"></div><div class="nom">Les trous</div><div class="note">traverser le manque</div></a>
-        <a class="etape" style="text-decoration:none" href="les-visages-de-lessence.html"><div class="pierre"></div><div class="nom">L'essence</div><div class="note">et ses couleurs</div></a>
-        <a class="etape" style="text-decoration:none" href="la-perle.html"><div class="pierre"></div><div class="nom">La Perle</div><div class="note">devenir une personne</div></a>
-        <a class="etape" style="text-decoration:none" href="le-point.html"><div class="pierre"></div><div class="nom">Le Point</div><div class="note">qui suis-je&nbsp;?</div></a>
-        <a class="etape" style="text-decoration:none" href="l-immensite.html"><div class="pierre"></div><div class="nom">L'immensité</div><div class="note">les dimensions de l'Être</div></a>
-      </div>
-    </section>
-
-    <!-- ================= LE MANQUE ================= -->
-    <section id="manque">
-      <h2 class="titre-section">Quelque chose vous manque&nbsp;?</h2>
-      <p class="chapeau">
-        Un vide au creux de la poitrine, un sentiment de ne pas être vraiment soi, une force qui fait défaut,
-        un amour qu'on cherche au-dehors&nbsp;— pour Almaas, un manque précis peut devenir une porte&nbsp;:
-        derrière certains «&nbsp;trous&nbsp;» se révèle la qualité même qui semblait absente.
-        Cette partie du site partira de ce que vous vivez — pas de la théorie.
-      </p>
-    </section>
-
-    <!-- ================= LES ESPACES ================= -->
-    <section id="espaces">
-      <h2 class="titre-section">Les espaces du site</h2>
-      <p class="chapeau">Vingt espaces, à parcourir dans l'ordre ou librement.</p>
-      <div class="espaces">
-        <a class="espace" href="parcours-decouverte.html"><span class="glyphe">☉</span><h3>Parcours découverte</h3><p>Une rampe d'entrée en plusieurs rythmes&nbsp;: survol, pratique courte, approfondissement.</p></a>
-        <a class="espace" href="approfondir-almaas.html"><span class="glyphe">✹</span><h3>Approfondir Almaas</h3><p>Une table d'étude dense pour relier essence, trous, inquiry, Perle, Point, amour, ennéagramme et sources.</p></a>
-        <a class="espace" href="situer.html"><span class="glyphe">⚖</span><h3>Situer Almaas</h3><p>Ses sources, le soufisme, Ibn ʿArabī, son originalité — et un regard critique honnête.</p></a>
-        <a class="espace" href="la-carte.html"><span class="glyphe">✳</span><h3>La carte</h3><p>Toute l'œuvre en huit mouvements — comment les notions se tiennent.</p></a>
-        <a class="espace" href="schemas-oeuvre.html"><span class="glyphe">⌁</span><h3>Schémas de l'œuvre</h3><p>Voir les grands mouvements&nbsp;: trous, inquiry, Perle, Point, amour et ennéagramme.</p></a>
-        <a class="espace" href="douze-notions.html"><span class="glyphe">✥</span><h3>12 notions clés</h3><p>Une boussole simple pour entrer dans Almaas&nbsp;: essence, trous, inquiry, Perle, Point, dimensions.</p></a>
-        <a class="espace" href="causeries.html"><span class="glyphe">✺</span><h3>Les causeries</h3><p>Espoir, acceptation, vérité, amour, être soi-même — cinq séries de conversations qui transforment le regard.</p></a>
-        <a class="espace" href="ouvrages.html"><span class="glyphe">◌</span><h3>Bibliothèque des ouvrages</h3><p>Choisir un livre par besoin, par niveau de profondeur, ou par grande famille de l'œuvre.</p></a>
-        <a class="espace" href="lexiques-ouvrages.html"><span class="glyphe">✶</span><h3>Lexiques par ouvrage</h3><p>Retrouver les notions livre par livre, avec les équivalents français-anglais et les portes associées.</p></a>
-        <a class="espace" href="l-intelligence.html"><span class="glyphe">◉</span><h3>L'intelligence</h3><p>Ni performance mentale ni quotient&nbsp;: Brillance, Guidance Diamant, Noûs — plusieurs plans à distinguer.</p></a>
-        <a class="espace" href="lessence.html"><span class="glyphe">✦</span><h3>La question de l'essence</h3><p>Ce qu'est l'essence, comment l'enfant la perd de vue, comment on la retrouve — le cœur du site.</p></a>
-        <a class="espace" href="lhomme.html"><span class="glyphe">◈</span><h3>L'homme</h3><p>Hameed Ali&nbsp;: du Koweït à Berkeley, la physique, Naranjo — la naissance d'une œuvre.</p></a>
-        <a class="espace" href="chemin.html"><span class="glyphe">◇</span><h3>Le chemin</h3><p>Le parcours guidé en sept portes, du plus accessible au plus profond. La première est prête.</p></a>
-        <a class="espace" href="les-visages-de-lessence.html"><span class="glyphe">❋</span><h3>Les visages de l'essence</h3><p>Force, amour, joie, paix, volonté, compassion — les qualités essentielles, une par une.</p></a>
-        <a class="espace" href="pratiquer.html"><span class="glyphe">❖</span><h3>Pratiquer</h3><p>L'inquiry comme fil vivant, le travail avec le juge intérieur, la présence dans la vie ordinaire.</p></a>
-        <a class="espace" href="lapproche.html"><span class="glyphe">◆</span><h3>L'approche Diamant</h3><p>La méthode qu'Almaas a fondée&nbsp;: psychologie et spiritualité réunies — présentée, située, sans en faire un dogme.</p></a>
-        <a class="espace" href="enneagramme-essence.html"><span class="glyphe">⬡</span><h3>L'ennéagramme de l'essence</h3><p>Les neuf Idées Saintes et les neuf qualités essentielles — en dialogue avec le Miroir intérieur.</p></a>
-        <a class="espace" href="le-chemin-de-lamour.html"><span class="glyphe">♡</span><h3>Le chemin de l'amour</h3><p>Rose, or, grenade&nbsp;: les visages de l'amour, jusqu'au Bien-aimé intérieur.</p></a>
-        <a class="espace" href="glossaire.html"><span class="glyphe">✧</span><h3>Glossaire bilingue</h3><p>Les mots d'Almaas, de l'anglais au français&nbsp;: chaque terme original, sa traduction et sa définition.</p></a>
-        <a class="espace" href="lire-almaas.html"><span class="glyphe">✦</span><h3>Lire Almaas</h3><p>Par où commencer, quel livre pour quelle question — le guide de lecture de l'œuvre.</p></a>
-      </div>
+      <p class="lv-more"><a href="sommaire.html">Voir le sommaire complet — pratique, ennéagramme, amour, repères →</a></p>
     </section>
 
     <!-- ================= FRATRIE ================= -->
@@ -322,6 +259,5 @@
     <footer>Tous droits réservés — synthèses originales&nbsp;; courtes citations attribuées.</footer>
   </div>
   <script defer src="assets/lang.js"></script>
-  <script defer src="assets/nav.js"></script>
 </body>
 </html>
