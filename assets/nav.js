@@ -12,8 +12,8 @@
     open:'Contents', close:'Close', label:'Site menu', home:'Home',
     groups:[
       ['Begin', [
-        ['douze-notions.html','The 12 key notions'],
         ['parcours-decouverte.html','Discovery path'],
+        ['douze-notions.html','The 12 key notions'],
         ['chemin.html','The guided path'],
         ['causeries.html','The talks'],
         ['lessence.html','The question of essence']
@@ -37,8 +37,8 @@
     open:'Sommaire', close:'Fermer', label:'Menu du site', home:'Accueil',
     groups:[
       ['Commencer', [
-        ['douze-notions.html','Les 12 notions clés'],
         ['parcours-decouverte.html','Parcours découverte'],
+        ['douze-notions.html','Les 12 notions clés'],
         ['chemin.html','Le chemin guidé'],
         ['causeries.html','Les causeries'],
         ['lessence.html','La question de l’essence']

@@ -78,6 +78,21 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
   body.lv-open #lv-backdrop{opacity:1;pointer-events:auto}
 }
 
+@media (max-width:640px){
+  body.livre{--topbar-h:3.55rem}
+  #lv-top{padding:0 .75rem;gap:.45rem}
+  #lv-top .lv-brand{gap:.38rem;min-width:0}
+  #lv-top .lv-brand svg{width:20px;height:20px}
+  #lv-top .lv-brand b{font-size:1rem;max-width:7.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #lv-top nav{align-items:center;gap:.02rem;font-size:.67rem;letter-spacing:.025em}
+  #lv-top nav a{padding:.34rem .42rem}
+  #lv-top nav a[href$="glossaire.html"]{display:none}
+  #lv-top .lv-burger{font-size:1.25rem;padding:.12rem .25rem}
+}
+@media (max-width:360px){
+  #lv-top nav a[href$="sommaire.html"]{display:none}
+}
+
 /* ---------- pied précédent / suivant ---------- */
 #lv-pager{display:flex;gap:1rem;max-width:44rem;margin:2.4rem auto 1rem;padding-top:1.6rem;
   border-top:1px solid rgba(35,44,74,.12)}
@@ -91,6 +106,19 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
   letter-spacing:.1em;text-transform:uppercase;color:#5f677b;margin-bottom:.15rem}
 #lv-pager .t{font-size:1.1rem;font-weight:600}
 #lv-pager a.empty{visibility:hidden}
+
+/* ---------- transitions de parcours ---------- */
+.lv-transition{max-width:44rem;margin:2.6rem auto .2rem;padding:1.2rem 1.35rem;
+  border:1px solid rgba(163,120,31,.28);border-radius:12px;background:rgba(255,253,248,.76);
+  box-shadow:0 8px 24px rgba(35,44,74,.05)}
+.lv-transition .lab{display:block;font-family:Inter,ui-sans-serif,sans-serif;font-size:.64rem;
+  font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--or-sombre);margin-bottom:.45rem}
+.lv-transition p{margin:0;color:#232b45;font-size:1.04rem;line-height:1.55}
+@media (min-width:1024px){ body.livre.has-rail .lv-transition{margin-left:0} }
+@media (max-width:640px){
+  .lv-transition{margin:2rem auto .1rem;padding:1rem 1.05rem}
+  .lv-transition p{font-size:1rem}
+}
 
 /* ---------- encart avancé « Pour aller plus loin » ---------- */
 .plusloin{border:1px solid rgba(163,120,31,.38);border-radius:14px;background:#faf6ec;
