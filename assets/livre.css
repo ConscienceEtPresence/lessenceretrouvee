@@ -59,12 +59,12 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
 
 /* sur les pages chapitre, on pousse tout le contenu à droite du rail */
 @media (min-width:1024px){
-  body.livre.has-rail .nuit,
-  body.livre.has-rail .voile.contenu,
-  body.livre.has-rail > .voile,
-  body.livre.has-rail footer{margin-left:16.5rem}
+  /* le rail occupe la gouttière gauche ; tout le reste vit dans l'espace de droite */
+  body.livre.has-rail{padding-left:16.5rem}
+  /* héros = bandeau pleine largeur (bord du rail -> bord droit) ; colonne de lecture centrée */
   body.livre.has-rail .nuit .voile,
-  body.livre.has-rail .voile.contenu{max-width:44rem}
+  body.livre.has-rail .voile.contenu,
+  body.livre.has-rail > .voile{max-width:44rem;margin-left:auto;margin-right:auto}
 }
 
 /* rail masqué en dessous : ouverture en panneau */
@@ -96,7 +96,7 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
 /* ---------- pied précédent / suivant ---------- */
 #lv-pager{display:flex;gap:1rem;max-width:44rem;margin:2.4rem auto 1rem;padding-top:1.6rem;
   border-top:1px solid rgba(35,44,74,.12)}
-@media (min-width:1024px){ body.livre.has-rail #lv-pager{margin-left:16.5rem} }
+@media (min-width:1024px){ body.livre.has-rail #lv-pager{margin-left:auto;margin-right:auto} }
 #lv-pager a{flex:1;text-decoration:none;color:#1b2138;border:1px solid rgba(35,44,74,.14);
   border-radius:12px;padding:.85rem 1.1rem;background:#fffdf8;transition:.18s;
   font-family:'Cormorant Garamond',Georgia,serif}
@@ -128,4 +128,37 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
 .plusloin h2{font-size:1.32rem!important;color:#12172b!important;margin:.1rem 0 .7rem!important;border:0!important;padding:0!important}
 .plusloin p{margin:0 0 .8rem;color:#232b45}
 .plusloin p:last-child{margin-bottom:0}
-@media (min-width:1024px){ body.livre.has-rail .plusloin{margin-left:0} }
+@media (min-width:1024px){ body.livre.has-rail .plusloin{margin-left:auto;margin-right:auto} }
+
+/* ---------- bascule de langue intégrée à la barre ---------- */
+#lv-top .lv-lang{display:inline-flex;align-items:center;gap:.15rem;margin-left:.55rem;
+  font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.04em}
+#lv-top .lv-lang a{color:#5f677b;text-decoration:none;padding:.3rem .32rem;border-radius:6px;transition:color .15s}
+#lv-top .lv-lang a:hover{color:#1b2138}
+#lv-top .lv-lang a.on{color:var(--or-profond,#7a5c17);pointer-events:none}
+#lv-top .lv-lang .sep{color:rgba(35,44,74,.3)}
+/* la pastille flottante FR/EN (lang.js) est remplacée par la bascule de la barre */
+body.livre #lang-switch{display:none!important}
+/* mobile : les liens texte passent dans le menu ☰ ; on garde marque + ☰ + FR·EN */
+@media (max-width:640px){ #lv-top nav > a{display:none} }
+
+/* ---------- polish ---------- */
+/* les ancres (#type-8, lettres…) ne se cachent plus sous la barre fixe */
+body.livre [id]{scroll-margin-top:5rem}
+/* titres mieux équilibrés (pas de mot orphelin) */
+.contenu h1,.contenu h2,.contenu h3,.nuit h1,.page h1,.plusloin h2,.type-c .pass{text-wrap:balance}
+/* focus clavier bien visible (accessibilité) */
+body.livre a:focus-visible,body.livre button:focus-visible{outline:2px solid var(--or-sombre,#916a1b);outline-offset:3px;border-radius:5px}
+/* bouton « retour en haut » */
+#lv-haut{position:fixed;bottom:22px;right:22px;z-index:940;width:2.7rem;height:2.7rem;border-radius:50%;
+  border:1px solid rgba(163,120,31,.4);background:#fffdf8;color:#916a1b;cursor:pointer;line-height:1;
+  font-size:1.15rem;box-shadow:0 6px 20px rgba(35,44,74,.16);opacity:0;pointer-events:none;
+  transition:opacity .25s ease,transform .2s ease,color .15s ease,border-color .15s ease}
+#lv-haut.show{opacity:1;pointer-events:auto}
+#lv-haut:hover{transform:translateY(-2px);color:#7a5c17;border-color:rgba(163,120,31,.75)}
+@media (max-width:640px){ #lv-haut{bottom:16px;right:14px;width:2.4rem;height:2.4rem} }
+/* révélation douce au défilement — garde-fou : sans JS (pas de body.lv-anim), rien n'est masqué */
+@media (prefers-reduced-motion:no-preference){
+  body.lv-anim .lv-reveal{opacity:0;transform:translateY(16px)}
+  body.lv-anim .lv-reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .55s cubic-bezier(.4,0,.2,1)}
+}

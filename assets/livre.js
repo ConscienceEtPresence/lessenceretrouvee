@@ -50,6 +50,13 @@
   top.id = 'lv-top';
   var BRAND = isEN ? '<b>Essence <em>Regained</em></b>' : '<b>L’essence <em>retrouvée</em></b>';
   var gloClass = 'lv-glo-link' + (here==='glossaire.html' ? ' on' : '');
+  /* bascule de langue, intégrée à la barre (remplace la pastille flottante) */
+  var cp = isEN ? ('../'+here) : ('en/'+here);
+  var lang = '<span class="lv-lang" role="navigation" aria-label="Langue">'
+    +'<a lang="fr" href="'+(isEN?cp:'#')+'"'+(isEN?'':' class="on" aria-current="true"')+'>FR</a>'
+    +'<span class="sep" aria-hidden="true">·</span>'
+    +'<a lang="en" href="'+(isEN?'#':cp)+'"'+(isEN?' class="on" aria-current="true"':'')+'>EN</a>'
+    +'</span>';
   top.innerHTML =
     '<a class="lv-brand" href="index.html">'+DIAM+BRAND+'</a>'
     +'<nav>'
@@ -57,6 +64,7 @@
       +'<a href="index.html">'+UI.home+'</a>'
       +'<a href="sommaire.html" class="'+(isPlan?'on':'')+'">'+UI.som+'</a>'
       +'<a href="glossaire.html" class="'+gloClass+'">'+UI.glo+'</a>'
+      +lang
     +'</nav>';
 
   var prog = document.createElement('div'); prog.id='lv-progress';
@@ -113,11 +121,36 @@
       document.addEventListener('keydown', function(e){ if(e.key==='Escape') document.body.classList.remove('lv-open'); });
     }
 
+    /* bouton « retour en haut » */
+    var haut=document.createElement('button');
+    haut.id='lv-haut'; haut.type='button';
+    haut.setAttribute('aria-label', isEN?'Back to top':'Retour en haut');
+    haut.textContent='↑';
+    haut.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+    document.body.appendChild(haut);
+
     window.addEventListener('scroll', function(){
       var d=document.documentElement, sc=d.scrollTop||document.body.scrollTop;
       var hh=(d.scrollHeight-d.clientHeight)||1;
       prog.style.width=(sc/hh*100)+'%';
+      haut.classList.toggle('show', sc>600);
     });
+
+    /* révélation douce au défilement — garde-fou : sans ce script rien n'est masqué */
+    if (isChapter && window.IntersectionObserver && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+      var cibles=document.querySelectorAll('.contenu > h2, .contenu .facette, .contenu .type-c, .contenu .plusloin, .contenu .idees, .contenu .exploration, .contenu .avertissement');
+      if (cibles.length){
+        document.body.classList.add('lv-anim');
+        var io=new IntersectionObserver(function(ents){
+          ents.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+        cibles.forEach(function(el){
+          el.classList.add('lv-reveal');
+          if (el.getBoundingClientRect().top < window.innerHeight*0.92){ el.classList.add('in'); }
+          else { io.observe(el); }
+        });
+      }
+    }
   }
   if (document.body) mount();
   else document.addEventListener('DOMContentLoaded', mount);
