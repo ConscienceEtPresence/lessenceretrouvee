@@ -59,12 +59,12 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
 
 /* sur les pages chapitre, on pousse tout le contenu à droite du rail */
 @media (min-width:1024px){
-  body.livre.chap .nuit,
-  body.livre.chap .voile.contenu,
-  body.livre.chap > .voile,
-  body.livre.chap footer{margin-left:16.5rem}
-  body.livre.chap .nuit .voile,
-  body.livre.chap .voile.contenu{max-width:44rem}
+  body.livre.has-rail .nuit,
+  body.livre.has-rail .voile.contenu,
+  body.livre.has-rail > .voile,
+  body.livre.has-rail footer{margin-left:16.5rem}
+  body.livre.has-rail .nuit .voile,
+  body.livre.has-rail .voile.contenu{max-width:44rem}
 }
 
 /* rail masqué en dessous : ouverture en panneau */
@@ -81,7 +81,7 @@ body.livre .nuit .retour{display:none} /* le retour est remplacé par la barre +
 /* ---------- pied précédent / suivant ---------- */
 #lv-pager{display:flex;gap:1rem;max-width:44rem;margin:2.4rem auto 1rem;padding-top:1.6rem;
   border-top:1px solid rgba(35,44,74,.12)}
-@media (min-width:1024px){ body.livre.chap #lv-pager{margin-left:16.5rem} }
+@media (min-width:1024px){ body.livre.has-rail #lv-pager{margin-left:16.5rem} }
 #lv-pager a{flex:1;text-decoration:none;color:#1b2138;border:1px solid rgba(35,44,74,.14);
   border-radius:12px;padding:.85rem 1.1rem;background:#fffdf8;transition:.18s;
   font-family:'Cormorant Garamond',Georgia,serif}

@@ -30,9 +30,11 @@
   var L = isEN ? 1 : 0;
   var i = -1; for (var k=0;k<CH.length;k++){ if (CH[k].id===here){ i=k; break; } }
 
+  if (here==='index.html' || here==='') return;   /* l'accueil garde sa couverture */
   var isChapter = i !== -1;
   var isPlan = here==='sommaire.html';
-  if (!isChapter && !isPlan) return;   /* l'accueil garde sa propre mise en page */
+  var isAnnexe = !isChapter && !isPlan;   /* page reliée mais hors chaînage */
+  var hasRail = isChapter || isAnnexe;    /* le rail s'affiche partout sauf sur le plan */
 
   var UI = isEN
     ? {home:'Home', som:'Contents', glo:'Glossary', prev:'Previous', next:'Next', end:'Reference', endt:'Contents'}
@@ -46,10 +48,11 @@
   /* ---- barre du haut ---- */
   var top = document.createElement('header');
   top.id = 'lv-top';
+  var BRAND = isEN ? '<b>Essence <em>Regained</em></b>' : '<b>L’essence <em>retrouvée</em></b>';
   top.innerHTML =
-    '<a class="lv-brand" href="index.html">'+DIAM+'<b>L’essence <em>retrouvée</em></b></a>'
+    '<a class="lv-brand" href="index.html">'+DIAM+BRAND+'</a>'
     +'<nav>'
-      +(isChapter?'<button class="lv-burger" type="button" aria-label="'+UI.som+'">☷</button>':'')
+      +(hasRail?'<button class="lv-burger" type="button" aria-label="'+UI.som+'">☷</button>':'')
       +'<a href="index.html">'+UI.home+'</a>'
       +'<a href="sommaire.html" class="'+(isPlan?'on':'')+'">'+UI.som+'</a>'
       +'<a href="glossaire.html" class="'+(here==='glossaire.html'?'on':'')+'">'+UI.glo+'</a>'
@@ -70,12 +73,12 @@
   var back = document.createElement('div'); back.id='lv-backdrop';
 
   document.body.classList.add('livre');
-  if (isChapter) document.body.classList.add('chap');
+  if (hasRail) document.body.classList.add('has-rail');
 
   function mount(){
     document.body.appendChild(prog);
     document.body.insertBefore(top, document.body.firstChild);
-    if (isChapter){ document.body.appendChild(rail); document.body.appendChild(back); }
+    if (hasRail){ document.body.appendChild(rail); document.body.appendChild(back); }
 
     /* pied précédent / suivant, seulement sur un chapitre */
     if (isChapter){
