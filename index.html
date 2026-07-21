@@ -141,23 +141,15 @@
     }
     .sommaire-col a:hover{color:var(--or-sombre)}
 
-    .fratrie{text-align:center;padding:3rem 0 2rem;border-top:1px solid rgba(35,44,74,.1)}
-    .fratrie p{color:var(--estompe);font-size:1.02rem;font-style:italic;margin:0 0 1rem}
-    .fratrie a{
-      color:var(--encre-douce);text-decoration:none;margin:0 .9rem;font-size:1.05rem;
-      border-bottom:1px solid rgba(35,44,74,.25);transition:all .18s ease;
-    }
-    .fratrie a:hover{color:var(--or-profond);border-color:var(--or-sombre)}
-
     footer{
       text-align:center;padding:1.6rem 0 2.4rem;color:var(--estompe);
       font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.03em;
     }
 
-    .apparait{opacity:0;transform:translateY(14px);animation:lever .9s ease forwards}
+    .apparait{opacity:0;transform:translateY(14px);animation:lever .55s ease forwards}
     @keyframes lever{to{opacity:1;transform:translateY(0)}}
-    .d1{animation-delay:.1s}.d2{animation-delay:.28s}.d3{animation-delay:.46s}.d4{animation-delay:.64s}.d5{animation-delay:.82s}
-    .diamant .trace{stroke-dasharray:var(--long,300);stroke-dashoffset:var(--long,300);animation:tracer 2.2s cubic-bezier(.4,0,.2,1) forwards}
+    .d1{animation-delay:.04s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}.d5{animation-delay:.36s}
+    .diamant .trace{stroke-dasharray:var(--long,300);stroke-dashoffset:var(--long,300);animation:tracer 1.35s cubic-bezier(.4,0,.2,1) forwards}
     @keyframes tracer{to{stroke-dashoffset:0}}
 
     @media (max-width:640px){
@@ -195,13 +187,14 @@
       </p>
 
       <nav class="portes apparait d4" aria-label="Portes d'entrée">
-        <a class="porte porte--principale" href="lhomme.html">Commencer la lecture</a>
+        <a class="porte porte--principale" href="douze-notions.html">Commencer la lecture</a>
         <a class="porte" href="sommaire.html">Le sommaire</a>
         <a class="porte" href="glossaire.html">Le glossaire</a>
       </nav>
       <p class="aide apparait d5">
-        Ce site se lit comme un livre&nbsp;: de l'homme qui a fondé l'approche Diamant
-        jusqu'au voyage de retour vers l'Être. On peut le suivre dans l'ordre&nbsp;—
+        Ce site se lit comme un livre&nbsp;: des notions clés jusqu'au voyage de retour
+        vers l'Être. Les repères sur l'auteur et les sources restent disponibles à part.
+        On peut le suivre dans l'ordre&nbsp;—
         ou entrer où l'on veut par <strong>le sommaire</strong>.
       </p>
     </header>
@@ -236,7 +229,7 @@
       <h2 class="titre-section">Le livre, chapitre après chapitre</h2>
       <p class="chapeau">Une lecture continue de l'œuvre d'Almaas. On peut la suivre dans l'ordre&nbsp;— ou entrer où l'on veut.</p>
       <div class="lv-list">
-        <a class="lv-row" href="lhomme.html"><span class="n">01</span><span class="t">L'homme<span class="d">La naissance de l'approche Diamant.</span></span></a>
+        <a class="lv-row" href="douze-notions.html"><span class="n">01</span><span class="t">12 notions clés<span class="d">Les repères indispensables avant d'avancer.</span></span></a>
         <a class="lv-row" href="etre-ou-lon-est.html"><span class="n">02</span><span class="t">Être où l'on est<span class="d">La présence : l'art de ne pas fuir l'instant.</span></span></a>
         <a class="lv-row" href="le-juge-interieur.html"><span class="n">03</span><span class="t">Le juge intérieur<span class="d">Le surmoi, et l'art de s'en défendre.</span></span></a>
         <a class="lv-row" href="les-trous.html"><span class="n">04</span><span class="t">Les trous<span class="d">Le manque qui montre le chemin.</span></span></a>
@@ -248,13 +241,6 @@
       </div>
       <p class="lv-more"><a href="sommaire.html">Voir le sommaire complet — pratique, ennéagramme, amour, repères →</a></p>
     </section>
-
-    <!-- ================= FRATRIE ================= -->
-    <div class="fratrie">
-      <p>L'essence retrouvée appartient à la même famille que&nbsp;:</p>
-      <a href="https://lavoiedudedans.fr" target="_blank" rel="noopener">La voie du dedans</a>
-      <a href="https://lemiroirinterieur.fr" target="_blank" rel="noopener">Le miroir intérieur</a>
-    </div>
 
     <footer>Tous droits réservés — synthèses originales&nbsp;; courtes citations attribuées.</footer>
   </div>

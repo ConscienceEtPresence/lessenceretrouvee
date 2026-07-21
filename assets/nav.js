@@ -12,16 +12,16 @@
     open:'Contents', close:'Close', label:'Site menu', home:'Home',
     groups:[
       ['Begin', [
+        ['douze-notions.html','The 12 key notions'],
         ['parcours-decouverte.html','Discovery path'],
         ['chemin.html','The guided path'],
         ['causeries.html','The talks'],
-        ['douze-notions.html','The 12 key notions'],
         ['lessence.html','The question of essence']
       ]],
       ['Place', [
-        ['situer.html','Place Almaas and his sources'],
+        ['lhomme.html','The author and the path'],
         ['lapproche.html','The Diamond Approach'],
-        ['lhomme.html','The man and the path']
+        ['situer.html','Place Almaas and his sources']
       ]],
       ['Deepen', [
         ['approfondir-almaas.html','Deepening Almaas'],
@@ -37,16 +37,16 @@
     open:'Sommaire', close:'Fermer', label:'Menu du site', home:'Accueil',
     groups:[
       ['Commencer', [
+        ['douze-notions.html','Les 12 notions clés'],
         ['parcours-decouverte.html','Parcours découverte'],
         ['chemin.html','Le chemin guidé'],
         ['causeries.html','Les causeries'],
-        ['douze-notions.html','Les 12 notions clés'],
         ['lessence.html','La question de l’essence']
       ]],
       ['Situer', [
-        ['situer.html','Situer Almaas et ses sources'],
+        ['lhomme.html','L’auteur et le parcours'],
         ['lapproche.html','L’approche Diamant'],
-        ['lhomme.html','L’homme et le parcours']
+        ['situer.html','Situer Almaas et ses sources']
       ]],
       ['Approfondir', [
         ['approfondir-almaas.html','Approfondir Almaas'],

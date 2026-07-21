@@ -11,7 +11,6 @@
 
   /* ordre de lecture = ordre du rail = chaînage précédent/suivant */
   var CH = [
-    {id:'lhomme.html',                 g:['L’ouverture','Opening'],        t:['L’homme','The man']},
     {id:'douze-notions.html',          g:['L’ouverture','Opening'],        t:['12 notions clés','12 key notions']},
     {id:'etre-ou-lon-est.html',        g:['Le chemin','The path'],         t:['Être où l’on est','Being where you are']},
     {id:'le-juge-interieur.html',      g:['Le chemin','The path'],         t:['Le juge intérieur','The inner judge']},
