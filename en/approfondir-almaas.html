@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Deepening Almaas — Essence Regained</title>
+  <meta name="description" content="A deeper study table for entering A. H. Almaas's work: essence, holes, inquiry, Diamond Guidance, superego, Pearl, Point, love, enneagram, and reading paths.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:52rem;margin:0 auto;padding:0 1.4rem}
+    .voile-large{max-width:68rem;margin:0 auto;padding:0 1.4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%,rgba(232,201,122,.08),transparent 60%),radial-gradient(900px 600px at 85% 40%,rgba(125,150,220,.05),transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.8rem}
+    .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}
+    .retour:hover{color:var(--or-vif)}
+    header{text-align:center;padding:2.9rem 0 .8rem}
+    .num{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+    h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.15rem);line-height:1.08;margin:.15rem 0 .45rem;color:#f4f7ff}
+    .chapeau{max-width:40rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;font-style:italic}
+    main{padding:3rem 0 4rem}
+    h2{font-weight:500;font-size:1.66rem;color:var(--or-sombre);margin:3rem 0 .75rem}
+    h3{font-weight:600;font-size:1.24rem;color:var(--encre);margin:0 0 .4rem}
+    p{margin:0 0 1.15rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.9rem;margin:1.4rem 0 2rem}
+    .carte{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1.15rem 1.2rem}
+    .carte .tag{font-family:Inter,sans-serif;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--or-profond);margin-bottom:.35rem}
+    .carte p{font-size:1.02rem;color:var(--encre-douce);margin:0}
+    .axe{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;padding:1.2rem 1.3rem;margin:1rem 0}
+    .axe p{color:var(--encre-douce);font-size:1.05rem;margin:0}
+    .axe p + p{margin-top:.7rem}
+    .table{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.8rem;margin:1.2rem 0}
+    .entree{display:block;background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1rem 1.1rem;color:inherit;text-decoration:none;transition:all .2s ease}
+    .entree:hover{transform:translateY(-2px);border-color:var(--jour-ligne)}
+    .entree .tag{font-family:Inter,sans-serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--estompe);margin-bottom:.25rem}
+    .entree h3{font-size:1.18rem;margin:0 0 .3rem}
+    .entree p{font-size:1rem;color:var(--encre-douce);margin:0}
+    .semaine{border-left:1px solid rgba(163,120,31,.35);padding-left:1.15rem;margin:1.2rem 0}
+    .semaine h3{color:var(--or-profond)}
+    .note{font-size:1rem;color:var(--estompe);font-style:italic;margin-top:1.6rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.doree{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← Essence Regained</a>
+    <header>
+      <div class="num">Study table</div>
+      <h1>Deepening Almaas</h1>
+      <p class="chapeau">A page for not remaining on the surface: connect the notions, choose an entry, then return to the books with greater precision.</p>
+    </header>
+  </div></div>
+
+  <main class="voile">
+    <p>
+      This page is designed as a study table. The rest of the site gives doorways,
+      diagrams, talks, and lexicons; here, the aim is to hold together the deeper logic
+      of the work. Almaas almost never proceeds by abstract definition. He starts from an
+      ordinary experience, lets it become more precise, discovers the defense covering it,
+      then shows how a quality of Being can appear where personality saw only a lack,
+      a reaction, or a problem.
+    </p>
+    <p>
+      The point is therefore not to become a specialist in vocabulary. It is to feel how
+      a word can change perception. <em>Hole</em> no longer means simply deficit: it becomes
+      the trace of a quality absent from consciousness. <em>Superego</em> no longer means
+      simple guilt: it becomes the guardian of an old organization. <em>Inquiry</em> no
+      longer means analysis: it becomes a way of remaining present to what is revealing
+      itself. <em>Pearl</em> no longer means a beautiful spiritual image: it names the
+      possibility of becoming a real person.
+    </p>
+
+    <h2>Four layers of reading</h2>
+    <div class="grille" aria-label="Four layers of reading">
+      <div class="carte">
+        <div class="tag">1. Experience</div>
+        <p>Begin with what is being lived now: lack, shame, desire, anger, confusion, aspiration, the need to be seen.</p>
+      </div>
+      <div class="carte">
+        <div class="tag">2. Structure</div>
+        <p>Notice the psychological organization: self-image, object relation, defense, superego, fixation, false aspect.</p>
+      </div>
+      <div class="carte">
+        <div class="tag">3. Quality</div>
+        <p>Ask which essential quality is absent, imitated, or sensed: strength, value, will, compassion, love, peace.</p>
+      </div>
+      <div class="carte">
+        <div class="tag">4. Integration</div>
+        <p>Let understanding transform concrete life: relationship, speech, action, autonomy, love of truth.</p>
+      </div>
+    </div>
+
+    <h2>The major axes to hold together</h2>
+
+    <div class="axe">
+      <h3>Essence as substantial presence</h3>
+      <p>
+        Essence is the foundation. It is not an elevated emotion or a better idea of
+        oneself: it is real presence, lived as subtle substance. That is why Almaas
+        describes essential qualities by their color, density, texture, or bodily effect.
+        This realism prevents the path from becoming inspirational discourse.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Personality as intelligent imitation</h3>
+      <p>
+        Personality is not simply false, and it is not to be despised. It is an adaptive
+        structure that imitates what it is separated from: false strength, false value,
+        false autonomy, false love. Its falseness becomes intelligible when we understand
+        which real quality it is trying to replace.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Holes as doors of return</h3>
+      <p>
+        The theory of holes gives a central reversal: lack is not merely something to fill.
+        If we remain with it without fleeing, it can reveal the quality lost from view.
+        This point links <em>Essence</em>, <em>The Void</em>, the <em>Diamond Heart</em>
+        talks, and the practice of inquiry.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>The superego as guardian of the status quo</h3>
+      <p>
+        The inner judge does not only hurt: it prevents transformation. It attacks
+        experience at the very moment it could become true, then uses our own aggression
+        against us. Defending against it means reclaiming that force, not entering an
+        endless inner trial.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Inquiry as living knowledge</h3>
+      <p>
+        Inquiry is not a technique for manufacturing a spiritual state. It is conscious
+        participation in the unfoldment of experience. It asks for openness, curiosity,
+        not-knowing, bodily precision, and love of truth. It joins the finest psychology
+        to the presence of Being.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Diamond Guidance</h3>
+      <p>
+        Diamond Guidance is the discriminating intelligence of Being: it helps us see what
+        is true, false, mixed, defensive, or essential in experience. The term must remain
+        clear: this is not sentimental or vague guidance, but a precise capacity for
+        knowing, inseparable from presence.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>The Pearl, or real individuality</h3>
+      <p>
+        Realization does not erase the person. With the Pearl, Almaas shows that the
+        person can become real, personal, and open to Being. Personality is metabolized:
+        object relations, wounds, and false aspects become material for a truer
+        individuality.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>The Point, or Essential Identity</h3>
+      <p>
+        The Point moves the question <em>who am I?</em> from the mental to the experiential
+        level. Ordinary identity depends on images, mirroring, and external support. By
+        moving through the narcissistic wound, emptiness, and black space, a simpler
+        identity may appear: presence that knows it is.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Love, relationship, and projection</h3>
+      <p>
+        Love is not only an emotion directed toward an object. Almaas unfolds it into
+        distinct qualities: personal love, merging love, passionate love, nondual love,
+        the inner Beloved. Relationship becomes a laboratory where projection, need, and
+        dependency are seen, but also the presence of the heart.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Enneagram and objective view</h3>
+      <p>
+        In Almaas's use of the enneagram, the aim is not to classify people. Each type
+        expresses a loss of objective view, a fixation, a passion, and a way back toward
+        a Holy Idea and an essential quality. The enneagram becomes a map of perception,
+        not an additional identity.
+      </p>
+    </div>
+
+    <h2>Where to deepen according to what is working in you</h2>
+    <div class="table" aria-label="Deepening entries">
+      <a class="entree" href="les-trous.html"><div class="tag">Lack / void</div><h3>The holes</h3><p>Understand lack as the trace of an essential quality.</p></a>
+      <a class="entree" href="lessence.html"><div class="tag">Presence</div><h3>Essence</h3><p>Distinguish essence, emotion, energy, emptiness, and passing state.</p></a>
+      <a class="entree" href="le-juge-interieur.html"><div class="tag">Guilt</div><h3>The inner judge</h3><p>See the superego, defend yourself, recover strength and essential conscience.</p></a>
+      <a class="entree" href="pratiquer.html"><div class="tag">Method</div><h3>Practicing inquiry</h3><p>Transform present experience into living investigation.</p></a>
+      <a class="entree" href="la-perle.html"><div class="tag">Real person</div><h3>The Pearl</h3><p>Metabolize personality and personalize essential qualities.</p></a>
+      <a class="entree" href="le-point.html"><div class="tag">Identity</div><h3>The Point</h3><p>Move through self-image, the need for mirroring, and the narcissistic wound.</p></a>
+      <a class="entree" href="le-chemin-de-lamour.html"><div class="tag">Relationship</div><h3>The path of love</h3><p>Distinguish need, projection, personal, merging, and nondual love.</p></a>
+      <a class="entree" href="enneagramme-essence.html"><div class="tag">Fixations</div><h3>Enneagram and essence</h3><p>Move from psychological type to objective view and essential qualities.</p></a>
+      <a class="entree" href="causeries.html"><div class="tag">Lived themes</div><h3>The talks</h3><p>Explore truth, hope, value, compassion, trust, acceptance.</p></a>
+      <a class="entree" href="lexiques-ouvrages.html"><div class="tag">Precision</div><h3>Book lexicons</h3><p>Find the English words, French translations, and notions book by book.</p></a>
+    </div>
+
+    <h2>What to avoid in order to remain faithful</h2>
+    <p>
+      First reduction: making Almaas into enriched psychology. Psychology is indispensable
+      in his work, but it is not the last word: personality structures are understood in
+      order to let Being appear. Second reduction: making a mysticism without psychodynamics.
+      That too would lose his originality: spiritual experiences are questioned down to
+      their defenses, confusions, and possible narcissistic uses.
+    </p>
+    <p>
+      Third reduction: turning the work into dogma. Almaas insists on direct verification:
+      a notion must be tested in experience, not merely repeated. Fourth reduction:
+      believing that personality must be destroyed. The subtler movement is understanding
+      that makes personality transparent, then metabolizes it. Fifth reduction: replacing
+      the work with positive affirmations. Saying <em>I am love</em> is not enough if the
+      hole of love, dependency, projection, and defense are not met.
+    </p>
+
+    <h2>A four-week study path</h2>
+    <div class="semaine">
+      <h3>Week 1 — Essence, holes, qualities</h3>
+      <p>
+        Read <a href="lessence.html">The question of essence</a>, <a href="les-trous.html">The holes</a>
+        and <a href="les-visages-de-lessence.html">The faces of essence</a>. Central question:
+        which quality is often absent from my experience: strength, value, love, will,
+        peace, compassion?
+      </p>
+    </div>
+    <div class="semaine">
+      <h3>Week 2 — Superego and inquiry</h3>
+      <p>
+        Read <a href="le-juge-interieur.html">The inner judge</a> and
+        <a href="pratiquer.html">Practice</a>. Observe the judge's attacks, the moments
+        of justification, then return to a simple question: what is true now, before
+        condemnation?
+      </p>
+    </div>
+    <div class="semaine">
+      <h3>Week 3 — Pearl and Point</h3>
+      <p>
+        Read <a href="la-perle.html">The Pearl</a> and <a href="le-point.html">The Point</a>.
+        Explore two questions: where am I playing a character? where do I need to be
+        confirmed in order to feel that I exist?
+      </p>
+    </div>
+    <div class="semaine">
+      <h3>Week 4 — Love, enneagram, overview</h3>
+      <p>
+        Read <a href="le-chemin-de-lamour.html">The path of love</a>,
+        <a href="enneagramme-essence.html">The enneagram of essence</a>,
+        <a href="schemas-oeuvre.html">The diagrams</a> and <a href="lire-almaas.html">Reading Almaas</a>.
+        The aim is to stop seeing the pages as separate sections and start seeing them as
+        facets of one work of transformation.
+      </p>
+    </div>
+
+    <p class="note">
+      Working sources: local summaries and glossaries around <em>Diamond Heart</em>,
+      <em>Essence</em>, <em>The Void</em>, <em>The Pearl Beyond Price</em>, <em>The Point of Existence</em>,
+      <em>Spacecruiser Inquiry</em>, the books on love, and the enneagram books. This page
+      remains an original pedagogical synthesis intended to lead back to the texts.
+    </p>
+
+    <nav class="suite" aria-label="Continue">
+      <a href="index.html">← Home</a>
+      <a class="doree" href="parcours-decouverte.html">Discovery path →</a>
+      <a href="lire-almaas.html">Reading Almaas →</a>
+      <a href="glossaire.html">Glossary →</a>
+    </nav>
+
+    <footer>Essence Regained — after A. H. Almaas · All rights reserved</footer>
+  </main>
+  <script defer src="../assets/lang.js"></script>
+</body>
+</html>

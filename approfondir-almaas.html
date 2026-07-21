@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Approfondir Almaas — L'essence retrouvée</title>
+  <meta name="description" content="Une table d'étude approfondie pour entrer dans l'œuvre d'A.H. Almaas : essence, trous, inquiry, Guidance Diamant, surmoi, Perle, Point, amour, ennéagramme et parcours de lecture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --nuit-bg:#0a0e18;--nuit-texte:#e9edf8;--nuit-doux:#aeb9d6;--nuit-estompe:#7c88a8;
+      --or:#e8c97a;--or-vif:#f5d77b;--nacre:#dbe6f5;
+      --jour-bg:#f6f1e6;--encre:#232c4a;--encre-douce:#3d4a72;--estompe:#8a8f9f;
+      --or-sombre:#a3781f;--or-profond:#8a6a1f;--jour-carte:#fffdf8;--jour-bord:rgba(35,44,74,.13);--jour-ligne:rgba(163,120,31,.4);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--jour-bg);scroll-behavior:smooth}
+    body{margin:0;color:var(--encre);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.72;background:var(--jour-bg);font-size:1.13rem}
+    .voile{max-width:52rem;margin:0 auto;padding:0 1.4rem}
+    .voile-large{max-width:68rem;margin:0 auto;padding:0 1.4rem}
+    .nuit{background:radial-gradient(1100px 700px at 50% -10%,rgba(232,201,122,.08),transparent 60%),radial-gradient(900px 600px at 85% 40%,rgba(125,150,220,.05),transparent 55%),var(--nuit-bg);color:var(--nuit-texte);padding-bottom:2.8rem}
+    .retour{display:inline-block;margin:1.6rem 0 0;color:var(--nuit-estompe);text-decoration:none;font-size:1.02rem;font-style:italic}
+    .retour:hover{color:var(--or-vif)}
+    header{text-align:center;padding:2.9rem 0 .8rem}
+    .num{font-family:Inter,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+    h1{font-weight:500;font-size:clamp(2.1rem,5vw,3.15rem);line-height:1.08;margin:.15rem 0 .45rem;color:#f4f7ff}
+    .chapeau{max-width:40rem;margin:0 auto;color:var(--nuit-doux);font-size:1.17rem;font-style:italic}
+    main{padding:3rem 0 4rem}
+    h2{font-weight:500;font-size:1.66rem;color:var(--or-sombre);margin:3rem 0 .75rem}
+    h3{font-weight:600;font-size:1.24rem;color:var(--encre);margin:0 0 .4rem}
+    p{margin:0 0 1.15rem}
+    a{color:var(--or-profond);text-decoration:none;border-bottom:1px solid var(--jour-ligne)}
+    a:hover{color:var(--or-sombre)}
+    .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.9rem;margin:1.4rem 0 2rem}
+    .carte{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1.15rem 1.2rem}
+    .carte .tag{font-family:Inter,sans-serif;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--or-profond);margin-bottom:.35rem}
+    .carte p{font-size:1.02rem;color:var(--encre-douce);margin:0}
+    .axe{background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:14px;padding:1.2rem 1.3rem;margin:1rem 0}
+    .axe p{color:var(--encre-douce);font-size:1.05rem;margin:0}
+    .axe p + p{margin-top:.7rem}
+    .table{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.8rem;margin:1.2rem 0}
+    .entree{display:block;background:var(--jour-carte);border:1px solid var(--jour-bord);border-radius:12px;padding:1rem 1.1rem;color:inherit;text-decoration:none;transition:all .2s ease}
+    .entree:hover{transform:translateY(-2px);border-color:var(--jour-ligne)}
+    .entree .tag{font-family:Inter,sans-serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--estompe);margin-bottom:.25rem}
+    .entree h3{font-size:1.18rem;margin:0 0 .3rem}
+    .entree p{font-size:1rem;color:var(--encre-douce);margin:0}
+    .semaine{border-left:1px solid rgba(163,120,31,.35);padding-left:1.15rem;margin:1.2rem 0}
+    .semaine h3{color:var(--or-profond)}
+    .note{font-size:1rem;color:var(--estompe);font-style:italic;margin-top:1.6rem}
+    .suite{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+    .suite a{font-size:1.05rem;font-weight:600;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;color:var(--encre);border:1px solid var(--jour-bord);background:var(--jour-carte);transition:all .2s ease}
+    .suite a:hover{border-color:var(--jour-ligne);transform:translateY(-2px)}
+    .suite a.doree{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
+    footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="nuit"><div class="voile">
+    <a class="retour" href="index.html">← L'essence retrouvée</a>
+    <header>
+      <div class="num">Table d'étude</div>
+      <h1>Approfondir Almaas</h1>
+      <p class="chapeau">Une page pour ne pas rester à la surface&nbsp;: relier les notions, choisir une entrée, puis revenir aux livres avec plus de précision.</p>
+    </header>
+  </div></div>
+
+  <main class="voile">
+    <p>
+      Cette page est conçue comme une table d'étude. Le reste du site donne des portes,
+      des schémas, des causeries et des lexiques&nbsp;; ici, l'objectif est de tenir ensemble
+      la logique profonde de l'œuvre. Almaas n'avance presque jamais par définition
+      abstraite. Il part d'une expérience ordinaire, la laisse se préciser, découvre la
+      défense qui la recouvre, puis montre comment une qualité de l'Être peut apparaître
+      là où la personnalité ne voyait qu'un manque, une réaction ou un problème.
+    </p>
+    <p>
+      L'enjeu n'est donc pas de devenir spécialiste d'un vocabulaire. C'est de sentir
+      comment un mot peut modifier le regard. <em>Trou</em> ne veut plus dire seulement
+      déficit&nbsp;: il devient trace d'une qualité absente de la conscience. <em>Surmoi</em>
+      ne veut plus dire simple culpabilité&nbsp;: il devient gardien d'une organisation
+      ancienne. <em>Inquiry</em> ne veut plus dire analyse&nbsp;: il devient manière de rester
+      présent à ce qui se révèle. <em>Perle</em> ne veut plus dire belle image spirituelle&nbsp;:
+      elle désigne la possibilité de devenir une personne réelle.
+    </p>
+
+    <h2>Quatre couches de lecture</h2>
+    <div class="grille" aria-label="Quatre couches de lecture">
+      <div class="carte">
+        <div class="tag">1. Expérience</div>
+        <p>Commencer par ce qui se vit maintenant&nbsp;: manque, honte, désir, colère, confusion, aspiration, besoin d'être vu.</p>
+      </div>
+      <div class="carte">
+        <div class="tag">2. Structure</div>
+        <p>Repérer l'organisation psychologique&nbsp;: image de soi, relation d'objet, défense, surmoi, fixation, faux aspect.</p>
+      </div>
+      <div class="carte">
+        <div class="tag">3. Qualité</div>
+        <p>Demander quelle qualité essentielle est absente, imitée ou pressentie&nbsp;: force, valeur, volonté, compassion, amour, paix.</p>
+      </div>
+      <div class="carte">
+        <div class="tag">4. Intégration</div>
+        <p>Laisser la compréhension transformer la vie concrète&nbsp;: relation, parole, action, autonomie, amour de la vérité.</p>
+      </div>
+    </div>
+
+    <h2>Les grands axes à tenir ensemble</h2>
+
+    <div class="axe">
+      <h3>Essence comme présence substantielle</h3>
+      <p>
+        L'essence est le socle. Elle n'est pas une émotion élevée ni une idée de soi
+        meilleure&nbsp;: elle est présence réelle, vécue comme une substance subtile. C'est
+        pourquoi Almaas décrit les qualités essentielles par leur couleur, leur densité,
+        leur texture ou leur effet corporel. Ce réalisme empêche de transformer le chemin
+        en discours inspirant.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Personnalité comme imitation intelligente</h3>
+      <p>
+        La personnalité n'est pas seulement fausse, et elle n'est pas à mépriser. Elle est
+        une structure d'adaptation qui imite ce dont elle est séparée&nbsp;: fausse force,
+        fausse valeur, fausse autonomie, faux amour. Sa fausseté devient lisible quand on
+        comprend quelle qualité réelle elle tente de remplacer.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Les trous comme portes de retour</h3>
+      <p>
+        La théorie des trous donne un retournement central&nbsp;: le manque n'est pas seulement
+        à combler. Si l'on reste avec lui sans fuir, il peut révéler la qualité perdue de
+        vue. Ce point relie <em>Essence</em>, <em>Le Vide</em>, les causeries du
+        <em>Cœur de Diamant</em> et la pratique de l'inquiry.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Le surmoi comme gardien du statu quo</h3>
+      <p>
+        Le juge intérieur ne fait pas seulement mal&nbsp;: il empêche la transformation. Il
+        attaque l'expérience au moment où elle pourrait devenir vraie, puis il utilise
+        notre propre agressivité contre nous. S'en défendre signifie reprendre cette force,
+        non entrer dans un procès intérieur interminable.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>L'inquiry comme connaissance vivante</h3>
+      <p>
+        L'inquiry n'est pas une technique pour fabriquer un état spirituel. C'est la
+        participation consciente au déploiement de l'expérience. Elle demande ouverture,
+        curiosité, non-savoir, précision corporelle et amour de la vérité. Elle relie la
+        psychologie la plus fine à la présence de l'Être.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>La Guidance Diamant</h3>
+      <p>
+        La Guidance Diamant est l'intelligence discriminante de l'Être&nbsp;: elle aide à voir
+        ce qui est vrai, faux, mélangé, défensif ou essentiel dans l'expérience. Le terme
+        doit rester clair&nbsp;: ce n'est pas une guidance sentimentale ou vague, mais une
+        capacité de connaissance précise, inséparable de la présence.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>La Perle, ou l'individualité réelle</h3>
+      <p>
+        La réalisation ne supprime pas la personne. Avec la Perle, Almaas montre que la
+        personne peut devenir réelle, personnelle et ouverte à l'Être. La personnalité est
+        métabolisée&nbsp;: les relations d'objet, les blessures et les faux aspects deviennent
+        matière d'une individualité plus vraie.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Le Point, ou l'identité essentielle</h3>
+      <p>
+        Le Point déplace la question <em>qui suis-je&nbsp;?</em> du plan mental au plan
+        expérientiel. L'identité ordinaire dépend d'images, de miroir, de soutien extérieur.
+        En traversant la blessure narcissique, le vide et l'espace noir, une identité plus
+        simple peut apparaître&nbsp;: présence qui sait qu'elle est.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Amour, relation et projection</h3>
+      <p>
+        L'amour n'est pas seulement une émotion dirigée vers un objet. Almaas le déploie
+        en qualités distinctes&nbsp;: amour personnel, amour fusionnel, amour passionné,
+        amour non duel, Bien-aimé intérieur. La relation devient un laboratoire où se
+        voient projection, besoin, dépendance, mais aussi présence du cœur.
+      </p>
+    </div>
+
+    <div class="axe">
+      <h3>Ennéagramme et vue objective</h3>
+      <p>
+        Dans l'usage qu'Almaas fait de l'ennéagramme, l'enjeu n'est pas de classer les
+        personnes. Chaque type exprime une perte de vue objective, une fixation, une
+        passion, et une voie de retour vers une Idée Sainte et une qualité essentielle.
+        L'ennéagramme devient une carte de perception, pas une identité supplémentaire.
+      </p>
+    </div>
+
+    <h2>Par où approfondir selon ce qui travaille en vous</h2>
+    <div class="table" aria-label="Entrées d'approfondissement">
+      <a class="entree" href="les-trous.html"><div class="tag">Manque / vide</div><h3>Les trous</h3><p>Comprendre le manque comme trace d'une qualité essentielle.</p></a>
+      <a class="entree" href="lessence.html"><div class="tag">Présence</div><h3>L'essence</h3><p>Distinguer essence, émotion, énergie, vide et état passager.</p></a>
+      <a class="entree" href="le-juge-interieur.html"><div class="tag">Culpabilité</div><h3>Le juge intérieur</h3><p>Voir le surmoi, se défendre, retrouver force et conscience essentielle.</p></a>
+      <a class="entree" href="pratiquer.html"><div class="tag">Méthode</div><h3>Pratiquer l'inquiry</h3><p>Transformer l'expérience présente en enquête vivante.</p></a>
+      <a class="entree" href="la-perle.html"><div class="tag">Personne réelle</div><h3>La Perle</h3><p>Métaboliser la personnalité et personnaliser les qualités essentielles.</p></a>
+      <a class="entree" href="le-point.html"><div class="tag">Identité</div><h3>Le Point</h3><p>Traverser l'image de soi, le besoin de miroir et la blessure narcissique.</p></a>
+      <a class="entree" href="le-chemin-de-lamour.html"><div class="tag">Relation</div><h3>Le chemin de l'amour</h3><p>Distinguer besoin, projection, amour personnel, fusionnel et non duel.</p></a>
+      <a class="entree" href="enneagramme-essence.html"><div class="tag">Fixations</div><h3>Ennéagramme et essence</h3><p>Passer du type psychologique à la vue objective et aux qualités.</p></a>
+      <a class="entree" href="causeries.html"><div class="tag">Thèmes vécus</div><h3>Les causeries</h3><p>Explorer vérité, espoir, valeur, compassion, confiance, acceptation.</p></a>
+      <a class="entree" href="lexiques-ouvrages.html"><div class="tag">Précision</div><h3>Lexiques par ouvrage</h3><p>Retrouver les mots anglais, les traductions et les notions livre par livre.</p></a>
+    </div>
+
+    <h2>Ce qu'il faut éviter pour rester fidèle</h2>
+    <p>
+      Première réduction&nbsp;: faire d'Almaas une psychologie enrichie. La psychologie est
+      indispensable dans son travail, mais elle n'est pas le dernier mot&nbsp;: les structures
+      de personnalité sont comprises pour laisser apparaître l'Être. Deuxième réduction&nbsp;:
+      faire une mystique sans psychodynamique. Là encore, ce serait perdre son originalité&nbsp;:
+      les expériences spirituelles sont interrogées jusque dans leurs défenses, leurs
+      confusions et leurs usages narcissiques possibles.
+    </p>
+    <p>
+      Troisième réduction&nbsp;: transformer l'œuvre en dogme. Almaas insiste sur la vérification
+      directe&nbsp;: une notion doit être testée dans l'expérience, pas seulement répétée.
+      Quatrième réduction&nbsp;: croire que la personnalité doit être détruite. Le mouvement
+      le plus fin est une compréhension qui rend la personnalité transparente, puis la
+      métabolise. Cinquième réduction&nbsp;: remplacer le travail par des affirmations
+      positives. Dire <em>je suis amour</em> ne suffit pas si le trou de l'amour, la dépendance,
+      la projection et la défense ne sont pas rencontrés.
+    </p>
+
+    <h2>Un parcours d'étude en quatre semaines</h2>
+    <div class="semaine">
+      <h3>Semaine 1 — Essence, trous, qualités</h3>
+      <p>
+        Lire <a href="lessence.html">La question de l'essence</a>, <a href="les-trous.html">Les trous</a>
+        et <a href="les-visages-de-lessence.html">Les visages de l'essence</a>. Question centrale&nbsp;:
+        quelle qualité est souvent absente de mon expérience&nbsp;? force, valeur, amour,
+        volonté, paix, compassion&nbsp;?
+      </p>
+    </div>
+    <div class="semaine">
+      <h3>Semaine 2 — Surmoi et inquiry</h3>
+      <p>
+        Lire <a href="le-juge-interieur.html">Le juge intérieur</a> et
+        <a href="pratiquer.html">Pratiquer</a>. Observer les attaques du juge, les moments
+        de justification, puis revenir à une question simple&nbsp;: qu'est-ce qui est vrai
+        maintenant, avant la condamnation&nbsp;?
+      </p>
+    </div>
+    <div class="semaine">
+      <h3>Semaine 3 — Perle et Point</h3>
+      <p>
+        Lire <a href="la-perle.html">La Perle</a> et <a href="le-point.html">Le Point</a>.
+        Explorer deux questions&nbsp;: où est-ce que je joue un personnage&nbsp;? où est-ce que
+        j'ai besoin d'être confirmé pour sentir que j'existe&nbsp;?
+      </p>
+    </div>
+    <div class="semaine">
+      <h3>Semaine 4 — Amour, ennéagramme, vue d'ensemble</h3>
+      <p>
+        Lire <a href="le-chemin-de-lamour.html">Le chemin de l'amour</a>,
+        <a href="enneagramme-essence.html">L'ennéagramme de l'essence</a>,
+        <a href="schemas-oeuvre.html">Les schémas</a> et <a href="lire-almaas.html">Lire Almaas</a>.
+        L'objectif est de ne plus voir les pages comme des rubriques séparées, mais comme
+        les facettes d'un même travail de transformation.
+      </p>
+    </div>
+
+    <p class="note">
+      Sources de travail : synthèses et glossaires locaux autour de <em>Cœur de Diamant</em>,
+      <em>Essence</em>, <em>Le Vide</em>, <em>La Perle Inestimable</em>, <em>The Point of Existence</em>,
+      <em>Le Vaisseau Spatial Inquiry</em>, les ouvrages sur l'amour et les livres sur l'ennéagramme.
+      Cette page reste une synthèse pédagogique originale, destinée à conduire vers les textes.
+    </p>
+
+    <nav class="suite" aria-label="Continuer">
+      <a href="index.html">← Accueil</a>
+      <a class="doree" href="parcours-decouverte.html">Parcours découverte →</a>
+      <a href="lire-almaas.html">Lire Almaas →</a>
+      <a href="glossaire.html">Glossaire →</a>
+    </nav>
+
+    <footer>L'essence retrouvée — d'après A.H. Almaas · Tous droits réservés</footer>
+  </main>
+  <script defer src="assets/lang.js"></script>
+</body>
+</html>
