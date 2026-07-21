@@ -201,7 +201,13 @@
     .suite a.dorée{color:#141005;border-color:transparent;background:linear-gradient(135deg,var(--or-vif),#d9b054)}
     .suite span{opacity:.5;cursor:default}
     footer{text-align:center;padding:2.6rem 0 0;color:var(--estompe);font-family:Inter,sans-serif;font-size:.78rem}
-    </style>
+      .alpha{display:flex;flex-wrap:wrap;gap:.25rem;justify-content:center;margin:.7rem auto 0;max-width:40rem}
+    .alpha button{font-family:Inter,ui-sans-serif,sans-serif;font-size:.72rem;font-weight:600;min-width:1.7rem;height:1.7rem;
+      border:1px solid var(--jour-bord);background:var(--jour-carte);color:var(--estompe);border-radius:6px;cursor:pointer;transition:.12s;padding:0 .2rem}
+    .alpha button:hover:not(:disabled){border-color:var(--or-sombre);color:var(--or-profond)}
+    .alpha button:disabled{opacity:.25;cursor:default}
+    .lettre{scroll-margin-top:5rem}
+  </style>
   <link rel="stylesheet" href="assets/livre.css">
 </head>
 <body>
@@ -240,6 +246,7 @@
              aria-label="Chercher dans le glossaire">
       <div class="filtres" id="filtres" role="group" aria-label="Filtrer par thème"></div>
       <p class="compteur" id="compteur"></p>
+      <div class="alpha" id="alpha" role="group" aria-label="Naviguer par lettre"></div>
     </div>
 
     <div id="liste"></div>
@@ -258,6 +265,7 @@
   const $compteur = document.getElementById('compteur');
   const $cherche = document.getElementById('cherche');
   const $filtres = document.getElementById('filtres');
+  const $alpha = document.getElementById('alpha');
 
   let theme = 'tous', requete = '';
 
@@ -284,6 +292,13 @@
     $filtres.appendChild(b);
   });
 
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function(l){
+    const b=document.createElement('button'); b.type='button'; b.textContent=l; b.dataset.l=l;
+    b.addEventListener('click',function(){ const el=document.getElementById('L-'+l); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); });
+    $alpha.appendChild(b);
+  });
+  function majAlpha(set){ $alpha.querySelectorAll('button').forEach(function(b){ b.disabled=!set.has(b.dataset.l); }); }
+
   function rend(){
     const q=normalise(requete);
     const vus=TERMES.filter(t=>{
@@ -293,11 +308,12 @@
     });
     $liste.innerHTML='';
     let lettre='';
+    const presentes=new Set();
     vus.forEach(t=>{
       const l=lettreDe(t);
       if(l!==lettre){
-        lettre=l;
-        const h=document.createElement('div'); h.className='lettre'; h.textContent=l;
+        lettre=l; presentes.add(l);
+        const h=document.createElement('div'); h.className='lettre'; h.id='L-'+l; h.textContent=l;
         $liste.appendChild(h);
       }
       const d=document.createElement('article'); d.className='terme';
@@ -307,6 +323,7 @@
                   (t.sources&&t.sources.length?'<p class="src">→ '+echappe(t.sources.join(' · '))+'</p>':'');
       $liste.appendChild(d);
     });
+    majAlpha(presentes);
     $rien.hidden=vus.length>0;
     $compteur.textContent=vus.length+' terme'+(vus.length>1?'s':'')+(theme!=='tous'?' — '+THEMES[theme]:'')+(q?' pour « '+requete+' »':'');
   }
