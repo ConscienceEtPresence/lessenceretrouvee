@@ -99,7 +99,8 @@
       h+= next ? '<a class="next" href="'+next.id+'"><span class="l">'+UI.next+' →</span><span class="t">'+next.t[L]+'</span></a>'
                : '<a class="next" href="sommaire.html"><span class="l">'+UI.end+' →</span><span class="t">'+UI.endt+'</span></a>';
       pager.innerHTML=h;
-      if (host===document.body) document.body.appendChild(pager);
+      var footer = host.querySelector ? host.querySelector('footer') : null;
+      if (footer) host.insertBefore(pager, footer);
       else host.appendChild(pager);
     }
 
