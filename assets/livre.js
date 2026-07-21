@@ -65,6 +65,7 @@
       +'<a href="sommaire.html" class="'+(isPlan?'on':'')+'">'+UI.som+'</a>'
       +'<a href="glossaire.html" class="'+gloClass+'">'+UI.glo+'</a>'
       +lang
+      +'<button id="lv-theme" type="button" aria-label="'+(isEN?'Toggle dark mode':'Basculer le mode sombre')+'"></button>'
     +'</nav>';
 
   var prog = document.createElement('div'); prog.id='lv-progress';
@@ -120,6 +121,21 @@
       rail.addEventListener('click', function(e){ if (e.target.tagName==='A') document.body.classList.remove('lv-open'); });
       document.addEventListener('keydown', function(e){ if(e.key==='Escape') document.body.classList.remove('lv-open'); });
     }
+
+    /* bascule mode sombre (persistant) */
+    var themeB=top.querySelector('#lv-theme');
+    function applyTheme(dark){
+      document.documentElement.classList.toggle('lv-dark', dark);
+      themeB.textContent = dark ? '☀' : '☾';
+      try{ localStorage.setItem('er_theme', dark?'dark':'light'); }catch(e){}
+    }
+    var startDark=false;
+    try{ startDark = localStorage.getItem('er_theme')==='dark'; }catch(e){}
+    if (document.documentElement.classList.contains('lv-dark')) startDark=true;
+    applyTheme(startDark);
+    themeB.addEventListener('click', function(){
+      applyTheme(!document.documentElement.classList.contains('lv-dark'));
+    });
 
     /* bouton « retour en haut » */
     var haut=document.createElement('button');
