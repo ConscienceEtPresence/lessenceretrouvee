@@ -1,0 +1,142 @@
+/* ============================================================
+   PULSE — compteur de visites anonyme, ultra-léger
+   Pour : L'essence retrouvée (site = 'lessenceretrouvee')
+   - 1 écriture Firestore atomique par pageview
+   - Visiteur unique = 1 ID anonyme en localStorage, compté 1 fois par jour
+   - Aucune donnée perso, aucun cookie, aucun pistage
+   ============================================================ */
+import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getFirestore, doc, setDoc, increment, serverTimestamp }
+  from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+const SITE = 'lessenceretrouvee';
+
+/* Le site vit sous /lessenceretrouvee/ (GitHub Pages projet). Ce préfixe est
+   retiré du chemin, sinon toutes les clés commenceraient par 'lessenceretrouvee_'
+   et le regroupement par section du cockpit ne marcherait pas. Si un vrai
+   domaine arrive un jour, les deux formes donneront la même clé. */
+const BASE = 'lessenceretrouvee';
+
+const FIRE_CFG = {
+  apiKey: "AIzaSyBYlX1AcOP4Yg5rCy9T5tIcrV0WOTT3E24",
+  authDomain: "la-voie-du-dedans.firebaseapp.com",
+  projectId: "la-voie-du-dedans",
+  storageBucket: "la-voie-du-dedans.firebasestorage.app",
+  messagingSenderId: "531110328878",
+  appId: "1:531110328878:web:322ac57d9504e750b83dbf"
+};
+
+const app = getApps().length ? getApps()[0] : initializeApp(FIRE_CFG);
+const db = getFirestore(app);
+
+function todayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function monthKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+}
+
+function normalizePath(p) {
+  let s = (p || '/').split('?')[0].split('#')[0];
+  s = s.replace(/^\/+|\/+$/g, '');
+  if (s === BASE) s = '';
+  else if (s.startsWith(BASE + '/')) s = s.slice(BASE.length + 1);
+  s = s.replace(/\.html?$/, '');
+  if (!s || s === 'index') return 'home';
+  s = s.replace(/\/index$/, '').replace(/[\/\.]/g, '_');
+  return s.substring(0, 80) || 'home';
+}
+
+function visitMoment() {
+  const hour = new Date().getHours();
+  const period = hour >= 5 && hour < 12 ? 'matin'
+    : hour >= 12 && hour < 18 ? 'apres_midi'
+    : hour >= 18 && hour < 23 ? 'soir'
+    : 'nuit';
+  return { hour: String(hour).padStart(2, '0'), period };
+}
+
+function sourceKey() {
+  try {
+    if (!document.referrer) return 'direct';
+    const from = new URL(document.referrer).hostname.replace(/^www\./, '');
+    const here = location.hostname.replace(/^www\./, '');
+    if (!from) return 'direct';
+    if (from === here) return 'interne';
+    if (/google\./i.test(from)) return 'google';
+    if (/bing\.|duckduckgo\.|qwant\.|yahoo\./i.test(from)) return 'recherche';
+    if (/lavoiedudedans\./i.test(from)) return 'lavoiedudedans';
+    if (/lemiroirinterieur\./i.test(from)) return 'lemiroirinterieur';
+    if (/facebook\.|instagram\.|threads\.|linkedin\.|x\.com$|twitter\.|t\.co$|youtube\./i.test(from)) return 'social';
+    return 'autre';
+  } catch {
+    return 'direct';
+  }
+}
+
+async function pulse() {
+  if (/bot|spider|crawler|preview|headless/i.test(navigator.userAgent || '')) return;
+
+  const date = todayKey();
+  const month = monthKey();
+  const pathKey = normalizePath(location.pathname);
+  const moment = visitMoment();
+
+  // ---- Doc du JOUR ----
+  const dayUpd = { pageviews: increment(1), lastSeen: serverTimestamp() };
+  dayUpd[`pages.${pathKey}`] = increment(1);
+  dayUpd[`hours.${moment.hour}`] = increment(1);
+  dayUpd[`periods.${moment.period}`] = increment(1);
+  try {
+    if (localStorage.getItem('pulse_last_day') !== date) {
+      dayUpd.uniques = increment(1);
+      dayUpd[`sources.${sourceKey()}`] = increment(1);
+      localStorage.setItem('pulse_last_day', date);
+    }
+  } catch {}
+  try {
+    let upPeriods = {};
+    try { upPeriods = JSON.parse(localStorage.getItem('pulse_uperiods') || '{}'); } catch {}
+    if (upPeriods.d !== date) upPeriods = { d: date, k: [] };
+    if (!upPeriods.k.includes(moment.period)) {
+      dayUpd[`uperiods.${moment.period}`] = increment(1);
+      upPeriods.k.push(moment.period);
+      localStorage.setItem('pulse_uperiods', JSON.stringify(upPeriods));
+    }
+  } catch {}
+  try {
+    let upDay = {};
+    try { upDay = JSON.parse(localStorage.getItem('pulse_upd') || '{}'); } catch {}
+    if (upDay.d !== date) upDay = { d: date, k: [] };
+    if (!upDay.k.includes(pathKey)) {
+      dayUpd[`upages.${pathKey}`] = increment(1);
+      upDay.k.push(pathKey);
+      localStorage.setItem('pulse_upd', JSON.stringify(upDay));
+    }
+  } catch {}
+
+  // ---- Doc du MOIS ----
+  const moUpd = { pageviews: increment(1) };
+  moUpd[`pages.${pathKey}`] = increment(1);
+  try {
+    if (localStorage.getItem('pulse_last_month') !== month) {
+      moUpd.uniques = increment(1);
+      localStorage.setItem('pulse_last_month', month);
+    }
+    let up = {}; try { up = JSON.parse(localStorage.getItem('pulse_upm') || '{}'); } catch {}
+    if (up.m !== month) up = { m: month, k: [] };
+    if (!up.k.includes(pathKey)) {
+      moUpd[`upages.${pathKey}`] = increment(1);
+      up.k.push(pathKey);
+      localStorage.setItem('pulse_upm', JSON.stringify(up));
+    }
+  } catch {}
+
+  try { await setDoc(doc(db, 'analytics', SITE, 'jours', date), dayUpd, { merge: true }); } catch (e) { console.warn('pulse day failed', e); }
+  try { await setDoc(doc(db, 'analytics', SITE, 'jours', '_mois_' + month), moUpd, { merge: true }); } catch (e) { console.warn('pulse month failed', e); }
+}
+
+pulse();
