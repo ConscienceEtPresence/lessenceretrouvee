@@ -296,7 +296,10 @@
       .idees{max-width:44rem;margin:1.2rem auto 0}
       .idees .triade{font-family:Inter,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.15em;
         text-transform:uppercase;color:var(--or-sombre);margin:1.4rem 0 .3rem;border-bottom:1px solid var(--jour-ligne);padding-bottom:.4rem}
-      .idees .ligne{display:flex;gap:1rem;align-items:baseline;padding:.7rem .2rem;border-bottom:1px solid rgba(35,44,74,.08)}
+      .idees .ligne{display:flex;gap:1rem;align-items:baseline;padding:.7rem .4rem;border-bottom:1px solid rgba(35,44,74,.08);border-radius:8px}
+      a.ligne{text-decoration:none;color:inherit;cursor:pointer;transition:background .12s}
+      a.ligne:hover{background:rgba(163,120,31,.08)}
+      a.ligne .pt::after{content:'›';margin-left:.35rem;color:#916a1b;opacity:.6}
       .idees .pt{flex:none;width:1.7rem;font-weight:700;color:var(--or-profond);font-variant-numeric:tabular-nums}
       .idees .nom{flex:none;width:12.5rem;font-weight:600;color:#12172b}
       .idees .d{color:var(--encre-douce);font-size:1.02rem}
@@ -311,25 +314,27 @@
     </p>
     <div class="idees">
       <div class="triade">The top (8 · 9 · 1) — the nature of reality</div>
-      <div class="ligne"><span class="pt">8</span><span class="nom">Holy Truth</span><span class="d">the cosmos as one non-dual reality, without separation.</span></div>
-      <div class="ligne"><span class="pt">9</span><span class="nom">Holy Love</span><span class="d">reality perceived as a love that enfolds and connects all.</span></div>
-      <div class="ligne"><span class="pt">1</span><span class="nom">Holy Perfection</span><span class="d">all is already perfect as it unfolds — nothing to correct.</span></div>
+      <a class="ligne" href="#type-8"><span class="pt">8</span><span class="nom">Holy Truth</span><span class="d">the cosmos as one non-dual reality, without separation.</span></a>
+      <a class="ligne" href="#type-9"><span class="pt">9</span><span class="nom">Holy Love</span><span class="d">reality perceived as a love that enfolds and connects all.</span></a>
+      <a class="ligne" href="#type-1"><span class="pt">1</span><span class="nom">Holy Perfection</span><span class="d">all is already perfect as it unfolds — nothing to correct.</span></a>
 
       <div class="triade">The Six angle (5 · 6 · 7) — the human's place</div>
-      <div class="ligne"><span class="pt">5</span><span class="nom">Holy Omniscience</span><span class="d">everything is interconnected&nbsp;; I am an organ of perception for the whole.</span></div>
-      <div class="ligne"><span class="pt">6</span><span class="nom">Holy Faith</span><span class="d">reality holds us&nbsp;; there is no need to defend against it.</span></div>
-      <div class="ligne"><span class="pt">7</span><span class="nom">Holy Wisdom</span><span class="d">life unfolds according to an intelligent plan we need not force.</span></div>
+      <a class="ligne" href="#type-5"><span class="pt">5</span><span class="nom">Holy Omniscience</span><span class="d">everything is interconnected&nbsp;; I am an organ of perception for the whole.</span></a>
+      <a class="ligne" href="#type-6"><span class="pt">6</span><span class="nom">Holy Faith</span><span class="d">reality holds us&nbsp;; there is no need to defend against it.</span></a>
+      <a class="ligne" href="#type-7"><span class="pt">7</span><span class="nom">Holy Wisdom</span><span class="d">life unfolds according to an intelligent plan we need not force.</span></a>
 
       <div class="triade">The Three angle (2 · 3 · 4) — right action</div>
-      <div class="ligne"><span class="pt">2</span><span class="nom">Holy Will</span><span class="d">one single functioning at work&nbsp;; to be free is to move with the flow.</span></div>
-      <div class="ligne"><span class="pt">3</span><span class="nom">Holy Hope</span><span class="d">things accomplish themselves, according to their own law.</span></div>
-      <div class="ligne"><span class="pt">4</span><span class="nom">Holy Origin</span><span class="d">all arises from the source and abides in it&nbsp;; we are never cut off.</span></div>
+      <a class="ligne" href="#type-2"><span class="pt">2</span><span class="nom">Holy Will</span><span class="d">one single functioning at work&nbsp;; to be free is to move with the flow.</span></a>
+      <a class="ligne" href="#type-3"><span class="pt">3</span><span class="nom">Holy Hope</span><span class="d">things accomplish themselves, according to their own law.</span></a>
+      <a class="ligne" href="#type-4"><span class="pt">4</span><span class="nom">Holy Origin</span><span class="d">all arises from the source and abides in it&nbsp;; we are never cut off.</span></a>
     </div>
     <p class="glossnote" style="margin-top:1.2rem">
       Three of them — <em>Love</em> (9), <em>Faith</em> (6), <em>Hope</em> (3) — play a special role&nbsp;:
       Almaas calls them the "theological virtues", for they are not only perceptions but dispositions
       of the heart that make the path possible&nbsp;: love carries, faith sustains, hope opens.
     </p>
+
+    <p class="glossnote" style="text-align:center;margin:.2rem 0 0"><strong>Each type is developed in full below</strong> — click a point above to jump straight to it.</p>
 
     <div class="respire">◆ ◆ ◆</div>
 
@@ -426,7 +431,7 @@
     </p>
     <style>
       .types{max-width:44rem;margin:1.4rem auto 0}
-      .type-c{border:1px solid rgba(35,44,74,.12);border-radius:14px;background:#fffdf8;
+      .type-c{border:1px solid rgba(35,44,74,.12);border-radius:14px;background:#fffdf8;scroll-margin-top:4.7rem;
         padding:1.3rem 1.5rem;margin:0 0 1.1rem;box-shadow:0 2px 10px rgba(35,44,74,.04)}
       .type-c .tete{display:flex;align-items:baseline;gap:.7rem;margin-bottom:.7rem;flex-wrap:wrap}
       .type-c .no{font-family:Inter,sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.06em;
