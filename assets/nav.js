@@ -12,8 +12,7 @@
     open:'Contents', close:'Close', label:'Site menu', home:'Home',
     groups:[
       ['Begin', [
-        ['parcours-decouverte.html','Discovery path'],
-        ['douze-notions.html','The 12 key notions'],
+        ['etre-ou-lon-est.html','Being where you are'],
         ['chemin.html','The guided path'],
         ['causeries.html','The talks'],
         ['lessence.html','The question of essence']
@@ -30,6 +29,7 @@
         ['ouvrages.html','The book library'],
         ['lexiques-ouvrages.html','Book-by-book lexicons'],
         ['glossaire.html','The bilingual glossary'],
+        ['douze-notions.html','The 12 key notions'],
         ['lire-almaas.html','Reading Almaas']
       ]]
     ]
@@ -37,8 +37,7 @@
     open:'Sommaire', close:'Fermer', label:'Menu du site', home:'Accueil',
     groups:[
       ['Commencer', [
-        ['parcours-decouverte.html','Parcours découverte'],
-        ['douze-notions.html','Les 12 notions clés'],
+        ['etre-ou-lon-est.html','Être où l’on est'],
         ['chemin.html','Le chemin guidé'],
         ['causeries.html','Les causeries'],
         ['lessence.html','La question de l’essence']
@@ -55,6 +54,7 @@
         ['ouvrages.html','La bibliothèque des ouvrages'],
         ['lexiques-ouvrages.html','Les lexiques par ouvrage'],
         ['glossaire.html','Le glossaire bilingue'],
+        ['douze-notions.html','Les 12 notions clés'],
         ['lire-almaas.html','Lire Almaas']
       ]]
     ]
